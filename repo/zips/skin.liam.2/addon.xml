@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.liam.2" version="1.0.2" name="Liam 2" provider-name="Liam">
+  <requires>
+		<import addon="xbmc.gui" version="5.15.0"/>
+		<import addon="script.skinshortcuts" version="1.1.5"/>
+		<import addon="plugin.video.themoviedb.helper" version="4.3.0"/>
+		<import addon="script.embuary.helper" version="2.0.8"/>
+		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
+		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
+	</requires>
+	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">A GUI for Kodi Media Center</summary>
+    <summary lang="en_AU">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_NZ">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_US">A GUI for Kodi Media Center</summary>
+  <description lang="en">This is the 2nd generation of Liam skin for Kodi. Liam 2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_AU">This is the 2nd generation of Liam skin for Kodi. Liam 2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_NZ">This is the 2nd generation of Liam skin for Kodi. Liam 2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_US">This is the 2nd generation of Liam skin for Kodi. Liam 2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <disclaimer lang="en">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_AU">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_NZ">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_US">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <platform>all</platform>
+    <license>Creative Commons Attribution-NonCommercial-Share Alike 4.0 International License</license>
+    <news>-PVR FIXES AND DESIGN FIXES</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+			<screenshot>resources/screenshot-10.jpg</screenshot>
+		</assets>
+  </extension>
+</addon>

@@ -1,4 +1,4 @@
-""" 
+"""
     Put this script in the root folder of your repo and it will
     zip up all addon folders, create a new zip in your zips folder
     and then update the md5 and addons.xml file
@@ -217,3 +217,9 @@ class Generator:
 if __name__ == "__main__":
     for release in [r for r in KODI_VERSIONS if os.path.exists(r)]:
         Generator(release)
+
+
+os.system("cd ~/kodirepository/repository.liam3")
+os.system("git add .")
+os.system('git commit -m "commit"')
+os.system("git push origin master")

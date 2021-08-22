@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol></defaultcontrol>
+	<onload condition="String.IsEmpty(Skin.String(DialogSeekBarStyle))">Skin.SetString(DialogSeekBarStyle,1)</onload>
+	<onload condition="String.IsEmpty(Skin.String(FullScreenVideoStyle))">Skin.SetString(FullScreenVideoStyle,1)</onload>
+	<onload condition="Window.IsActive(PlayerControls)">Dialog.Close(PlayerControls)</onload>
+	<controls>
+		<control type="image" id="1">
+			<include>FullscreenDimensions</include>
+			<include>BackgroundFade</include>
+			<visible>!Window.IsActive(SliderDialog)</visible>
+			<visible>Player.ShowInfo | Integer.IsGreater(PVR.ChannelNumberInput,0) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVRChannelGuide) | Window.IsActive(PVRGuideInfo)  | Window.IsActive(ContextMenu) | Window.IsActive(ShutdownMenu) | Window.IsActive(notification) | Window.IsActive(VideoOSD) | Window.IsActive(OSDSubtitleSettings) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(SelectDialog) | Window.IsActive(SubtitleSearch) | Window.IsActive(NumericInput) | Window.IsActive(Favourites) | Window.IsActive(script-upnext-upnext.xml) | Window.IsActive(script-upnext-upnext-simple.xml) | Window.IsActive(script-upnext-stillwatching.xml) | Window.IsActive(script-upnext-stillwatching-simple.xml)</visible>
+		</control>
+		<control type="image" id="1">
+			<include>FullscreenDimensions</include>
+			<texture background="true">windows/pvr/pvr_vignette.png</texture>
+			<include>BackgroundFade</include>
+			<visible>[Window.IsActive(VideoBookmarks) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVRChannelGuide)] + !Window.IsActive(PVRGuideInfo)</visible>
+		</control>
+		<control type="image" id="1">
+			<include>FullscreenDimensions</include>
+			<texture background="true">windows/bg/bg_overlay.png</texture>
+			<include>BackgroundFade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Window.IsActive(PVRGuideInfo)</visible>
+		</control>
+
+		<!-- SeekNumeric Input -->
+		<control type="group" id="1">
+			<left>204r</left>
+			<top>16</top>
+			<width>178</width>
+			<align>right</align>
+			<visible>!String.IsEmpty(Player.SeekNumeric) + !Window.IsActive(VolumeBar)</visible>
+			<animation type="Visible">
+			  <effect type="fade" start="0" end="100" time="250" tween="sine" easing="in"  />
+			  <effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden">
+			  <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+			  <effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+			</animation>
+			<control type="image" id="1">
+				<width>178</width>
+				<height>85</height>
+				<texture background="true" border="29">osd/volume/volume_bg.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>Seek Numeric</description>
+				<width>178</width>
+				<height>86</height>
+		    <align>center</align>
+		    <aligny>center</aligny>
+				<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
+				<font>FontSize_28</font>
+				<textcolor>osdinfo</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+			</control>
+		</control>
+
+
+		<!-- =========================== -->
+		<!-- == VideoFullcreen Window == -->
+		<!-- =========================== -->
+		<!-- VideoInfo (Default) -->
+		<control type="group" id="1">
+			<left>45</left>
+			<width>1190</width>
+			<include>OSDAnimation</include>
+			<visible>!String.IsEqual(Skin.String(FullScreenVideoStyle),2)</visible>
+			<visible>[Player.ShowInfo | [[Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + String.IsEqual(Skin.String(DialogSeekBarStyle),3)] | Window.IsActive(VideoOSD)] + ![Window.IsActive(BusyDialog) | Window.IsActive(SliderDialog) | Window.IsActive(SeekBar) | Window.IsActive(OSDSubtitleSettings) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(SelectDialog) | Window.IsActive(SubtitleSearch) | Window.IsActive(ShutdownMenu) | Window.IsActive(favourites) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVRChannelGuide) | Window.IsActive(PVRGuideInfo) | Window.IsActive(TextViewer)]</visible>
+			<control type="image" id="1">
+				<left>-45</left>
+				<top>120</top>
+				<include>FullscreenDimensions</include>
+				<texture background="true">windows/home/menu_overlay.png</texture>
+				<animation effect="slide" start="0,0" end="0,-80" time="250" condition="![String.IsEmpty(Window(VideoOSD).Property(ShowPlot)) | String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
+			</control>
+
+			<!-- Info -->
+			<control type="textbox" id="2">
+				<left>180</left>
+				<top>570</top>
+				<height>108</height>
+				<width>1000</width>
+				<label>$INFO[VideoPlayer.Plot]</label>
+				<font>FontSize_20</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+				<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+			</control>
+			<control type="label" id="2">
+				<left>180</left>
+				<top>680</top>
+				<height>50</height>
+				 <width>auto</width>
+				<label>[I]$INFO[VideoPlayer.NextTitle,[COLOR=white]$LOCALIZE[19031]:[/COLOR] ,]$INFO[VideoPlayer.NextStartTime, (,)][/I]</label>
+				<font>FontSize_20</font>
+				<textcolor>beige</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+				<scroll>true</scroll>
+				<scrollspeed>100</scrollspeed>
+				<pauseatend>5000</pauseatend>
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Title label</description>
+				<left>179</left>
+				<top>470</top>
+				<height>30</height>
+				<width>740</width>
+				<label>$INFO[Player.Title]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>FontSize_36</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+			</control>
+			<control type="label" id="1">
+				<description>Title label</description>
+				<left>180</left>
+				<top>500</top>
+				<height>30</height>
+				<width>1000</width>
+				<label>$INFO[VideoPlayer.EpisodeName,, - ][LIGHT]S$INFO[VideoPlayer.Season] E$INFO[VideoPlayer.Episode] - Episode $INFO[VideoPlayer.Episode] of Season $INFO[VideoPlayer.Season][/LIGHT]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>FontSize_24</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+				<visible>!String.IsEmpty(VideoPlayer.Season)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Title label</description>
+				<left>180</left>
+				<top>500</top>
+				<height>30</height>
+				<width>1000</width>
+				<label>$INFO[VideoPlayer.EpisodeName</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>FontSize_24</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+				<visible>String.IsEmpty(VideoPlayer.Season)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Title label</description>
+				<left>1110</left>
+				<top>540</top>
+				<height>30</height>
+				<width>740</width>
+					<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[VideoPlayer.EndTime]</label>
+				<visible>!Pvr.IsPlayingRecording</visible>
+				<font>FontSize_20</font>
+			</control>
+			<control type="label" id="1">
+				<description>Title label</description>
+				<left>180</left>
+				<top>540</top>
+				<height>30</height>
+				<width>740</width>
+					<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[VideoPlayer.StartTime]</label>
+					<visible>!Pvr.IsPlayingRecording</visible>
+				<font>FontSize_20</font>
+			</control>
+			<control type="group" id="1">
+				<left>0</left>
+				<top>497</top>
+				<animation effect="slide" start="0,0" end="0,-80" time="250" condition="![String.IsEmpty(Window(VideoOSD).Property(ShowPlot)) | String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="180,0" condition="[VideoPlayer.Content(Movies) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Files) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Episodes) + !String.IsEmpty(Player.Art(tvshow.poster))] | VideoPlayer.Content(LiveTV)">Conditional</animation>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>-200</left>
+					<top>150</top>
+					<height>30</height>
+					<width>740</width>
+					<label>$VAR[PlayerTitleLabel]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<description>Label</description>
+					<left>2</left>
+					<top>40</top>
+					<height>40</height>
+					<width>510</width>
+					<label>$VAR[PlayerSubLabel]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<include>OSDAnimation</include>
+					<visible>[String.IsEmpty(Window(VideoOSD).Property(ShowPlot)) | String.IsEmpty(VideoPlayer.Plot)]</visible>
+				</control>
+			</control>
+
+			<!-- Movies/Episodes Cover -->
+			<control type="group" id="1">
+				<left>0</left>
+				<top>400</top>
+				<include>PlayerPoster</include>
+				<visible>!Pvr.IsPlayingRecording + [VideoPlayer.Content(Movies) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Files) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Episodes) + !String.IsEmpty(Player.Art(tvshow.poster))]</visible>
+			</control>
+
+
+			<control type="group" id="1">
+				<left>0</left>
+				<top>475</top>
+				<include>PlayerPoster4</include>
+				<visible>Pvr.IsPlayingRecording</visible>
+			</control>
+
+			<!-- LiveTV Cover -->
+			<control type="group" id="1">
+				<left>0</left>
+				<top>475</top>
+				<include>PlayerSquare</include>
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+			</control>
+
+			<!-- Progress -->
+			<control type="group" id="1">
+				<left>1</left>
+				<top>537</top>
+				<animation effect="slide" start="0,0" end="0,-80" time="250" condition="![String.IsEmpty(Window(VideoOSD).Property(ShowPlot)) | String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
+				<include>OSDProgressBar</include>
+			</control>
+
+			<!-- Time Label -->
+			<control type="group" id="1">
+				<left>800</left>
+				<top>485</top>
+				<include>OSDAnimation</include>
+				<visible>[String.IsEmpty(Window(VideoOSD).Property(ShowPlot)) | String.IsEmpty(VideoPlayer.Plot)] + !VideoPlayer.Content(LiveTV)</visible>
+				<animation effect="slide" start="0,0" end="180,0" condition="[VideoPlayer.Content(Movies) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Files) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Episodes) + !String.IsEmpty(Player.Art(tvshow.poster))] | VideoPlayer.Content(LiveTV)">Conditional</animation>
+				<control type="label" id="1">
+					<left>0</left>
+					<top>0</top>
+					<height>60</height>
+					<width>550</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_36</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+				</control>
+			</control>
+
+			<!-- Right Fade SubLabels -->
+
+		</control>
+
+		<!-- MediaFlags -->
+
+
+		<!-- VideoInfo (Simple) -->
+		<control type="group" id="1">
+			<visible>String.IsEqual(Skin.String(FullScreenVideoStyle),2)</visible>
+			<visible>Player.ShowInfo + ![Window.IsActive(SelectDialog) | Window.IsActive(SliderDialog) | Window.IsActive(ShutdownMenu) | Window.IsActive(favourites) | Window.IsActive(VideoBookmarks) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVRChannelGuide) | Window.IsActive(PVRGuideInfo)]</visible>
+			<include>OSDAnimation</include>
+			<include>TextViewerHideAnimations</include>
+			<control type="image" id="1">
+				<left>0</left>
+				<top>305</top>
+				<include>FullscreenDimensions</include>
+				<texture background="true">windows/home/menu_overlay.png</texture>
+			</control>
+			<control type="grouplist" id="1">
+				<left>37</left>
+				<top>640</top>
+				<width>1190</width>
+				<height>60</height>
+				<align>left</align>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include>KaiToastSlideAnimations</include>
+				<control type="label" id="1">
+					<height>53</height>
+					<width min="10" max="1000">auto</width>
+					<label>$INFO[Player.Time]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_50</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+				</control>
+				<!-- DISABLED
+				<control type="group" id="1">
+					<width>15</width>
+					<control type="image" id="1">
+						<left>6</left>
+						<top>8</top>
+						<width>1</width>
+						<height>40</height>
+						<colordiffuse>viewsinfo</colordiffuse>
+						<texture>windows/bg/white.png</texture>
+					</control>
+				</control>
+				-->
+				<control type="group" id="1">
+					<control type="label" id="1">
+						<left>0</left>
+						<top>4</top>
+						<width>980</width>
+						<height>25</height>
+						<label>$VAR[PlayerTitleLabel]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>NotificationsFont</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+					</control>
+					<control type="label" id="1">
+						<left>0</left>
+						<top>25</top>
+						<width>980</width>
+						<height>25</height>
+						<label>$VAR[PlayerSubLabel]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>NotificationsFont</font>
+						<textcolor>viewsinfo</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+					</control>
+				</control>
+			</control>
+		</control>
+
+
+		<!-- ==================== -->
+		<!-- == Dialog Seekbar == -->
+		<!-- ==================== -->
+		<!-- Seekbar (Default) -->
+		<control type="group" id="1">
+			<visible>!String.IsEqual(Skin.String(FullScreenVideoStyle),2)</visible>
+			<visible>Window.IsActive(FullScreenVideo) + [[Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek | Player.Caching | Integer.IsGreater(PVR.ChannelNumberInput,0)] + ![String.IsEqual(Skin.String(DialogSeekBarStyle),2) | String.IsEqual(Skin.String(DialogSeekBarStyle),3)]] + ![Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(SliderDialog) | Window.IsActive(SubtitleSearch) | Window.IsActive(ShutdownMenu) | Window.IsActive(favourites) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVRChannelGuide) | Window.IsActive(PVRGuideInfo)]</visible>
+<!--	<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" time="350" center="640,360" start="150" end="100" tween="cubic" easing="out"/>
+				<effect type="fade" time="350" start="0" easing="out" end="100"/>
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" time="250" center="640,360" start="100" end="150" tween="cubic" easing="in"/>
+				<effect type="fade" time="250" start="100" easing="in" end="0"/>
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="zoom" time="350" center="640,360" start="150" end="100" tween="cubic" easing="out"/>
+				<effect type="fade" time="350" start="0" easing="out" end="100"/>
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" time="250" center="640,360" start="100" end="150" tween="cubic" easing="in"/>
+				<effect type="fade" time="250" start="100" easing="in" end="0"/>
+			</animation>
+			<animation type="Conditional" condition="Player.Paused + ![Player.Caching | Player.Seeking]">
+				<effect type="zoom" time="350" delay="13000" center="640,360" start="100" end="0" tween="cubic" easing="in"/>
+				<effect type="fade" time="350" delay="13000" start="100" easing="in" end="0"/>
+			</animation> -->
+
+
+
+
+			<control type="image" id="1">
+				<left>250</left>
+				<top>550</top>
+				<width>800</width>
+				<height>180</height>
+				<texture background="true">osd/osd_controls_bg.png</texture>
+			</control>
+
+
+			<control type="group" id="1">
+				<left>770</left>
+				<top>615</top>
+				<control type="group" id="1">
+					<visible>!Player.ChapterCount</visible>
+					<control type="label" id="1">
+						<description>Seek Time Label</description>
+						<width>323</width>
+						<height>20</height>
+						<font>FontSize_24</font>
+						<textcolor>viewsinfo</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[DialogSeekBarLabel]</label>
+				<!--		<animation type="Conditional" reversible="false" condition="Player.Paused  + ![Player.Forwarding | Player.Rewinding | Player.Caching]" loop="true">
+							<effect type="fade" start="0" end="100" time="400" delay="0" />
+							<effect type="fade" start="100" end="0" time="400" delay="5000" />
+							<effect type="fade" start="100" end="0" time="400" delay="10000" />
+						</animation> -->
+					</control>
+				</control>
+				<control type="group" id="1">
+					<visible>Player.ChapterCount</visible>
+					<control type="label" id="1">
+						<description>Seek Time Label</description>
+						<width>323</width>
+						<height>20</height>
+						<font>FontSize_24</font>
+						<textcolor>viewsinfo</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[DialogSeekBarLabel]</label>
+				<!--		<animation type="Conditional" reversible="false" condition="Player.Paused  + ![Player.Forwarding | Player.Rewinding | Player.Caching]" loop="true">
+							<effect type="fade" start="0" end="100" time="400" delay="0" />
+							<effect type="fade" start="100" end="0" time="400" delay="5000" />
+							<effect type="fade" start="100" end="0" time="400" delay="15000" />
+						</animation> -->
+					</control>
+				</control>
+			</control>
+			<!-- Movies/Episodes Cover -->
+			<control type="group" id="1">
+				<left>300</left>
+				<top>562</top>
+				<include>PlayerPoster2</include>
+				<visible>[VideoPlayer.Content(Movies) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Files) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Episodes) + !String.IsEmpty(Player.Art(tvshow.poster))]</visible>
+			</control>
+
+			<control type="group" id="1">
+				<left>300</left>
+				<top>562</top>
+				<include>PlayerPoster3</include>
+				<visible>Pvr.IsPlayingRecording</visible>
+			</control>
+
+
+			<!-- LiveTV Cover -->
+			<control type="group" id="1">
+				<left>300</left>
+				<top>540</top>
+				<include>PlayerSquare2</include>
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+			</control>
+
+
+
+			<control type="group" id="1">
+				<left>860</left>
+				<top>600</top>
+				<control type="image" id="1">
+					<width>156</width>
+					<height>156</height>
+					<colordiffuse>77white</colordiffuse>
+					<texture background="true">osd/osd_play.png</texture>
+					<visible>Player.Playing + ![Player.Rewinding | Player.Forwarding | Player.Seeking | Player.Caching | [Player.DisplayAfterSeek + !String.IsEmpty(Player.SeekOffset)]]</visible>
+				</control>
+				<control type="image" id="1">
+					<width>156</width>
+					<height>156</height>
+					<colordiffuse>77white</colordiffuse>
+					<texture background="true">$VAR[DialogSeekBarIcons]</texture>
+				</control>
+				<control type="image" id="1">
+					<width>156</width>
+					<height>156</height>
+					<colordiffuse>77white</colordiffuse>
+					<texture background="true">osd/osd_rw.png</texture>
+					<visible>[[Player.Playing + !String.IsEmpty(Player.SeekOffset)] | Player.Seeking] + [String.Contains(Player.SeekOffset,-) | String.Contains(Player.SeekStepSize,-)] + ![Player.Paused | Player.Caching]</visible>
+				</control>
+				<control type="image" id="1">
+					<width>156</width>
+					<height>156</height>
+					<colordiffuse>77white</colordiffuse>
+					<texture background="true">osd/osd_ff.png</texture>
+					<visible>[[Player.Playing + !String.IsEmpty(Player.SeekOffset)] | Player.Seeking] + ![String.Contains(Player.SeekOffset,-) | String.Contains(Player.SeekStepSize,-)] + ![Player.Paused | Player.Caching]</visible>
+				</control>
+			</control>
+
+			<control type="group" id="1">
+				<top>650</top>
+				<left>210</left>
+				<visible>Player.HasVideo</visible>
+				<animation effect="slide" start="0,0" end="180,0" condition="[VideoPlayer.Content(Movies) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Files) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Episodes) + !String.IsEmpty(Player.Art(tvshow.poster))] | VideoPlayer.Content(LiveTV) | Player.HasAudio">Conditional</animation>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>420</left>
+					<top>8</top>
+					<height>30</height>
+					<width>740</width>
+						<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[VideoPlayer.EndTime]</label>
+					<font>FontSize_20</font>
+					<visible>!Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>0</left>
+					<top>8</top>
+					<height>30</height>
+					<width>740</width>
+						<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[VideoPlayer.StartTime]</label>
+					<visible>!Pvr.IsPlayingRecording</visible>
+					<font>FontSize_20</font>
+				</control>
+				<control type="label" id="2">
+					<left>0</left>
+					<top>30</top>
+					<height>50</height>
+					 <width>auto</width>
+					<label>[I]$INFO[VideoPlayer.NextTitle,[COLOR=white]$LOCALIZE[19031]:[/COLOR] ,]$INFO[VideoPlayer.NextStartTime, (,)][/I]</label>
+					<font>FontSize_20</font>
+					<textcolor>beige</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<scroll>true</scroll>
+					<scrollspeed>100</scrollspeed>
+					<pauseatend>5000</pauseatend>
+					<visible>VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-90</top>
+					<height>30</height>
+					<width>550</width>
+					<align>center</align>
+					<label>$INFO[Player.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_28</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-65</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[VideoPlayer.EpisodeName]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_24</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!String.IsEmpty(VideoPlayer.Season) + !Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-40</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>[LIGHT]S$INFO[VideoPlayer.Season] E$INFO[VideoPlayer.Episode] - Episode $INFO[VideoPlayer.Episode] of Season $INFO[VideoPlayer.Season][/LIGHT]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_24</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!String.IsEmpty(VideoPlayer.Season) + !Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>10</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_24</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
+
+<control type="group" id="1">
+	<left>190</left>
+	<control type="label" id="1">
+		<description>Title label</description>
+		<left>100</left>
+		<top>10</top>
+		<height>30</height>
+		<width>1000</width>
+		<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>FontSize_24</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>77000000</shadowcolor>
+		<visible>Pvr.IsPlayingRecording</visible>
+	</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-90</top>
+					<height>30</height>
+					<width>550</width>
+					<align>center</align>
+					<label>$INFO[Player.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_28</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-65</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[VideoPlayer.EpisodeName]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_24</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!String.IsEmpty(VideoPlayer.Season)</visible>
+					<visible>Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-40</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>[LIGHT]S$INFO[VideoPlayer.Season] E$INFO[VideoPlayer.Episode] - Episode $INFO[VideoPlayer.Episode] of Season $INFO[VideoPlayer.Season][/LIGHT]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_24</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!String.IsEmpty(VideoPlayer.Season)</visible>
+					<visible>Pvr.IsPlayingRecording</visible>
+				</control>
+			</control>
+
+				<control type="image" id="1">
+				<height>15</height>
+				<top>-5</top>
+					<texture background="true">windows/bg/white.png</texture>
+					<animation effect="fade" end="30" condition="true">Conditional</animation>
+					<visible>!VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+					<width>501</width>
+				</control>
+				<control type="image" id="1">
+				<height>18</height>
+				<top>-10</top>
+				<width>501</width>
+					<texture background="true">windows/bg/white.png</texture>
+					<animation effect="fade" end="30" condition="true">Conditional</animation>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="image" id="1">
+					<left>190</left>
+				<height>15</height>
+				<top>-5</top>
+				<width>501</width>
+					<texture background="true">windows/bg/white.png</texture>
+					<animation effect="fade" end="30" condition="true">Conditional</animation>
+					<visible>Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="progress" id="1">
+					<width>501</width>
+					<visible>!VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+					<description>Progressbar</description>
+					<include condition="Player.HasAudio">OSDProgressWidthSmall</include>
+					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthBig</include>
+					<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressWidthSmall</include>
+					<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthSmall</include>
+					<height>6</height>
+					<reveal>true</reveal>
+					<info>Player.Progress</info>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control>
+				<control type="slider" id="1">
+					<width>501</width>
+					<visible>!VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+					<left>-3</left>
+					<top>-7</top>
+					<include condition="Player.HasAudio">OSDProgressSliderWidthSmall</include>
+					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthBig</include>
+					<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressSliderWidthSmall</include>
+					<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthSmall</include>
+					<!-- <width>1192</width> -->
+					<height>7</height>
+					<orientation>horizontal</orientation>
+					<texturesliderbar border="1">osd/progressbar/progress_bg.png</texturesliderbar>
+					<textureslidernib border="1">osd/progressbar/progress_nib.png</textureslidernib>
+					<textureslidernibfocus border="1">osd/progressbar/progress_nib.png</textureslidernibfocus>
+					<info>Player.Progress</info>
+					<action>seek</action>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control>
+
+				<!-- Live TV -->
+			<!--	<control type="progress" id="1">
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<description>ProgressbarTimeshift</description>
+					<include condition="Pvr.IsPlayingTv | Pvr.IsPlayingRadio">OSDProgressWidthSmall</include>
+					<height>6</height>
+					<reveal>true</reveal>
+					<info>Player.ProgressCache</info>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+					<animation effect="fade" start="100" end="30" condition="true">Conditional</animation>
+				</control>
+				<control type="progress" id="1">
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<description>Progressbar</description>
+					<include condition="Pvr.IsPlayingTv | Pvr.IsPlayingRadio">OSDProgressWidthSmall</include>
+					<height>6</height>
+					<reveal>true</reveal>
+					<info>PVR.EpgEventProgress</info>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control>
+				<control type="slider" id="1">
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<left>-3</left>
+					<top>-7</top>
+					<include condition="Pvr.IsPlayingTv | Pvr.IsPlayingRadio">OSDProgressSliderWidthSmall</include> -->
+						<!-- <width>1192</width> -->
+				<!--	<height>7</height>
+					<orientation>horizontal</orientation>
+					<texturesliderbar border="1">osd/progressbar/progress_bg.png</texturesliderbar>
+					<textureslidernib border="1">osd/progressbar/progress_nib.png</textureslidernib>
+					<textureslidernibfocus border="1">osd/progressbar/progress_nib.png</textureslidernibfocus>
+					<info>PVR.SeekBar</info>
+					<action>seek</action>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control> -->
+				<control type="progress" id="1">
+					<width>501</width>
+					<top>-10</top>
+			<height>6</height>
+			<info2>PVR.TimeshiftProgressBufferStart</info2>
+			<info>PVR.TimeshiftProgressBufferEnd</info>
+			<reveal>true</reveal>
+			<colordiffuse>chartreuse</colordiffuse>
+		</control>
+		<control type="progress" id="1">
+			<width>500</width>
+			<height>6</height>
+			<info>PVR.TimeshiftProgressEpgEnd</info>
+			<info2>PVR.TimeshiftProgressPlayPos</info2>
+				<colordiffuse>white</colordiffuse>
+		</control>
+		<control type="progress" id="1">
+			<width>499</width>
+			<height>6</height>
+			<info>PVR.TimeshiftProgressPlayPos</info>
+			<info2>PVR.TimeshiftProgressEpgStart</info2>
+			<colordiffuse>red</colordiffuse>
+		</control>
+		<control type="slider" id="1">
+			<width>501</width>
+			<height>7</height>
+			<visible>true</visible>
+			<left>-3</left>
+			<top>-7</top>
+			<orientation>horizontal</orientation>
+			<texturesliderbar border="1">osd/progressbar/progress_bg.png</texturesliderbar>
+			<textureslidernib border="1">osd/progressbar/progress_nib.png</textureslidernib>
+			<textureslidernibfocus border="1">osd/progressbar/progress_nib.png</textureslidernibfocus>
+			<colordiffuse>red</colordiffuse>
+			<info>PVR.TimeShiftSeekbar</info>
+			<visible>VideoPlayer.Content(LiveTV)</visible>
+		</control>
+
+	<control type="group" id="1">
+		<left>190</left>
+		<control type="progress" id="1">
+			<width>501</width>
+			<visible>Pvr.IsPlayingRecording</visible>
+			<description>Progressbar</description>
+			<include condition="Player.HasAudio">OSDProgressWidthSmall</include>
+			<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthBig</include>
+			<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressWidthSmall</include>
+			<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthSmall</include>
+			<height>6</height>
+			<reveal>true</reveal>
+			<info>Player.Progress</info>
+			<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+		</control>
+		<control type="slider" id="1">
+			<width>501</width>
+			<visible>Pvr.IsPlayingRecording</visible>
+			<left>-3</left>
+			<top>-7</top>
+			<include condition="Player.HasAudio">OSDProgressSliderWidthSmall</include>
+			<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthBig</include>
+			<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressSliderWidthSmall</include>
+			<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthSmall</include>
+			<!-- <width>1192</width> -->
+			<height>7</height>
+			<orientation>horizontal</orientation>
+			<texturesliderbar border="1">osd/progressbar/progress_bg.png</texturesliderbar>
+			<textureslidernib border="1">osd/progressbar/progress_nib.png</textureslidernib>
+			<textureslidernibfocus border="1">osd/progressbar/progress_nib.png</textureslidernibfocus>
+			<info>Player.Progress</info>
+			<action>seek</action>
+			<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+		</control>
+</control>
+
+			</control>
+		</control>
+
+
+		<!-- Seekbar (Simple for Default VideoInfo) -->
+
+		<!-- Seekbar (Simple for Simple VideoInfo) -->
+
+
+		<!-- ===================== -->
+		<!-- == Weather & Clock == -->
+		<!-- ===================== -->
+		<control type="group" id="1">
+			<left>25</left>
+			<top>45</top>
+			<include>OpenCloseSlideAnimation</include>
+			<include>TextViewerHideAnimations</include>
+			<animation type="Visible">
+				<include>CommonOpenEffect</include>
+			</animation>
+			<animation type="Hidden">
+				<include>CommonCloseEffect</include>
+			</animation>
+			<include>WeatherAndClock</include>
+			<visible>Player.ShowInfo | [Window.IsActive(VideoOSD) + !String.IsEqual(Skin.String(FullScreenVideoStyle),2)] </visible>
+			<visible>!Window.IsActive(VideoBookmarks)</visible>
+		</control>
+
+		<include>DebugInfo</include>
+	</controls>
+</window>
