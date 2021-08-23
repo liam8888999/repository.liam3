@@ -434,7 +434,6 @@
 				<visible>Pvr.IsPlayingRecording</visible>
 			</control>
 
-
 			<!-- LiveTV Cover -->
 			<control type="group" id="1">
 				<left>300</left>
@@ -446,7 +445,7 @@
 
 
 			<control type="group" id="1">
-				<left>860</left>
+				<left>865</left>
 				<top>600</top>
 				<control type="image" id="1">
 					<width>156</width>
@@ -523,21 +522,6 @@
 				<control type="label" id="1">
 					<description>Title label</description>
 					<left>50</left>
-					<top>-90</top>
-					<height>30</height>
-					<width>550</width>
-					<align>center</align>
-					<label>$INFO[Player.Title]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>FontSize_28</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>77000000</shadowcolor>
-					<visible>!Pvr.IsPlayingRecording</visible>
-				</control>
-				<control type="label" id="1">
-					<description>Title label</description>
-					<left>50</left>
 					<top>-65</top>
 					<height>30</height>
 					<width>1000</width>
@@ -563,9 +547,11 @@
 					<shadowcolor>77000000</shadowcolor>
 					<visible>!String.IsEmpty(VideoPlayer.Season) + !Pvr.IsPlayingRecording</visible>
 				</control>
+
+
 				<control type="label" id="1">
 					<description>Title label</description>
-					<left>50</left>
+					<left>90</left>
 					<top>10</top>
 					<height>30</height>
 					<width>1000</width>
@@ -575,8 +561,115 @@
 					<font>FontSize_24</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
-					<visible>!VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+					<visible>!String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
 				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-90</top>
+					<height>30</height>
+					<width>600</width>
+					<align>center</align>
+					<label>$INFO[Player.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_28</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
+
+<control type="group" id="1">
+	<left>40</left>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>90</left>
+					<top>10</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_24</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-90</top>
+					<height>30</height>
+					<width>600</width>
+					<align>center</align>
+					<label>$INFO[Player.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_28</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>90</left>
+					<top>10</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_24</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-90</top>
+					<height>30</height>
+					<width>600</width>
+					<align>center</align>
+					<label>$INFO[Player.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_28</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>90</left>
+					<top>10</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_24</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-90</top>
+					<height>30</height>
+					<width>600</width>
+					<align>center</align>
+					<label>$INFO[Player.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_28</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
+			</control>
+
 
 <control type="group" id="1">
 	<left>190</left>
@@ -646,9 +739,37 @@
 				<top>-5</top>
 					<texture background="true">windows/bg/white.png</texture>
 					<animation effect="fade" end="30" condition="true">Conditional</animation>
-					<visible>!VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+					<visible>!String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				<width>501</width>
+				</control>
+
+				<control type="image" id="1">
+				<height>15</height>
+				<top>-5</top>
+					<texture background="true">windows/bg/white.png</texture>
+					<animation effect="fade" end="30" condition="true">Conditional</animation>
+					<visible>!String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				<width>501</width>
+				</control>
+				<control type="image" id="1">
+				<height>15</height>
+				<top>-5</top>
+					<texture background="true">windows/bg/white.png</texture>
+					<animation effect="fade" end="30" condition="true">Conditional</animation>
+					<visible>String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				<width>501</width>
+				</control>
+				<control type="image" id="1">
+				<height>15</height>
+				<top>-5</top>
+				<left>120</left>
+					<texture background="true">windows/bg/white.png</texture>
+					<animation effect="fade" end="30" condition="true">Conditional</animation>
+					<visible>String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
 					<width>501</width>
 				</control>
+
+
 				<control type="image" id="1">
 				<height>18</height>
 				<top>-10</top>
@@ -668,8 +789,8 @@
 				</control>
 				<control type="progress" id="1">
 					<width>501</width>
-					<visible>!VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
-					<description>Progressbar</description>
+					<visible>!String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				<description>Progressbar</description>
 					<include condition="Player.HasAudio">OSDProgressWidthSmall</include>
 					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthBig</include>
 					<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressWidthSmall</include>
@@ -680,9 +801,8 @@
 					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
 				</control>
 				<control type="slider" id="1">
-					<width>501</width>
-					<visible>!VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
-					<left>-3</left>
+					<width>506</width>
+					<visible>!String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
 					<top>-7</top>
 					<include condition="Player.HasAudio">OSDProgressSliderWidthSmall</include>
 					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthBig</include>
@@ -698,6 +818,105 @@
 					<action>seek</action>
 					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
 				</control>
+				<control type="progress" id="1">
+					<width>501</width>
+					<visible>!String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+					<description>Progressbar</description>
+					<include condition="Player.HasAudio">OSDProgressWidthSmall</include>
+					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthBig</include>
+					<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressWidthSmall</include>
+					<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthSmall</include>
+					<height>6</height>
+					<reveal>true</reveal>
+					<info>Player.Progress</info>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control>
+				<control type="slider" id="1">
+					<width>506</width>
+					<visible>!String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+					<top>-7</top>
+					<include condition="Player.HasAudio">OSDProgressSliderWidthSmall</include>
+					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthBig</include>
+					<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressSliderWidthSmall</include>
+					<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthSmall</include>
+					<!-- <width>1192</width> -->
+					<height>7</height>
+					<orientation>horizontal</orientation>
+					<texturesliderbar border="1">osd/progressbar/progress_bg.png</texturesliderbar>
+					<textureslidernib border="1">osd/progressbar/progress_nib.png</textureslidernib>
+					<textureslidernibfocus border="1">osd/progressbar/progress_nib.png</textureslidernibfocus>
+					<info>Player.Progress</info>
+					<action>seek</action>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control>
+				<control type="progress" id="1">
+					<width>501</width>
+					<visible>String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				<description>Progressbar</description>
+					<include condition="Player.HasAudio">OSDProgressWidthSmall</include>
+					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthBig</include>
+					<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressWidthSmall</include>
+					<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthSmall</include>
+					<height>6</height>
+					<reveal>true</reveal>
+					<info>Player.Progress</info>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control>
+				<control type="slider" id="1">
+					<width>506</width>
+					<visible>String.IsEmpty(Player.Art(poster)) + !String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+
+					<top>-7</top>
+					<include condition="Player.HasAudio">OSDProgressSliderWidthSmall</include>
+					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthBig</include>
+					<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressSliderWidthSmall</include>
+					<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthSmall</include>
+					<!-- <width>1192</width> -->
+					<height>7</height>
+					<orientation>horizontal</orientation>
+					<texturesliderbar border="1">osd/progressbar/progress_bg.png</texturesliderbar>
+					<textureslidernib border="1">osd/progressbar/progress_nib.png</textureslidernib>
+					<textureslidernibfocus border="1">osd/progressbar/progress_nib.png</textureslidernibfocus>
+					<info>Player.Progress</info>
+					<action>seek</action>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control>
+
+
+	<control type="group" id="1">
+		<left>120</left>
+				<control type="progress" id="1">
+					<width>501</width>
+					<visible>String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				<description>Progressbar</description>
+					<include condition="Player.HasAudio">OSDProgressWidthSmall</include>
+					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthBig</include>
+					<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressWidthSmall</include>
+					<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressWidthSmall</include>
+					<height>6</height>
+					<reveal>true</reveal>
+					<info>Player.Progress</info>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control>
+				<control type="slider" id="1">
+					<width>506</width>
+					<visible>String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + !VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+					<top>-7</top>
+					<include condition="Player.HasAudio">OSDProgressSliderWidthSmall</include>
+					<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthBig</include>
+					<include condition="!String.IsEmpty(Player.Art(poster))">OSDProgressSliderWidthSmall</include>
+					<include condition="!String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthSmall</include>
+					<!-- <width>1192</width> -->
+					<height>7</height>
+					<orientation>horizontal</orientation>
+					<texturesliderbar border="1">osd/progressbar/progress_bg.png</texturesliderbar>
+					<textureslidernib border="1">osd/progressbar/progress_nib.png</textureslidernib>
+					<textureslidernibfocus border="1">osd/progressbar/progress_nib.png</textureslidernibfocus>
+					<info>Player.Progress</info>
+					<action>seek</action>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				</control>
+			</control>
 
 				<!-- Live TV -->
 			<!--	<control type="progress" id="1">
@@ -758,10 +977,9 @@
 			<colordiffuse>red</colordiffuse>
 		</control>
 		<control type="slider" id="1">
-			<width>501</width>
+			<width>506</width>
 			<height>7</height>
 			<visible>true</visible>
-			<left>-3</left>
 			<top>-7</top>
 			<orientation>horizontal</orientation>
 			<texturesliderbar border="1">osd/progressbar/progress_bg.png</texturesliderbar>
@@ -788,9 +1006,8 @@
 			<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
 		</control>
 		<control type="slider" id="1">
-			<width>501</width>
+			<width>506</width>
 			<visible>Pvr.IsPlayingRecording</visible>
-			<left>-3</left>
 			<top>-7</top>
 			<include condition="Player.HasAudio">OSDProgressSliderWidthSmall</include>
 			<include condition="String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster))">OSDProgressSliderWidthBig</include>

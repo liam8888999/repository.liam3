@@ -3,7 +3,7 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[31000]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultLiveTV.png</icon>
 			<thumb />
 			<property name="labelID">31000</property>
@@ -21,7 +21,7 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<label>$LOCALIZE[342]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultMovies.png</icon>
 			<thumb />
 			<property name="labelID">movies</property>
@@ -39,7 +39,7 @@
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
 			<label>$LOCALIZE[31002]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultTVShows.png</icon>
 			<thumb />
 			<property name="labelID">31002</property>
@@ -57,7 +57,7 @@
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
 			<label>$LOCALIZE[3]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultVideo.png</icon>
 			<thumb />
 			<property name="labelID">videos</property>
@@ -74,7 +74,7 @@
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
 			<label>$LOCALIZE[2]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultAudio.png</icon>
 			<thumb />
 			<property name="labelID">music</property>
@@ -91,7 +91,7 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<label>$LOCALIZE[10002]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultPicture.png</icon>
 			<thumb />
 			<property name="labelID">pictures</property>
@@ -108,7 +108,7 @@
 		<item id="7">
 			<property name="id">$NUMBER[7]</property>
 			<label>$LOCALIZE[24001]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
 			<property name="labelID">24001</property>
@@ -125,7 +125,7 @@
 		<item id="8">
 			<property name="id">$NUMBER[8]</property>
 			<label>$LOCALIZE[31018]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>icons/big/Trailers.png</icon>
 			<thumb />
 			<property name="labelID">31018</property>
@@ -142,7 +142,7 @@
 		<item id="9">
 			<property name="id">$NUMBER[9]</property>
 			<label>$LOCALIZE[12600]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>icons/big/Weather.png</icon>
 			<thumb />
 			<property name="labelID">weather</property>
@@ -160,7 +160,7 @@
 		<item id="10">
 			<property name="id">$NUMBER[10]</property>
 			<label>$LOCALIZE[10004]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>icons/big/Settings.png</icon>
 			<thumb />
 			<property name="labelID">settings</property>
@@ -197,24 +197,6 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<property name="mainmenuid">1</property>
-			<label>$LOCALIZE[19138]</label>
-			<label2>Live TV</label2>
-			<icon>DefaultLiveTV.png</icon>
-			<thumb />
-			<property name="labelID">19138</property>
-			<property name="defaultID">19138</property>
-			<property name="translatedPath">ActivateWindow(TVTimerRules)</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(20).ListItem.Property(submenuVisibility),num-31000)</visible>
-			<onclick>ActivateWindow(TVTimerRules)</onclick>
-			<property name="path">ActivateWindow(TVTimerRules)</property>
-			<property name="list">TVTimerRules</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="group">31000</property>
-			<property name="isSubmenu">True</property>
-		</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19024]</label>
 			<label2 />
 			<icon>DefaultLiveTV.png</icon>
@@ -229,8 +211,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19069]</label>
 			<label2 />
@@ -246,8 +228,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19163]</label>
 			<label2 />
@@ -263,8 +245,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19040]</label>
 			<label2 />
@@ -280,8 +262,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[137]</label>
 			<label2 />
@@ -1293,7 +1275,7 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[31000]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultLiveTV.png</icon>
 			<thumb />
 			<property name="labelID">31000</property>
@@ -1332,25 +1314,6 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<property name="mainmenuid">1</property>
-			<label>$LOCALIZE[19138]</label>
-			<label2>Live TV</label2>
-			<icon>DefaultLiveTV.png</icon>
-			<thumb />
-			<property name="labelID">19138</property>
-			<property name="defaultID">19138</property>
-			<property name="translatedPath">ActivateWindow(TVTimerRules)</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Window(10000).Property(submenuVisibility),num-31000)</visible>
-			<onclick>ActivateWindow(TVTimerRules)</onclick>
-			<property name="path">ActivateWindow(TVTimerRules)</property>
-			<property name="list">TVTimerRules</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="group">31000</property>
-			<property name="isSubmenu">True</property>
-			<property name="submenuVisibility">num-31000</property>
-		</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19024]</label>
 			<label2 />
 			<icon>DefaultLiveTV.png</icon>
@@ -1366,8 +1329,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">num-31000</property>
 		</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19069]</label>
 			<label2 />
@@ -1384,8 +1347,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">num-31000</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19163]</label>
 			<label2 />
@@ -1402,8 +1365,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">num-31000</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19040]</label>
 			<label2 />
@@ -1420,8 +1383,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">num-31000</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[137]</label>
 			<label2 />
@@ -1441,7 +1404,7 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<label>$LOCALIZE[342]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultMovies.png</icon>
 			<thumb />
 			<property name="labelID">movies</property>
@@ -1693,7 +1656,7 @@
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
 			<label>$LOCALIZE[31002]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultTVShows.png</icon>
 			<thumb />
 			<property name="labelID">31002</property>
@@ -1891,7 +1854,7 @@
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
 			<label>$LOCALIZE[3]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultVideo.png</icon>
 			<thumb />
 			<property name="labelID">videos</property>
@@ -2016,7 +1979,7 @@
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
 			<label>$LOCALIZE[2]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultAudio.png</icon>
 			<thumb />
 			<property name="labelID">music</property>
@@ -2266,7 +2229,7 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<label>$LOCALIZE[10002]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultPicture.png</icon>
 			<thumb />
 			<property name="labelID">pictures</property>
@@ -2283,7 +2246,7 @@
 		<item id="7">
 			<property name="id">$NUMBER[7]</property>
 			<label>$LOCALIZE[24001]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
 			<property name="labelID">24001</property>
@@ -2421,7 +2384,7 @@
 		<item id="8">
 			<property name="id">$NUMBER[8]</property>
 			<label>$LOCALIZE[31018]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>icons/big/Trailers.png</icon>
 			<thumb />
 			<property name="labelID">31018</property>
@@ -2438,7 +2401,7 @@
 		<item id="9">
 			<property name="id">$NUMBER[9]</property>
 			<label>$LOCALIZE[12600]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>icons/big/Weather.png</icon>
 			<thumb />
 			<property name="labelID">weather</property>
@@ -2456,7 +2419,7 @@
 		<item id="10">
 			<property name="id">$NUMBER[10]</property>
 			<label>$LOCALIZE[10004]</label>
-			<label2>Common menu item</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>icons/big/Settings.png</icon>
 			<thumb />
 			<property name="labelID">settings</property>
@@ -2681,24 +2644,6 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<property name="mainmenuid">1</property>
-			<label>$LOCALIZE[19138]</label>
-			<label2>Live TV</label2>
-			<icon>DefaultLiveTV.png</icon>
-			<thumb />
-			<property name="labelID">19138</property>
-			<property name="defaultID">19138</property>
-			<property name="translatedPath">ActivateWindow(TVTimerRules)</property>
-			<visible>System.HasPVRAddon</visible>
-			<onclick>ActivateWindow(TVTimerRules)</onclick>
-			<property name="path">ActivateWindow(TVTimerRules)</property>
-			<property name="list">TVTimerRules</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="group">31000</property>
-			<property name="isSubmenu">True</property>
-		</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19024]</label>
 			<label2 />
 			<icon>DefaultLiveTV.png</icon>
@@ -2713,8 +2658,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19069]</label>
 			<label2 />
@@ -2730,8 +2675,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19163]</label>
 			<label2 />
@@ -2747,8 +2692,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19040]</label>
 			<label2 />
@@ -2764,8 +2709,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[137]</label>
 			<label2 />
@@ -2803,24 +2748,6 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<property name="mainmenuid">1</property>
-			<label>$LOCALIZE[19138]</label>
-			<label2>Live TV</label2>
-			<icon>DefaultLiveTV.png</icon>
-			<thumb />
-			<property name="labelID">19138</property>
-			<property name="defaultID">19138</property>
-			<property name="translatedPath">ActivateWindow(TVTimerRules)</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Window(10000).Property(submenuVisibility),num-31000)</visible>
-			<onclick>ActivateWindow(TVTimerRules)</onclick>
-			<property name="path">ActivateWindow(TVTimerRules)</property>
-			<property name="list">TVTimerRules</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="group">31000</property>
-			<property name="isSubmenu">True</property>
-		</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19024]</label>
 			<label2 />
 			<icon>DefaultLiveTV.png</icon>
@@ -2835,8 +2762,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19069]</label>
 			<label2 />
@@ -2852,8 +2779,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19163]</label>
 			<label2 />
@@ -2869,8 +2796,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[19040]</label>
 			<label2 />
@@ -2886,8 +2813,8 @@
 			<property name="group">31000</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">1</property>
 			<label>$LOCALIZE[137]</label>
 			<label2 />
