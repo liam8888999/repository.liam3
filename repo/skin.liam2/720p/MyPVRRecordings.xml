@@ -5,6 +5,33 @@
 	<views>50</views>
 	<controls>
 		<include>BackgroundItemsPVR</include>
+		<control type="group">
+			<top>650</top>
+			<left>454</left>
+			<control type="group">
+				<left>40</left>
+				<control type="label">
+					<description>Disk usage text</description>
+					<width>300</width>
+					<height>20</height>
+					<label>$INFO[PVR.backenddiskspace]</label>
+					<textcolor>white</textcolor>
+					<align>center</align>
+					<font>font13</font>
+				</control>
+				<control type="progress">
+					<description>Disk usage bar</description>
+					<top>20</top>
+					<left>20</left>
+					<width>260</width>
+					<height>15</height>>
+					<info>PVR.backenddiskspaceprogr</info>
+					<midtexture colordiffuse="$VAR[Textures.GlobalColor]">windows/bg/white.png</midtexture>
+					<texturebg colordiffuse="themecolor" border="3,0,3,0">windows/bg/white.png</texturebg>
+					<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+				</control>
+			</control>
+		</control>
 
 		<control type="group">
 			<description>Recordings</description>
