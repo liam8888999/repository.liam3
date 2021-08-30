@@ -5,6 +5,8 @@
 	<views>50</views>
 	<controls>
 		<include>BackgroundItemsPVR</include>
+
+
 		<control type="group">
 			<top>650</top>
 			<left>454</left>
@@ -32,6 +34,9 @@
 				</control>
 			</control>
 		</control>
+
+
+
 
 		<control type="group">
 			<description>Recordings</description>
@@ -61,6 +66,7 @@
 				<scrolltime tween="cubic" easing="out">300</scrolltime>
 				<itemlayout height="50">
 					<control type="group">
+
 						<control type="image">
 							<left>14</left>
 							<top>8</top>

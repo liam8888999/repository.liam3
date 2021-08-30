@@ -77,6 +77,16 @@
 				<animation effect="slide" start="0,0" end="0,-80" time="250" condition="![String.IsEmpty(Window(VideoOSD).Property(ShowPlot)) | String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 			</control>
 
+			<control type="image" id="1">
+				<left>50</left>
+				<top>660</top>
+				<width>64</width>
+				<height>64</height>
+				<aspectratio>keep</aspectratio>
+				<texture>windows/pvr/rec_epg.png</texture>
+<visible>Pvr.IsRecordingPlayingChannel</visible>
+			</control>
+
 			<!-- Info -->
 			<control type="textbox" id="2">
 				<left>180</left>
@@ -343,7 +353,7 @@
 		<!-- Seekbar (Default) -->
 		<control type="group" id="1">
 			<visible>!String.IsEqual(Skin.String(FullScreenVideoStyle),2)</visible>
-			<visible>Window.IsActive(FullScreenVideo) + [[Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek | Player.Caching | Integer.IsGreater(PVR.ChannelNumberInput,0)] + ![String.IsEqual(Skin.String(DialogSeekBarStyle),2) | String.IsEqual(Skin.String(DialogSeekBarStyle),3)]] + ![Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(SliderDialog) | Window.IsActive(SubtitleSearch) | Window.IsActive(ShutdownMenu) | Window.IsActive(favourites) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVRChannelGuide) | Window.IsActive(PVRGuideInfo)]</visible>
+			<visible>Window.IsActive(FullScreenVideo) + [[Player.Paused | [Player.Forwarding + !System.IdleTime(3)] | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek | Player.Caching | Integer.IsGreater(PVR.ChannelNumberInput,0)] + ![String.IsEqual(Skin.String(DialogSeekBarStyle),2) | String.IsEqual(Skin.String(DialogSeekBarStyle),3)]] + ![Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(SliderDialog) | Window.IsActive(SubtitleSearch) | Window.IsActive(ShutdownMenu) | Window.IsActive(favourites) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVRChannelGuide) | Window.IsActive(PVRGuideInfo)]</visible>
 <!--	<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" time="350" center="640,360" start="150" end="100" tween="cubic" easing="out"/>
 				<effect type="fade" time="350" start="0" easing="out" end="100"/>
@@ -481,6 +491,15 @@
 				<left>210</left>
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="180,0" condition="[VideoPlayer.Content(Movies) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Files) + !String.IsEmpty(Player.Art(poster))] | [VideoPlayer.Content(Episodes) + !String.IsEmpty(Player.Art(tvshow.poster))] | VideoPlayer.Content(LiveTV) | Player.HasAudio">Conditional</animation>
+				<control type="image" id="1">
+					<left>-80</left>
+					<top>0</top>
+					<width>64</width>
+					<height>64</height>
+					<aspectratio>keep</aspectratio>
+					<texture>windows/pvr/rec_epg.png</texture>
+	<visible>Pvr.IsRecordingPlayingChannel</visible>
+				</control>
 				<control type="label" id="1">
 					<description>Title label</description>
 					<left>420</left>
@@ -953,6 +972,7 @@
 					<action>seek</action>
 					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
 				</control> -->
+				<control type="group" id="1">
 				<control type="progress" id="1">
 					<width>501</width>
 					<top>-10</top>
@@ -989,6 +1009,7 @@
 			<info>PVR.TimeShiftSeekbar</info>
 			<visible>VideoPlayer.Content(LiveTV)</visible>
 		</control>
+	</control>
 
 	<control type="group" id="1">
 		<left>190</left>

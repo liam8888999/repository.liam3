@@ -139,10 +139,10 @@
 						<width>60</width>
 						<height>45</height>
 						<font>FontSize_16B</font>
-						<textcolor>viewsinfo</textcolor>
+						<textcolor>white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!ListItem.IsRecording + !ListItem.HasTimer</visible>
+						<visible>!ListItem.IsRecording + !ListItem.HasTimer + !ListItem.HasRecording + !Listitem.TimerHasConflict + !ListItem.TimerHasError</visible>
 					</control>
 					<control type="label" id="1">
 						<left>30</left>
@@ -150,10 +150,19 @@
 						<width>45</width>
 						<height>45</height>
 						<font>FontSize_16B</font>
-						<textcolor>viewsinfo</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>ListItem.IsRecording | ListItem.HasTimer</visible>
+					</control>
+					<control type="label" id="1">
+						<left>30</left>
+						<top>0</top>
+						<width>45</width>
+						<height>45</height>
+						<font>FontSize_16B</font>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>ListItem.HasRecording + !ListItem.IsRecording</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -165,12 +174,39 @@
 						<visible>ListItem.IsRecording</visible>
 					</control>
 					<control type="image">
+						<left>0</left>
+						<top>8</top>
+						<width>26</width>
+						<height>26</height>
+						<aspectratio>keep</aspectratio>
+						<texture>myextras/recorded.png</texture>
+						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.TimerHasError + !ListItem.TimerHasConflict</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>8</top>
+						<width>26</width>
+						<height>26</height>
+						<aspectratio>keep</aspectratio>
+						<texture>myextras/error.png</texture>
+						<visible>!ListItem.HasRecording + !ListItem.IsRecording + ListItem.TimerHasError + !ListItem.TimerHasConflict</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>8</top>
+						<width>26</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<texture>myextras/error.png</texture>
+						<visible>!ListItem.HasRecording + !ListItem.IsRecording + !ListItem.TimerHasError + ListItem.TimerHasConflict</visible>
+					</control>
+					<control type="image">
 						<left>4</left>
 						<top>10</top>
 						<width>26</width>
 						<height>26</height>
 						<aspectratio>keep</aspectratio>
-						<colordiffuse>viewsinfo</colordiffuse>
+						<colordiffuse>ccffffff</colordiffuse>
 						<texture>windows/pvr/timer_epg.png</texture>
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
@@ -195,7 +231,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!ListItem.IsRecording + !ListItem.HasTimer</visible>
+						<visible>!ListItem.IsRecording + !ListItem.HasTimer + !ListItem.HasRecording + !Listitem.TimerHasConflict + !ListItem.TimerHasError</visible>
 					</control>
 					<control type="label" id="1">
 						<left>30</left>
@@ -204,9 +240,18 @@
 						<height>45</height>
 						<font>FontSize_16B</font>
 						<textcolor>white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>ListItem.IsRecording | ListItem.HasTimer</visible>
+					</control>
+					<control type="label" id="1">
+						<left>30</left>
+						<top>0</top>
+						<width>45</width>
+						<height>45</height>
+						<font>FontSize_16B</font>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>ListItem.HasRecording + !ListItem.IsRecording</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -216,6 +261,33 @@
 						<aspectratio>keep</aspectratio>
 						<texture>windows/pvr/rec_epg.png</texture>
 						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>8</top>
+						<width>26</width>
+						<height>26</height>
+						<aspectratio>keep</aspectratio>
+						<texture>myextras/recorded.png</texture>
+						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.TimerHasError + !ListItem.TimerHasConflict</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>8</top>
+						<width>26</width>
+						<height>26</height>
+						<aspectratio>keep</aspectratio>
+						<texture>myextras/error.png</texture>
+						<visible>!ListItem.HasRecording + !ListItem.IsRecording + ListItem.TimerHasError + !ListItem.TimerHasConflict</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>8</top>
+						<width>26</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<texture>myextras/error.png</texture>
+						<visible>!ListItem.HasRecording + !ListItem.IsRecording + !ListItem.TimerHasError + ListItem.TimerHasConflict</visible>
 					</control>
 					<control type="image">
 						<left>4</left>

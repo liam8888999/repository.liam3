@@ -1023,7 +1023,7 @@
 				<width min="10" max="200">auto</width>
 				<height>26</height>
 				<font>FontSize_20</font>
-				<textcolor>$VAR[Text.GlobalColor]</textcolor>
+				<textcolor>white</textcolor>
 				<shadowcolor>77000000</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -1041,7 +1041,7 @@
 					<width>20</width>
 					<height>18</height>
 					<font>ClockFont</font>
-					<textcolor>$VAR[Text.GlobalColor]</textcolor>
+					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
 					<label>31030</label>
 				</control>
@@ -1051,7 +1051,7 @@
 					<top>0</top>
 					<width>20</width>
 					<height>18</height>
-					<textcolor>$VAR[Text.GlobalColor]</textcolor>
+					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
 					<font>ClockFont</font>
 					<label>31031</label>
