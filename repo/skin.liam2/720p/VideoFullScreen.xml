@@ -538,6 +538,21 @@
 					<pauseatend>5000</pauseatend>
 					<visible>VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
 				</control>
+
+				<control type="label" id="1">
+					<description>Title label</description>
+					<left>50</left>
+					<top>-90</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>FontSize_24</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>77000000</shadowcolor>
+				<visible>VideoPlayer.Content(LiveTV) + !Pvr.IsPlayingRecording</visible>
+				</control>
 				<control type="label" id="1">
 					<description>Title label</description>
 					<left>50</left>
@@ -588,10 +603,8 @@
 					<top>-90</top>
 					<height>30</height>
 					<width>600</width>
-					<align>center</align>
 					<label>$INFO[Player.Title]</label>
 					<align>left</align>
-					<aligny>center</aligny>
 					<font>FontSize_28</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
@@ -620,10 +633,8 @@
 					<top>-90</top>
 					<height>30</height>
 					<width>600</width>
-					<align>center</align>
 					<label>$INFO[Player.Title]</label>
 					<align>left</align>
-					<aligny>center</aligny>
 					<font>FontSize_28</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
@@ -649,10 +660,8 @@
 					<top>-90</top>
 					<height>30</height>
 					<width>600</width>
-					<align>center</align>
 					<label>$INFO[Player.Title]</label>
 					<align>left</align>
-					<aligny>center</aligny>
 					<font>FontSize_28</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
@@ -678,10 +687,8 @@
 					<top>-90</top>
 					<height>30</height>
 					<width>600</width>
-					<align>center</align>
 					<label>$INFO[Player.Title]</label>
 					<align>left</align>
-					<aligny>center</aligny>
 					<font>FontSize_28</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
@@ -712,10 +719,8 @@
 					<top>-90</top>
 					<height>30</height>
 					<width>550</width>
-					<align>center</align>
 					<label>$INFO[Player.Title]</label>
 					<align>left</align>
-					<aligny>center</aligny>
 					<font>FontSize_28</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>

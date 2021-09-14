@@ -110,6 +110,7 @@
 					<onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">SendClick(28)</onclick>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+					<visible>!Window.IsActive(10702)</visible>
 				</control>
 				<control type="button" id="132">
 					<description>Recordings</description>
@@ -117,12 +118,14 @@
 					<include>TopLeftMenusButton</include>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+<visible>!Window.IsActive(tvrecordings)</visible>
 				</control>
 				<control type="button" id="133">
 					<description>Timers</description>
 					<label>Scheduled Recordings</label>
 					<include>TopLeftMenusButton</include>
-					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+					<onclick>ActivateWindow(tvtimers)</onclick>
+					<visible>!Window.IsActive(tvtimers)</visible>
 				</control>
 				<control type="button" id="134">
 					<description>Timer Rules</description>
@@ -130,6 +133,7 @@
 					<label>Series Recordings</label>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
+					<visible>!Window.IsActive(tvtimerrules)</visible>
 				</control>
 				<control type="togglebutton" id="99">
 					<description>Show Program Info</description>
@@ -326,6 +330,7 @@
 						<top>-40</top>
 						<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
 					</control>
+
 			<!-- Plot Info -->
 			<control type="group">
 				<top>-35</top>
@@ -351,7 +356,7 @@
 			<left>45</left>
 			<top>190</top>
 			<visible>!String.IsEmpty(ListItem.Date) + !String.IsEmpty(ListItem.Title)</visible>
-			<control type="image">
+	<!--		<control type="image">
 				<left>60</left>
 				<top>-80</top>
 				<width>255</width>
@@ -371,6 +376,29 @@
 				<texture>$INFO[Listitem.EPGEventIcon]</texture>
 				<bordertexture border="9">thumbs/thumb_border.png</bordertexture>
 				<bordersize>12</bordersize>
+			</control> -->
+
+			<control type="image">
+				<left>60</left>
+				<top>-80</top>
+				<width>255</width>
+				<height>2000</height>
+				<aspectratio align="right" aligny="top">keep</aspectratio>
+				<texture>$INFO[ListItem.EPGEventIcon]</texture>
+				<bordertexture border="9">thumbs/thumb_border.png</bordertexture>
+				<bordersize>12</bordersize>
+				<visible>!Window.IsActive(tvtimerrules)</visible>
+			</control>
+			<control type="image">
+				<left>60</left>
+				<top>-80</top>
+				<width>255</width>
+				<height>2000</height>
+				<aspectratio align="right" aligny="top">keep</aspectratio>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="9">thumbs/thumb_border.png</bordertexture>
+				<bordersize>12</bordersize>
+				<visible>String.IsEmpty(ListItem.EPGEventIcon) + !Window.IsActive(tvtimerrules)</visible>
 			</control>
 			<control type="label">
 				<top>-150</top>
@@ -384,12 +412,12 @@
 			</control>
 			<control type="label">
 				<top>-110</top>
-				<left>350</left>
+				<left>750</left>
 				<width>940</width>
 				<font>FontSize_24</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>99000000</shadowcolor>
-				<label>$INFO[ListItem.EpisodeName] | S$INFO[ListItem.Season] E$INFO[ListItem.Episode] - Episode $INFO[ListItem.Episode] of Season $INFO[ListItem.Season]</label>
+				<label>|  $INFO[ListItem.EpisodeName]</label>
 				<visible>!String.IsEmpty(ListItem.EpisodeName)</visible>
 			</control>
 			<control type="label">
@@ -400,7 +428,7 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>99000000</shadowcolor>
 				<label>S$INFO[ListItem.Season] E$INFO[ListItem.Episode] - Episode $INFO[ListItem.Episode] of Season $INFO[ListItem.Season]</label>
-				<visible>String.IsEmpty(ListItem.EpisodeName)</visible>
+				<visible>!String.IsEmpty(ListItem.Season)</visible>
 			</control>
 			<control type="label">
 				<top>-80</top>

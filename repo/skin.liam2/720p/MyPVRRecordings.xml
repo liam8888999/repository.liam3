@@ -91,7 +91,7 @@
 							<textcolor>white</textcolor>
 							<shadowcolor>77000000</shadowcolor>
 							<selectedcolor>$VAR[Text.GlobalColor]</selectedcolor>
-							<label>S$INFO[VideoPlayer.Season,, ]E$INFO[VideoPlayer.Episode]$INFO[ListItem.EpisodeName, - ]</label>
+							<label>S$INFO[VideoPlayer.Season]E$INFO[VideoPlayer.Episode]$INFO[ListItem.EpisodeName, - ]</label>
 							<visible>!String.IsEmpty(ListItem.Season)</visible>
 							<animation effect="slide" start="0,0" end="25,0" time="0" tween="sine" easing="inout" condition="String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)">Conditional</animation>
 						</control>

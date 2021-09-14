@@ -562,16 +562,7 @@
 			<align>left</align>
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
-			<control type="label">
-				<height>53</height>
-				<width min="10" max="1000">auto</width>
-				<label>$INFO[Player.Time]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>FontSize_50</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>77000000</shadowcolor>
-			</control>
+
 			<!-- DISABLED
 			<control type="group">
 				<width>15</width>

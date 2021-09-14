@@ -32,10 +32,10 @@
 				<timeblocks>40</timeblocks>
 				<rulerunit>6</rulerunit>
 				<viewtype label="19032">list</viewtype>
-				<progresstexture border="0,59,19,19">windows/pvr/EPGProgressIndicator.png</progresstexture>
-				<rulerlayout height="50" width="40">
+				<progresstexture border="0,59,19,19" left="300">windows/pvr/EPGProgressIndicator.png</progresstexture>
+				<rulerlayout height="50" width="60">
 					<control type="label" id="2">
-						<left>10</left>
+						<left>0</left>
 						<top>10</top>
 						<width>325</width>
 						<height>50</height>
@@ -73,10 +73,17 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					</control>
+					<control type="image" id="1">
+						<left>75</left>
+						<top>5</top>
+						<width>43</width>
+						<height>35</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
 					<control type="label" id="1">
-						<left>87</left>
+						<left>120</left>
 						<top>0</top>
-						<width>243</width>
+						<width>198</width>
 						<height>45</height>
 						<font>FontSize_20</font>
 						<textcolor>viewsinfo</textcolor>
@@ -114,20 +121,27 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					</control>
+					<control type="image" id="1">
+						<left>75</left>
+						<top>5</top>
+						<width>43</width>
+						<height>35</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
 					<control type="label" id="1">
-						<left>87</left>
+						<left>120</left>
 						<top>0</top>
-						<width>243</width>
+						<width>198</width>
 						<height>45</height>
 						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
+						<textcolor>viewsinfo</textcolor>
 						<shadowcolor>77000000</shadowcolor>
-						<selectedcolor>white</selectedcolor>
+						<selectedcolor>$VAR[Text.GlobalColor]</selectedcolor>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</focusedchannellayout>
 
-				<itemlayout height="50" width="102">
+				<itemlayout height="50" width="99">
 					<include content="ListSeperatorNoFocus">
 						<param name="id" value="2"/>
 						<param name="width" value="98"/>
@@ -211,7 +225,7 @@
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="50" width="102">
+				<focusedlayout height="50" width="99">
 					<include content="ListSeperatorNoFocus">
 						<param name="id" value="2"/>
 						<param name="width" value="98"/>
