@@ -73,7 +73,7 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					</control>
-					<control type="image" id="1">
+			<control type="image" id="1">
 						<left>75</left>
 						<top>5</top>
 						<width>43</width>

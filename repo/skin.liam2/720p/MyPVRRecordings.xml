@@ -67,6 +67,7 @@
 				<itemlayout height="50">
 					<control type="group">
 
+
 						<control type="image">
 							<left>14</left>
 							<top>8</top>

@@ -356,33 +356,34 @@
 			<left>45</left>
 			<top>190</top>
 			<visible>!String.IsEmpty(ListItem.Date) + !String.IsEmpty(ListItem.Title)</visible>
-	<!--		<control type="image">
+	<control type="image">
 				<left>60</left>
-				<top>-80</top>
+				<top>-130</top>
 				<width>255</width>
-				<height>150</height>
+				<height>200</height>
 				<aspectratio align="right" aligny="top">keep</aspectratio>
 				<texture>$INFO[Listitem.Icon]</texture>
 				<bordertexture border="9">thumbs/thumb_border.png</bordertexture>
-				<visible>String.IsEmpty(ListItem.EPGEventIcon)</visible>
+				<visible>String.IsEmpty(ListItem.EPGEventIcon) + !ListItem.IsFolder</visible>
 				<bordersize>12</bordersize>
 			</control>
 			<control type="image">
 				<left>60</left>
-				<top>-80</top>
+				<top>-130</top>
 				<width>255</width>
-				<height>2000</height>
+				<height>200</height>
 				<aspectratio align="right" aligny="top">keep</aspectratio>
 				<texture>$INFO[Listitem.EPGEventIcon]</texture>
 				<bordertexture border="9">thumbs/thumb_border.png</bordertexture>
+				<visible>!ListItem.IsFolder</visible>
 				<bordersize>12</bordersize>
-			</control> -->
+			</control>
 
-			<control type="image">
+	<control type="image">
 				<left>60</left>
-				<top>-80</top>
+				<top>-130</top>
 				<width>255</width>
-				<height>2000</height>
+				<height>200</height>
 				<aspectratio align="right" aligny="top">keep</aspectratio>
 				<texture>$INFO[ListItem.EPGEventIcon]</texture>
 				<bordertexture border="9">thumbs/thumb_border.png</bordertexture>
@@ -391,9 +392,9 @@
 			</control>
 			<control type="image">
 				<left>60</left>
-				<top>-80</top>
+				<top>-130</top>
 				<width>255</width>
-				<height>2000</height>
+				<height>200</height>
 				<aspectratio align="right" aligny="top">keep</aspectratio>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<bordertexture border="9">thumbs/thumb_border.png</bordertexture>
