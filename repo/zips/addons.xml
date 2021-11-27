@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="skin.liam2" version="1.5" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="1.6" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.0.17"/>
@@ -30,6 +30,7 @@
     -add new space label to recordings pvr
     -fix general bugs
     -fix image too big and scrolling time bug
+    -add option for more channels
   </news>
 		<assets>
 			<icon>resources/icon.png</icon>

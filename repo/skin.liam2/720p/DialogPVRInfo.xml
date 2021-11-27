@@ -337,7 +337,7 @@
 					<visible>Window.IsVisible(PVRRecordingInfo) | Window.IsVisible(PVRGuideInfo)</visible>
 				</control>
 				<control type="button" id="6">
-					<description>Record</description>
+					<description>Record Once</description>
 					<include>TopMenuButton</include>
 					<label/>
 					<oninfo>PreviousMenu</oninfo>

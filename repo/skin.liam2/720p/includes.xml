@@ -555,7 +555,7 @@
 				<include>CommonHiddenEffectTwo</include>
 			</animation>
 			<left>45</left>
-			<top>640</top>
+			<top>650</top>
 			<width>1000</width>
 			<height>60</height>
 			<align>left</align>
