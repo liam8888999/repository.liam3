@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="skin.liam2" version="1.6.1" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="1.6.2" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.0.17"/>
@@ -31,6 +31,7 @@
     -fix general bugs
     -fix image too big and scrolling time bug
     -add option for more channels (bug fix)
+    -add options menu to recordings
   </news>
 		<assets>
 			<icon>resources/icon.png</icon>

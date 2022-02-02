@@ -4,7 +4,7 @@
   <menucontrol>9000</menucontrol>
 	<views>50</views>
 	<controls>
-		<include>BackgroundItemsPVR</include>
+	<include>BackgroundItemsPVR</include>
 
 
 		<control type="group">
@@ -56,7 +56,8 @@
 				<top>290</top>
 				<width>1200</width>
 				<height>350</height>
-				<onleft>132</onleft>
+			<!--	<onleft>132</onleft> -->
+				<onleft>Action(menu)</onleft>
 				<onright>60</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
