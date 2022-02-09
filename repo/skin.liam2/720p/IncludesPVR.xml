@@ -411,7 +411,7 @@
 				<label>[B]$INFO[ListItem.Title][/B] | $INFO[ListItem.ChannelName]</label>
 <align>center</align>
 			</control>
-			<control type="label">
+	<!--		<control type="label">
 				<top>-110</top>
 				<left>750</left>
 				<width>940</width>
@@ -421,6 +421,7 @@
 				<label>|  $INFO[ListItem.EpisodeName]</label>
 				<visible>!String.IsEmpty(ListItem.EpisodeName)</visible>
 			</control>
+		-->
 			<control type="label">
 				<top>-110</top>
 				<left>350</left>
@@ -428,7 +429,7 @@
 				<font>FontSize_24</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>99000000</shadowcolor>
-				<label>S$INFO[ListItem.Season] E$INFO[ListItem.Episode] - Episode $INFO[ListItem.Episode] of Season $INFO[ListItem.Season]</label>
+				<label>S$INFO[ListItem.Season] E$INFO[ListItem.Episode] - Episode $INFO[ListItem.Episode] of Season $INFO[ListItem.Season]$INFO[ListItem.EpisodeName, | ]</label>
 				<visible>!String.IsEmpty(ListItem.Season)</visible>
 			</control>
 			<control type="label">
