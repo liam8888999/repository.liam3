@@ -76,6 +76,20 @@
 							<height>30</height>
 							<texture background="true" colordiffuse="viewsinfo">$INFO[ListItem.Icon]</texture>
 						</control>
+
+
+						<control type="progress">
+							<description>watch progress bar</description>
+							<top>0</top>
+							<left>74</left>
+							<width>780</width>
+							<height>45</height>>
+							<info>ListItem.PercentPlayed</info>
+							<midtexture colordiffuse="FF595959">windows/bg/white.png</midtexture>
+							<texturebg colordiffuse="BG.GlobalColor" border="3,0,3,0">windows/bg/white.png</texturebg>
+							<visible>!ListItem.IsFolder</visible>
+						</control>
+
 						<control type="image">
 							<left>83</left>
 							<top>14</top>
@@ -84,6 +98,7 @@
 							<texture background="true" colordiffuse="viewsinfo">overlays/unwatched/list/UnWatched.png</texture>
 							<visible>String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						</control>
+
 						<control type="label">
 							<left>85</left>
 							<top>0</top>
@@ -92,7 +107,7 @@
 							<font>FontSize_22</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>77000000</shadowcolor>
-							<selectedcolor>$VAR[Text.GlobalColor]</selectedcolor>
+							<selectedcolor>bgcolor</selectedcolor>
 							<label>S$INFO[VideoPlayer.Season]E$INFO[VideoPlayer.Episode]$INFO[ListItem.EpisodeName, - ]</label>
 							<visible>!String.IsEmpty(ListItem.Season)</visible>
 							<animation effect="slide" start="0,0" end="25,0" time="0" tween="sine" easing="inout" condition="String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)">Conditional</animation>
@@ -158,6 +173,20 @@
 							<height>30</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 						</control>
+
+
+						<control type="progress">
+							<description>watch progress bar</description>
+							<top>0</top>
+							<left>74</left>
+							<width>780</width>
+							<height>45</height>>
+							<info>ListItem.PercentPlayed</info>
+							<midtexture colordiffuse="FF595959">windows/bg/white.png</midtexture>
+							<texturebg colordiffuse="BG.GlobalColor" border="3,0,3,0">windows/bg/white.png</texturebg>
+							<visible>Integer.IsGreater(ListItem.PercentPlayed,1) + !ListItem.IsFolder</visible>
+						</control>
+
 						<control type="image">
 							<left>83</left>
 							<top>14</top>
@@ -166,6 +195,8 @@
 							<texture background="true">overlays/unwatched/list/UnWatched.png</texture>
 							<visible>String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						</control>
+
+
 						<control type="label">
 							<left>85</left>
 							<top>0</top>

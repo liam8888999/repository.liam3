@@ -3,7 +3,7 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[31000]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultLiveTV.png</icon>
 			<thumb />
 			<property name="labelID">31000</property>
@@ -21,7 +21,7 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<label>$LOCALIZE[342]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultMovies.png</icon>
 			<thumb />
 			<property name="labelID">movies</property>
@@ -39,7 +39,7 @@
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
 			<label>$LOCALIZE[31002]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultTVShows.png</icon>
 			<thumb />
 			<property name="labelID">31002</property>
@@ -57,7 +57,7 @@
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
 			<label>$LOCALIZE[3]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultVideo.png</icon>
 			<thumb />
 			<property name="labelID">videos</property>
@@ -74,7 +74,7 @@
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
 			<label>$LOCALIZE[2]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultAudio.png</icon>
 			<thumb />
 			<property name="labelID">music</property>
@@ -91,7 +91,7 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<label>$LOCALIZE[10002]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultPicture.png</icon>
 			<thumb />
 			<property name="labelID">pictures</property>
@@ -108,7 +108,7 @@
 		<item id="7">
 			<property name="id">$NUMBER[7]</property>
 			<label>$LOCALIZE[24001]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
 			<property name="labelID">24001</property>
@@ -125,7 +125,7 @@
 		<item id="8">
 			<property name="id">$NUMBER[8]</property>
 			<label>$LOCALIZE[31018]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>icons/big/Trailers.png</icon>
 			<thumb />
 			<property name="labelID">31018</property>
@@ -142,7 +142,7 @@
 		<item id="9">
 			<property name="id">$NUMBER[9]</property>
 			<label>$LOCALIZE[12600]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>icons/big/Weather.png</icon>
 			<thumb />
 			<property name="labelID">weather</property>
@@ -160,7 +160,7 @@
 		<item id="10">
 			<property name="id">$NUMBER[10]</property>
 			<label>$LOCALIZE[10004]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>icons/big/Settings.png</icon>
 			<thumb />
 			<property name="labelID">settings</property>
@@ -173,6 +173,23 @@
 			<property name="submenuVisibility">settings</property>
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
+			</item>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
+			<label>test</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">/Users/liam/test.sh</property>
+			<property name="defaultID" />
+			<onclick condition="Window.IsActive(PlayerControls.xml)">Close</onclick>
+			<onclick>RunScript(/Users/liam/test.sh)</onclick>
+			<property name="path">RunScript(/Users/liam/test.sh)</property>
+			<property name="list">RunScript(/Users/liam/test.sh)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">users-liam-test-sh</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
 			</item>
 		</include>
 	<include />
@@ -1097,6 +1114,23 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">10</property>
+			<label>&lt;None&gt;</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">none</property>
+			<property name="defaultID" />
+			<visible>[system.getbool(eventlog.enabled)] + String.IsEqual(Container(20).ListItem.Property(submenuVisibility),settings)</visible>
+			<onclick>ActivateWindow(EventLog,events://,return)</onclick>
+			<property name="path">ActivateWindow(EventLog,events://,return)</property>
+			<property name="list">events://</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[166]</label>
 			<label2 />
 			<icon>icons/big/Skin.png</icon>
@@ -1110,8 +1144,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="2">
-			<property name="id">$NUMBER[2]</property>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14206]</label>
 			<label2 />
@@ -1126,8 +1160,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14200]</label>
 			<label2 />
@@ -1142,8 +1176,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14211]</label>
 			<label2 />
@@ -1158,8 +1192,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[31000]</label>
 			<label2 />
@@ -1174,8 +1208,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[24001]</label>
 			<label2 />
@@ -1190,8 +1224,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14036]</label>
 			<label2 />
@@ -1206,8 +1240,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="8">
-			<property name="id">$NUMBER[8]</property>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[13000]</label>
 			<label2 />
@@ -1222,8 +1256,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="9">
-			<property name="id">$NUMBER[9]</property>
+		<item id="10">
+			<property name="id">$NUMBER[10]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[130]</label>
 			<label2 />
@@ -1238,8 +1272,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="10">
-			<property name="id">$NUMBER[10]</property>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[13200]</label>
 			<label2 />
@@ -1254,8 +1288,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="11">
-			<property name="id">$NUMBER[11]</property>
+		<item id="12">
+			<property name="id">$NUMBER[12]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[31016]</label>
 			<label2 />
@@ -1275,7 +1309,7 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[31000]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultLiveTV.png</icon>
 			<thumb />
 			<property name="labelID">31000</property>
@@ -1404,7 +1438,7 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<label>$LOCALIZE[342]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultMovies.png</icon>
 			<thumb />
 			<property name="labelID">movies</property>
@@ -1656,7 +1690,7 @@
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
 			<label>$LOCALIZE[31002]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultTVShows.png</icon>
 			<thumb />
 			<property name="labelID">31002</property>
@@ -1854,7 +1888,7 @@
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
 			<label>$LOCALIZE[3]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultVideo.png</icon>
 			<thumb />
 			<property name="labelID">videos</property>
@@ -1979,7 +2013,7 @@
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
 			<label>$LOCALIZE[2]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultAudio.png</icon>
 			<thumb />
 			<property name="labelID">music</property>
@@ -2229,7 +2263,7 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<label>$LOCALIZE[10002]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultPicture.png</icon>
 			<thumb />
 			<property name="labelID">pictures</property>
@@ -2246,7 +2280,7 @@
 		<item id="7">
 			<property name="id">$NUMBER[7]</property>
 			<label>$LOCALIZE[24001]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
 			<property name="labelID">24001</property>
@@ -2384,7 +2418,7 @@
 		<item id="8">
 			<property name="id">$NUMBER[8]</property>
 			<label>$LOCALIZE[31018]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>icons/big/Trailers.png</icon>
 			<thumb />
 			<property name="labelID">31018</property>
@@ -2401,7 +2435,7 @@
 		<item id="9">
 			<property name="id">$NUMBER[9]</property>
 			<label>$LOCALIZE[12600]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>icons/big/Weather.png</icon>
 			<thumb />
 			<property name="labelID">weather</property>
@@ -2419,7 +2453,7 @@
 		<item id="10">
 			<property name="id">$NUMBER[10]</property>
 			<label>$LOCALIZE[10004]</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<label2>Common menu item</label2>
 			<icon>icons/big/Settings.png</icon>
 			<thumb />
 			<property name="labelID">settings</property>
@@ -2438,6 +2472,24 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">10</property>
+			<label>&lt;None&gt;</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">none</property>
+			<property name="defaultID" />
+			<visible>[system.getbool(eventlog.enabled)] + String.IsEqual(Window(10000).Property(submenuVisibility),settings)</visible>
+			<onclick>ActivateWindow(EventLog,events://,return)</onclick>
+			<property name="path">ActivateWindow(EventLog,events://,return)</property>
+			<property name="list">events://</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">settings</property>
+			</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[166]</label>
 			<label2 />
 			<icon>icons/big/Skin.png</icon>
@@ -2452,8 +2504,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="2">
-			<property name="id">$NUMBER[2]</property>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14206]</label>
 			<label2 />
@@ -2469,8 +2521,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14200]</label>
 			<label2 />
@@ -2486,8 +2538,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14211]</label>
 			<label2 />
@@ -2503,8 +2555,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[31000]</label>
 			<label2 />
@@ -2520,8 +2572,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[24001]</label>
 			<label2 />
@@ -2537,8 +2589,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14036]</label>
 			<label2 />
@@ -2554,8 +2606,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="8">
-			<property name="id">$NUMBER[8]</property>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[13000]</label>
 			<label2 />
@@ -2571,8 +2623,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="9">
-			<property name="id">$NUMBER[9]</property>
+		<item id="10">
+			<property name="id">$NUMBER[10]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[130]</label>
 			<label2 />
@@ -2588,8 +2640,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="10">
-			<property name="id">$NUMBER[10]</property>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[13200]</label>
 			<label2 />
@@ -2605,8 +2657,8 @@
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
 			</item>
-		<item id="11">
-			<property name="id">$NUMBER[11]</property>
+		<item id="12">
+			<property name="id">$NUMBER[12]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[31016]</label>
 			<label2 />
@@ -2621,6 +2673,23 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">settings</property>
+			</item>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
+			<label>test</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">/Users/liam/test.sh</property>
+			<property name="defaultID" />
+			<onclick condition="Window.IsActive(PlayerControls.xml)">Close</onclick>
+			<onclick>RunScript(/Users/liam/test.sh)</onclick>
+			<property name="path">RunScript(/Users/liam/test.sh)</property>
+			<property name="list">RunScript(/Users/liam/test.sh)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">users-liam-test-sh</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
 			</item>
 		</include>
 	<include name="skinshortcuts-group-num-31000">
@@ -4503,6 +4572,23 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">10</property>
+			<label>&lt;None&gt;</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">none</property>
+			<property name="defaultID" />
+			<visible>system.getbool(eventlog.enabled)</visible>
+			<onclick>ActivateWindow(EventLog,events://,return)</onclick>
+			<property name="path">ActivateWindow(EventLog,events://,return)</property>
+			<property name="list">events://</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[166]</label>
 			<label2 />
 			<icon>icons/big/Skin.png</icon>
@@ -4516,8 +4602,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="2">
-			<property name="id">$NUMBER[2]</property>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14206]</label>
 			<label2 />
@@ -4532,8 +4618,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14200]</label>
 			<label2 />
@@ -4548,8 +4634,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14211]</label>
 			<label2 />
@@ -4564,8 +4650,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[31000]</label>
 			<label2 />
@@ -4580,8 +4666,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[24001]</label>
 			<label2 />
@@ -4596,8 +4682,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14036]</label>
 			<label2 />
@@ -4612,8 +4698,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="8">
-			<property name="id">$NUMBER[8]</property>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[13000]</label>
 			<label2 />
@@ -4628,8 +4714,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="9">
-			<property name="id">$NUMBER[9]</property>
+		<item id="10">
+			<property name="id">$NUMBER[10]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[130]</label>
 			<label2 />
@@ -4644,8 +4730,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="10">
-			<property name="id">$NUMBER[10]</property>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[13200]</label>
 			<label2 />
@@ -4660,8 +4746,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="11">
-			<property name="id">$NUMBER[11]</property>
+		<item id="12">
+			<property name="id">$NUMBER[12]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[31016]</label>
 			<label2 />
@@ -4681,6 +4767,23 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">10</property>
+			<label>&lt;None&gt;</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">none</property>
+			<property name="defaultID" />
+			<visible>[system.getbool(eventlog.enabled)] + String.IsEqual(Window(10000).Property(submenuVisibility),settings)</visible>
+			<onclick>ActivateWindow(EventLog,events://,return)</onclick>
+			<property name="path">ActivateWindow(EventLog,events://,return)</property>
+			<property name="list">events://</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">settings</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[166]</label>
 			<label2 />
 			<icon>icons/big/Skin.png</icon>
@@ -4694,8 +4797,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="2">
-			<property name="id">$NUMBER[2]</property>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14206]</label>
 			<label2 />
@@ -4710,8 +4813,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14200]</label>
 			<label2 />
@@ -4726,8 +4829,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14211]</label>
 			<label2 />
@@ -4742,8 +4845,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[31000]</label>
 			<label2 />
@@ -4758,8 +4861,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[24001]</label>
 			<label2 />
@@ -4774,8 +4877,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[14036]</label>
 			<label2 />
@@ -4790,8 +4893,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="8">
-			<property name="id">$NUMBER[8]</property>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[13000]</label>
 			<label2 />
@@ -4806,8 +4909,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="9">
-			<property name="id">$NUMBER[9]</property>
+		<item id="10">
+			<property name="id">$NUMBER[10]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[130]</label>
 			<label2 />
@@ -4822,8 +4925,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="10">
-			<property name="id">$NUMBER[10]</property>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[13200]</label>
 			<label2 />
@@ -4838,8 +4941,8 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
-		<item id="11">
-			<property name="id">$NUMBER[11]</property>
+		<item id="12">
+			<property name="id">$NUMBER[12]</property>
 			<property name="mainmenuid">10</property>
 			<label>$LOCALIZE[31016]</label>
 			<label2 />
@@ -4854,5 +4957,11 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 			</item>
+		</include>
+	<include name="skinshortcuts-group-users-liam-test-sh">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-alt-users-liam-test-sh">
+		<description>No items</description>
 		</include>
 	</includes>
