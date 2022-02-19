@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="skin.confluence.liam" version="1.0.1" name="Liam Confluence" provider-name="Liam">
+<addon id="skin.liam2" version="1.6.4" name="Liam 2" provider-name="Liam">
+  <requires>
+		<import addon="xbmc.gui" version="5.15.0"/>
+		<import addon="script.skinshortcuts" version="1.0.17"/>
+		<import addon="plugin.video.themoviedb.helper" version="2.0.18"/>
+		<import addon="script.embuary.helper" version="1.4.5"/>
+		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
+		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
+	</requires>
+	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+  <extension point="xbmc.addon.metadata">
+  <summary lang="en">A GUI for Kodi Media Center</summary>
+    <summary lang="en_AU">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_NZ">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_US">A GUI for Kodi Media Center</summary>
+  <description lang="en">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_AU">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_NZ">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_US">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+  <disclaimer lang="en">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_AU">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_NZ">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_US">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <platform>all</platform>
+    <news>-General changes
+    -add new space label to recordings pvr
+    -fix general bugs
+    -fix image too big and scrolling time bug
+    -add option for more channels (bug fix)
+    -add options menu to recordings
+    -fix recording episode name bug
+    -bug fix
+    -recording watch progress indicator
+  </news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+			<screenshot>resources/screenshot-10.jpg</screenshot>
+		</assets>
+  </extension>
+</addon>
+
+<addon id="repository.liam3" name="Liam Repo" version="1.0" provider-name="Liam">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+      <dir>
+          <info compressed="false">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml</info>
+          <checksum>https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml.md5</checksum>
+          <datadir zip="true">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/</datadir>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Liams Repo</summary>
+        <description>Mine</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="skin.liam.confluence" version="1.0.0" name="Liam - Confluence" provider-name="Liam">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 	</requires>
@@ -146,78 +219,5 @@
 		<description lang="zh_CN">Confluence 集合了许多流行皮肤的创意，力求把这些优点融合到一个皮肤中，使得首次使用 Kodi 的用户能更容易上手。</description>
 		<description lang="zh_TW">Confluence 是從 Kodi 9.11 開始預設的佈景主題。它結合了許多受歡迎的佈景主題的概念，且試圖包含並整合它們的優點，使第一次使用 Kodi 的使用者可以簡單地上手。</description>
 	</extension>
-</addon>
-
-<addon id="skin.liam2" version="1.6.4" name="Liam 2" provider-name="Liam">
-  <requires>
-		<import addon="xbmc.gui" version="5.15.0"/>
-		<import addon="script.skinshortcuts" version="1.0.17"/>
-		<import addon="plugin.video.themoviedb.helper" version="2.0.18"/>
-		<import addon="script.embuary.helper" version="1.4.5"/>
-		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
-		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
-	</requires>
-	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
-		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
-	</extension>
-  <extension point="xbmc.addon.metadata">
-  <summary lang="en">A GUI for Kodi Media Center</summary>
-    <summary lang="en_AU">A GUI for Kodi Media Centre</summary>
-    <summary lang="en_NZ">A GUI for Kodi Media Centre</summary>
-    <summary lang="en_US">A GUI for Kodi Media Center</summary>
-  <description lang="en">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
-    <description lang="en_AU">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
-    <description lang="en_NZ">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
-    <description lang="en_US">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
-  <disclaimer lang="en">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
-    <disclaimer lang="en_AU">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
-    <disclaimer lang="en_NZ">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
-    <disclaimer lang="en_US">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
-    <platform>all</platform>
-    <news>-General changes
-    -add new space label to recordings pvr
-    -fix general bugs
-    -fix image too big and scrolling time bug
-    -add option for more channels (bug fix)
-    -add options menu to recordings
-    -fix recording episode name bug
-    -bug fix
-    -recording watch progress indicator
-  </news>
-		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshot-08.jpg</screenshot>
-			<screenshot>resources/screenshot-09.jpg</screenshot>
-			<screenshot>resources/screenshot-10.jpg</screenshot>
-		</assets>
-  </extension>
-</addon>
-
-<addon id="repository.liam3" name="Liam Repo" version="1.0" provider-name="Liam">
-    <extension point="xbmc.addon.repository" name="Example Repository">
-      <dir>
-          <info compressed="false">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml</info>
-          <checksum>https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml.md5</checksum>
-          <datadir zip="true">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/</datadir>
-      </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Liams Repo</summary>
-        <description>Mine</description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
 </addon>
 </addons>
