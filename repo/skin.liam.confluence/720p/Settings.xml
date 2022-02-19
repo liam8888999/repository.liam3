@@ -164,6 +164,11 @@
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 						<icon/>
 					</item>
+					<item id="8">
+						<label>FileManager</label>
+						<onclick>ActivateWindow(FileManager)</onclick>
+						<icon/>
+					</item>
 				</content>
 			</control>
 			<control type="image">

@@ -141,13 +141,7 @@
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
-	<include name="HomeSubMenuSystem">
-		<control type="button" id="90123">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>7</label>
-			<onclick>ActivateWindow(FileManager)</onclick>
-		</control>
-	</include>
+
 	<include name="HomeSubMenuPlayDisc">
 		<control type="image" id="90131">
 			<width>35</width>
