@@ -1042,34 +1042,6 @@
 			<top>55r</top>
 			<include>Window_OpenClose_Animation</include>
 			<control type="group">
-				<visible>!Skin.HasSetting(HomepageHideFavourite)</visible>
-				<control type="button" id="20">
-					<description>Favourites push button</description>
-					<left>55</left>
-					<top>0</top>
-					<width>45</width>
-					<height>45</height>
-					<label>31003</label>
-					<font/>
-					<onclick>ActivateWindow(Favourites)</onclick>
-					<texturefocus border="5">floor_buttonFO.png</texturefocus>
-					<texturenofocus border="5">floor_button.png</texturenofocus>
-					<onleft>21</onleft>
-					<onright>22</onright>
-					<onup>9002</onup>
-					<ondown>9003</ondown>
-				</control>
-				<control type="image">
-					<description>Favourites Icon</description>
-					<left>60</left>
-					<top>5</top>
-					<width>35</width>
-					<height>35</height>
-					<aspectratio>keep</aspectratio>
-					<texture>icon_favourites.png</texture>
-				</control>
-			</control>
-			<control type="group">
 				<control type="button" id="21">
 					<description>Power push button</description>
 					<left>0</left>
@@ -1094,37 +1066,6 @@
 					<height>35</height>
 					<aspectratio>keep</aspectratio>
 					<texture>icon_power.png</texture>
-				</control>
-			</control>
-			<control type="group">
-				<visible>Skin.HasSetting(HomepageHideSearch)</visible>
-				<animation effect="slide" start="0,0" end="-55,0" time="0" condition="Skin.HasSetting(HomepageHideFavourite)">conditional</animation>
-				<control type="button" id="22">
-					<description>Search push button</description>
-					<left>110</left>
-					<top>0</top>
-					<width>45</width>
-					<height>45</height>
-					<label>137</label>
-					<font/>
-					<onclick condition="System.AddonIsEnabled(script.globalsearch)">RunScript(script.globalsearch)</onclick>
-					<onclick condition="!System.AddonIsEnabled(script.globalsearch) + System.HasAddon(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
-					<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
-					<texturefocus border="5">floor_buttonFO.png</texturefocus>
-					<texturenofocus border="5">floor_button.png</texturenofocus>
-					<onleft>20</onleft>
-					<onright>21</onright>
-					<onup>9002</onup>
-					<ondown>9003</ondown>
-				</control>
-				<control type="image">
-					<description>Search Icon</description>
-					<left>115</left>
-					<top>5</top>
-					<width>35</width>
-					<height>35</height>
-					<aspectratio>keep</aspectratio>
-					<texture>icon_search.png</texture>
 				</control>
 			</control>
 		</control>
