@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">500</defaultcontrol>
+	<menucontrol>9000</menucontrol>
+	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
+	<views>500,51,50,550,551,509,506,507,511,512,513</views>
+	<controls>
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<!-- view id = 50 -->
+			<include>CommonRootView</include>
+			<!-- view id = 51 -->
+			<include>FullWidthList</include>
+			<!-- view id = 500 -->
+			<include>ThumbnailView</include>
+			<!-- view id = 506, 507 -->
+			<include>MusicInfoListView</include>
+			<!-- view id = 509 -->
+			<include>AlbumWrapView2_Fanart</include>
+			<!-- view id = 511 -->
+			<include>MusicVideoInfoListView</include>
+			<!-- view id = 512 -->
+			<include>ArtistMediaListView</include>
+			<!-- view id = 513 -->
+			<include>AlbumInfoListView</include>
+			<!-- view id = 550 -->
+			<include>AddonInfoListView1</include>
+			<!-- view id = 551 -->
+			<include>AddonInfoThumbView1</include>
+		</control>
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<include>CommonPageCount</include>
+			<include>CommonNowPlaying</include>
+		</control>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<include>ScrollOffsetLabel</include>
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_music" />
+			<param name="Label" value="$LOCALIZE[10516]" />
+		</include>
+	</controls>
+</window>
