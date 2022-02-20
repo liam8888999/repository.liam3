@@ -1059,7 +1059,7 @@
 					<width>35</width>
 					<height>35</height>
 					<aspectratio>keep</aspectratio>
-					<texture>icon_power.png</texture>
+					<texture>icon_system.png</texture>
 				</control>
 			</control>
 		</control>
