@@ -921,6 +921,7 @@
 						<icon/>
 						<thumb/>
 						</item>
+				</content>
 			</control>
 			<control type="image">
 				<left>-10</left>
