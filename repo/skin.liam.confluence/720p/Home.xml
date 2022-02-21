@@ -825,7 +825,7 @@
 				<texture>HomeOverlay1.png</texture>
 			</control>
 			<control type="fixedlist" id="9000">
-				<left>-110</left>
+				<left>-300</left>
 				<top>5</top>
 				<width>1500</width>
 				<height>60</height>
