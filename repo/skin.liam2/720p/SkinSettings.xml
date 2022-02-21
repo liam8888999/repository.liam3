@@ -132,6 +132,12 @@
 							<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
 							<selected>Skin.HasSetting(AutoScroll)</selected>
 						</control>
+						<control type="radiobutton" id="5102">
+							<include>SettingsRadioButton</include>
+							<label>Jodie</label>
+							<onclick>Skin.ToggleSetting(Jodie)</onclick>
+							<selected>Skin.HasSetting(Jodie)</selected>
+						</control>
 						<control type="radiobutton" id="5106">
 							<include>SettingsRadioButton</include>
 							<label>31162</label>

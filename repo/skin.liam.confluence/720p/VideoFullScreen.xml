@@ -77,20 +77,6 @@
 				<visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="label" id="1">
-				<description>Channel Group label</description>
-				<left>30</left>
-				<top>5</top>
-				<width>1000</width>
-				<height>25</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>$INFO[VideoPlayer.ChannelGroup,$LOCALIZE[31509]: ]</label>
-				<visible>VideoPlayer.Content(LiveTV)</visible>
-			</control>
-			<control type="label" id="1">
 				<description>Clock label</description>
 				<left>450</left>
 				<top>5</top>
@@ -257,75 +243,6 @@
 						<label>$INFO[Player.Title]</label>
 						<textcolor>orange</textcolor>
 						<scroll>true</scroll>
-					</control>
-					<control type="image" id="1">
-						<description>Video Resolution Image</description>
-						<width>50</width>
-						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
-						<visible>!Player.ChannelPreviewActive</visible>
-					</control>
-					<control type="image" id="1">
-						<description>Audio Codec Image</description>
-						<width>85</width>
-						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
-						<visible>!Player.ChannelPreviewActive</visible>
-						<texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
-					</control>
-					<control type="image" id="1">
-						<description>Audio Channels Image</description>
-						<width>50</width>
-						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
-						<visible>!Player.ChannelPreviewActive</visible>
-					</control>
-					<control type="group" id="1">
-						<width>85</width>
-						<height>35</height>
-						<visible>![String.IsEmpty(VideoPlayer.AudioLanguage) | Player.ChannelPreviewActive]</visible>
-						<control type="image" id="1">
-							<left>5</left>
-							<top>0</top>
-							<description>Audio Language Image</description>
-							<width>80</width>
-							<height>35</height>
-							<texture>flagging/AudioLang.png</texture>
-						</control>
-						<control type="label" id="1">
-							<left>38</left>
-							<top>2</top>
-							<width>47</width>
-							<height>35</height>
-							<font>font13</font>
-							<align>left</align>
-							<label>$INFO[VideoPlayer.AudioLanguage]</label>
-							<textcolor>grey</textcolor>
-						</control>
-					</control>
-					<control type="group" id="1">
-						<width>85</width>
-						<height>35</height>
-						<visible>![String.IsEmpty(VideoPlayer.SubtitlesLanguage) | Player.ChannelPreviewActive] + VideoPlayer.SubtitlesEnabled</visible>
-						<control type="image" id="1">
-							<left>5</left>
-							<top>0</top>
-							<width>80</width>
-							<height>35</height>
-							<texture>flagging/SubLang.png</texture>
-						</control>
-						<control type="label" id="1">
-							<left>38</left>
-							<top>2</top>
-							<width>47</width>
-							<height>35</height>
-							<font>font13</font>
-							<align>left</align>
-							<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
-							<textcolor>grey</textcolor>
-						</control>
 					</control>
 				</control>
 				<control type="label" id="1">

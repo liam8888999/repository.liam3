@@ -3,7 +3,7 @@
   <defaultcontrol always="true">996</defaultcontrol>
 	<onunload condition="![Window.IsVisible(Favourites) + !String.IsEqual(Window(home).Property(Resume),true)]">ClearProperty(Resume,Home)</onunload>
   <include condition="!Window.IsVisible(filemanager) + !Window.IsVisible(musicplaylisteditor) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(LockSettings) + !Window.IsVisible(Favourites)">ContextCoordinates</include>
-  <animation effect="slide" end="-270,0" condition="Window.IsVisible(Favourites) + !Window.IsActive(Favourites)">Conditional</animation>
+
 	<controls>
 
   <!-- Content Info -->

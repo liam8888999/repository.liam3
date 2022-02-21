@@ -34,6 +34,7 @@
 									<shadowcolor>77000000</shadowcolor>
 									<texturenofocus>windows/bg/bg_overlay.png</texturenofocus>
 									<texturefocus>windows/pvr/epg_focus.png</texturefocus>
+									<visible>!Skin.HasSetting(Jodie)</visible>
 						</control>
 			<control type="epggrid" id="10">
 				<description>EPG Grid</description>

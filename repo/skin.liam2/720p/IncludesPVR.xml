@@ -94,6 +94,7 @@
 	<include name="PVRControlsMenu">
 		<!-- PVR Controls Menu -->
 		<control type="group"  id="9000">
+				<visible>!Skin.HasSetting(Jodie)</visible>
 			<left>30</left>
 			<top>25</top>
 			<include>ShutdownMenuAnimation</include>

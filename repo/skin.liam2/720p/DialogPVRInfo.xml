@@ -366,15 +366,6 @@
 		</control>
 
 
-		<control type="button" id="4">
-			<description>Find similar</description>
-			<include>HiddenItem</include>
-		</control>
-		<control type="button" id="9">
-			<description>Add timer</description>
-			<include>HiddenItem</include>
-		</control>
-
 
 	</controls>
 </window>

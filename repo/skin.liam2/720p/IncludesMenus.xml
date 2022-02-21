@@ -96,6 +96,25 @@
 	<!-- ================================ -->
 	<include name="ContextMenuContentInfo">
 		<control type="group">
+			<top>200</top>
+			<left>400</left>
+		<control type="label">
+			<visible>Skin.HasSetting(Jodie)</visible>
+			<font>FontSize_50</font>
+			<textcolor>red</textcolor>
+			<label>Nothing To See Here...</label>
+		</control>
+		<control type="label">
+			<top>50</top>
+			<left>50</left>
+			<visible>Skin.HasSetting(Jodie)</visible>
+			<font>FontSize_46</font>
+			<textcolor>red</textcolor>
+			<label>Please Go Back</label>
+		</control>
+	</control>
+		<control type="group">
+				<visible>!Skin.HasSetting(Jodie)</visible>
 			<left>105</left>
 			<top>25</top>
 			<include>OpenCloseSlideAnimation</include>
@@ -198,6 +217,7 @@
 
 
 	<include name="ContextMenuDefualt">
+		<visible>!Skin.HasSetting(Jodie)</visible>
 		<control type="image" id="999">
 			<description>background image</description>
 			<left>0</left>
@@ -238,6 +258,7 @@
 
 	<include name="ContextMenuOnTopLeft">
 		<control type="group">
+				<visible>!Skin.HasSetting(Jodie)</visible>
 			<left>30</left>
 			<include>OpenCloseSlideAnimation</include>
 			<control type="image" id="997">
@@ -257,6 +278,8 @@
 			</control>
 		</control>
 		<control type="grouplist" id="996">
+
+				<visible>!Skin.HasSetting(Jodie)</visible>
 			<left>30</left>
 			<top>88</top>
 			<width>405</width>
