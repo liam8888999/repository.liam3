@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">500</defaultcontrol>
+	<menucontrol>9000</menucontrol>
+	<views>500,501,51,550,551,560,50,508,504,503,515,505,511</views>
+	<controls>
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<!-- view id = 500 -->
+			<include>ThumbnailView</include>
+		</control>
+		
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<include>CommonPageCount</include>
+			<include>CommonNowPlaying</include>
+		</control>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<include>ScrollOffsetLabel</include>
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_video" />
+			<param name="Label" value="$LOCALIZE[3]" />
+		</include>
+	</controls>
+</window>
