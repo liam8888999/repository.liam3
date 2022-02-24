@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="1113" type="window">
+<window id="1113">
 	<defaultcontrol always="true">500</defaultcontrol>
 	<views>500</views>
 	<controls>
@@ -10,7 +10,7 @@
 			<!-- view id = 500 -->
 			<include>ThumbnailView</include>
 		</control>
-<control type="label"
+<control type="label">
 	<label>hello</label>
 </control>
 		<control type="group">
