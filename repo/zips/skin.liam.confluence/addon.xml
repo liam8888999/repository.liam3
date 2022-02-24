@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.liam.confluence" version="1.0.16" name="Liam - Confluence" provider-name="Liam">
+<addon id="skin.liam.confluence" version="1.0.17" name="Liam - Confluence" provider-name="Liam">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 	</requires>
