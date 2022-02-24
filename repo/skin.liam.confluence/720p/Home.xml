@@ -660,7 +660,7 @@
 						<visible>PVR.HasTVChannels</visible>
 					</item>
 					<item id="2">
-						<label>31953</label>
+						<label>hello</label>
 						<onclick>ActivateWindow(1113)</onclick>
 						<icon/>
 						<thumb/>
