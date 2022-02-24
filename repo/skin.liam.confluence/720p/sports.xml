@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="1113">
+<window id="1113" type="window">
 	<defaultcontrol always="true">500</defaultcontrol>
-	<menucontrol>9000</menucontrol>
-	<views>500,501,51,550,551,560,50,508,504,503,515,505,511</views>
+	<views>500</views>
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
