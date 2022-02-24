@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>
+<window id="1113">
 	<defaultcontrol always="true">500</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<views>500,501,51,550,551,560,50,508,504,503,515,505,511</views>
@@ -11,7 +11,7 @@
 			<!-- view id = 500 -->
 			<include>ThumbnailView</include>
 		</control>
-		
+
 		<control type="group">
 			<depth>DepthFooter</depth>
 			<include>CommonPageCount</include>

@@ -661,7 +661,7 @@
 					</item>
 					<item id="2">
 						<label>31953</label>
-						<onclick>ActivateWindow(sports.xml)</onclick>
+						<onclick>ActivateWindow(1113)</onclick>
 						<icon/>
 						<thumb/>
 						</item>
