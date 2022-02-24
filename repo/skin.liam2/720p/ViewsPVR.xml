@@ -16,26 +16,6 @@
 			<include content="EPGTimelineTopInfo">
 				<param name="visible" value="Skin.HasSetting(ShowProgramInfo)"/>
 			</include>
-			<control type="button" id="11">
-							<top>290</top>
-							<left>380</left>
-							<right>40</right>
-							<onleft>noop</onleft>
-							<onright>noop</onright>
-							<onup>10</onup>
-							<ondown>10</ondown>
-							<onclick>RunAddon(plugin.acme.livenet)</onclick>
-									<width>358</width>
-									<height>28</height>
-									<align>center</align>
-									<aligny>center</aligny>
-									<label>More Channels...</label>
-									<textcolor>white</textcolor>
-									<shadowcolor>77000000</shadowcolor>
-									<texturenofocus>windows/bg/bg_overlay.png</texturenofocus>
-									<texturefocus>windows/pvr/epg_focus.png</texturefocus>
-									<visible>!Skin.HasSetting(Jodie)</visible>
-						</control>
 			<control type="epggrid" id="10">
 				<description>EPG Grid</description>
 				<left>35</left>
