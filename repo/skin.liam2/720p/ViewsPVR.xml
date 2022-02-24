@@ -25,8 +25,8 @@
 				<animation effect="slide" end="0,200" condition="Skin.HasSetting(ShowProgramInfo)">Conditional</animation>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
+				<onup>10</onup>
+				<ondown>10</ondown>
 				<onback>9000</onback>
 				<pagecontrol>10</pagecontrol>
 				<scrolltime>250</scrolltime>
