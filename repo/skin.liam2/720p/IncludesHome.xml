@@ -931,7 +931,7 @@
 	<!-- TopHomeMenu -->
 	<!-- =========== -->
 	<include name="TopHomeMenu">
-	<!--	<control type="group">
+<control type="group">
 			<left>45</left>
 			<top>25</top>
 			<include>ShutdownMenuAnimation</include>
@@ -939,7 +939,7 @@
 			<include>VisibleHiddenSlideAnimation</include>
 			<include>InfoDialogs_ContentInfoAnimation</include>
 			<visible allowhiddenfocus="true">!ControlGroup(22).HasFocus</visible>
-			<control type="grouplist" id="21">
+	<!--		<control type="grouplist" id="21">
 				<left>0</left>
 				<top>0</top>
 				<height>0</height>
@@ -988,7 +988,7 @@
 					<onclick>ActivateWindow(shutdownmenu)</onclick>
 				</control>
 			</control>
-<!--		</control> -->
+	</control> 
 	</include>
 
 </includes>
