@@ -931,6 +931,7 @@
 	<!-- TopHomeMenu -->
 	<!-- =========== -->
 	<include name="TopHomeMenu">
+		<!--
 <control type="group">
 			<left>45</left>
 			<top>25</top>
@@ -939,7 +940,7 @@
 			<include>VisibleHiddenSlideAnimation</include>
 			<include>InfoDialogs_ContentInfoAnimation</include>
 			<visible allowhiddenfocus="true">!ControlGroup(22).HasFocus</visible>
-	<!--		<control type="grouplist" id="21">
+		<control type="grouplist" id="21">
 				<left>0</left>
 				<top>0</top>
 				<height>0</height>
@@ -979,7 +980,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<include>Select_Search</include>
 					<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[137]...,usedetails=true)</onclick>
-				</control> -->
+				</control>
 				<control type="button" id="212">
 					<description>Power</description>
 					<include>TopMenuButton</include>
@@ -988,7 +989,8 @@
 					<onclick>ActivateWindow(shutdownmenu)</onclick>
 				</control>
 			</control>
-	</control> 
+	</control>
+-->
 	</include>
 
 </includes>
