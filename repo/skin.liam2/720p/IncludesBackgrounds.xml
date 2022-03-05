@@ -138,7 +138,7 @@
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<visible>!Container(3000).IsUpdating</visible>
-			<visible>![Skin.HasSetting(HideBGFanart) + !Control.IsVisible(65)]</visible>
+			<visible>![Skin.HasSetting(HideBGFanart) + !Control.IsVisible(65)] + !Player.HasMedia</visible>
 			<visible>![[Control.IsVisible(55) | [Control.IsVisible(59) + Window.IsVisible(MyVideoNav.xml)]] + ![Window.IsActive(movieinformation) | Window.IsActive(1130) | [String.IsEqual(Window(Home).Property(ShowTextViewer),1) + Window.IsActive(TextViewer)] | Window.IsActive(favourites) | Window.IsActive(playercontrols)] + String.IsEmpty(Window(Home).Property(infodialogs.active))] + !Control.IsVisible(580)</visible>
 			<include condition="[Skin.HasSetting(HomeBG-Animation) + Window.IsActive(Home)]">BackgroundAnimation</include>
 			<include>QuickNavFadeEffect</include>
@@ -230,7 +230,7 @@
 				| Control.IsVisible(563)
 				| Control.IsVisible(64)
 				| [[Control.IsVisible(25) | Control.IsVisible(65) | Control.IsVisible(66) | Control.IsVisible(660) | Control.IsVisible(661) | Control.IsVisible(580) | Control.IsVisible(3000)] + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]
-				| [Control.IsVisible(59) + [Skin.HasSetting(HideBGFanart) | Window.IsActive(DialogVideoInfo.xml)]]
+				| [Control.IsVisible(59) + [Skin.HasSetting(HideBGFanart) + !Player.HasMedia | Window.IsActive(DialogVideoInfo.xml)]]
 				| Window.IsActive(Custom_Trailers.xml)
 				| Window.IsActive(Custom_TMDBInfo.xml)
 				| Window.IsActive(AddonSettings)
@@ -238,8 +238,8 @@
 				| Window.IsActive(TextViewer)
 				| Window.IsActive(MusicPlaylistEditor)
 				| Window.IsActive(PlayerControls)
-				| [Window.IsActive(script-NextAired-TVGuide.xml) + ![Skin.HasSetting(HideBGFanart) | Skin.HasSetting(HideBGTVGuideFanart)]]
-				| [Window.IsActive(script-NextAired-TVGuide2.xml) + ![Skin.HasSetting(HideBGFanart) | Skin.HasSetting(HideBGTVGuideFanart)]]
+				| [Window.IsActive(script-NextAired-TVGuide.xml) + ![Skin.HasSetting(HideBGFanart) + !Player.HasMedia | Skin.HasSetting(HideBGTVGuideFanart)]]
+				| [Window.IsActive(script-NextAired-TVGuide2.xml) + ![Skin.HasSetting(HideBGFanart) + !Player.HasMedia | Skin.HasSetting(HideBGTVGuideFanart)]]
 				| !String.IsEmpty(Window(Home).Property(infodialogs.active))
 			</visible>
 		</control>
