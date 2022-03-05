@@ -979,7 +979,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<include>Select_Search</include>
 					<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[137]...,usedetails=true)</onclick>
-				</control>
+				</control> -->
 				<control type="button" id="212">
 					<description>Power</description>
 					<include>TopMenuButton</include>
@@ -988,7 +988,7 @@
 					<onclick>ActivateWindow(shutdownmenu)</onclick>
 				</control>
 			</control>
-		</control> -->
+<!--		</control> -->
 	</include>
 
 </includes>
