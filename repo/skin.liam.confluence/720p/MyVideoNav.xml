@@ -24,5 +24,6 @@
 			<param name="Icon" value="icon_video" />
 			<param name="Label" value="$LOCALIZE[3]" />
 		</include>
+				<include>SideBladeLeft</include>
 	</controls>
 </window>
