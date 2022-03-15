@@ -660,8 +660,8 @@
 						<visible>PVR.HasTVChannels</visible>
 					</item>
 					<item id="2">
-						<label>hello</label>
-						<onclick>ActivateWindow(1113)</onclick>
+						<label>sport</label>
+						<onclick>noop</onclick>
 						<icon/>
 						<thumb/>
 						</item>

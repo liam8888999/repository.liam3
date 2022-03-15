@@ -257,6 +257,42 @@
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
+
+
+	<include name="HomeSubMenuVideos">
+			<control type="image" id="90101">
+				<width>35</width>
+				<height>35</height>
+				<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			</control>
+			<control type="button" id="90102">
+				<include>ButtonHomeSubCommonValues</include>
+				<label>Kayo Sports</label>
+				<onclick>ActivateWindow(Videos,"plugin://plugin.video.kayo.sports",return)</onclick>
+			</control>
+			<control type="button" id="90103">
+				<include>ButtonHomeSubCommonValues</include>
+				<label>Paramount+Sport</label>
+				<onclick>ActivateWindow(Videos,"plugin://slyguy.paramount.plus/?_=featured&homegroup=345",return)</onclick>
+			</control>
+			<control type="button" id="90104">
+				<include>ButtonHomeSubCommonValues</include>
+				<label>Optus Sport</label>
+				<onclick>ActivateWindow(Videos,"plugin://plugin.video.optus.sport",return)</onclick>
+			</control>
+			<control type="button" id="90105">
+				<include>ButtonHomeSubCommonValues</include>
+				<label>Stan Sport</label>
+				<onclick>ActivateWindow(Videos,"plugin://plugin.video.stan.au/?_=nav&key=sport&title=Sport",return)</onclick>
+			</control>
+			<control type="image" id="90106">
+				<width>35</width>
+				<height>35</height>
+				<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			</control>
+		</include>
+
+
 	<include name="HomeAddonItemsVideos">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton1))]</label>
