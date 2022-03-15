@@ -96,22 +96,6 @@
 	<!-- ================================ -->
 	<include name="ContextMenuContentInfo">
 		<control type="group">
-			<top>200</top>
-			<left>400</left>
-		<control type="label">
-			<font>FontSize_50</font>
-			<textcolor>red</textcolor>
-			<label>Nothing To See Here...</label>
-		</control>
-		<control type="label">
-			<top>50</top>
-			<left>50</left>
-			<font>FontSize_46</font>
-			<textcolor>red</textcolor>
-			<label>Please Go Back</label>
-		</control>
-	</control>
-		<control type="group">
 			<left>105</left>
 			<top>25</top>
 			<include>OpenCloseSlideAnimation</include>
