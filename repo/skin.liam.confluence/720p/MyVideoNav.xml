@@ -156,5 +156,6 @@
 				</control>
 				<include>CommonNowPlaying_Controls</include>
 			</control>
+		</control>
 	</controls>
 </window>
