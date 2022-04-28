@@ -19,6 +19,7 @@
 				<include>SearchSeperators</include>
 			</control>
 			<control type="list" id="50">
+				<onleft>Action(menu)</onleft>
 				<left>35</left>
 				<top>290</top>
 				<width>1200</width>
