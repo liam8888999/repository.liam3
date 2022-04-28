@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+ <shortcut>
+  <label>7Plus</label>
+  <label2>7Plus</label2>
+  <defaultID>13000</defaultID>
+  <icon>DefaultHardDisk.png</icon>
+  <thumb />
+  <action>ActivateWindow(Videos,"plugin://slyguy.7plus",return)</action>
+ </shortcut>
+ <shortcut>
+  <label>9Now</label>
+  <label2>9Now</label2>
+  <defaultID>13001</defaultID>
+  <icon>DefaultHardDisk.png</icon>
+  <thumb />
+  <action>ActivateWindow(Videos,"plugin://slyguy.9now",return)</action>
+ </shortcut>
+ <shortcut>
+  <label>10play</label>
+  <label2>10play</label2>
+  <defaultID>13002</defaultID>
+  <icon>DefaultHardDisk.png</icon>
+  <thumb />
+  <action>ActivateWindow(Videos,"plugin://slyguy.10play",return)</action>
+ </shortcut>
+</shortcuts>

@@ -3,20 +3,20 @@
 
   <!-- Live TV -->
   <shortcut>
-   <label>$LOCALIZE[31000]</label>
-   <label2>32034</label2>
+   <label>Live TV</label>
+   <label2>HI</label2>
    <defaultID>livetv</defaultID>
    <icon>DefaultLiveTV.png</icon>
-   <action>ActivateWindow(TVChannels)</action>
+   <action>ActivateWindow(TVGuide)</action>
   </shortcut>
-  
+
  <!-- Movies -->
  <shortcut>
   <label>$LOCALIZE[342]</label>
   <label2>32034</label2>
   <defaultID>movies</defaultID>
   <icon>DefaultMovies.png</icon>
-  <action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+  <action>noop</action>
  </shortcut>
 
  <!-- TVShows -->
@@ -26,6 +26,33 @@
   <defaultID>tvshows</defaultID>
   <icon>DefaultTVShows.png</icon>
   <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+ </shortcut>
+
+ <!-- Sports -->
+ <shortcut>
+  <label>Sports</label>
+  <label2>Sports</label2>
+  <defaultID>sports</defaultID>
+  <icon>DefaultPicture.png</icon>
+  <action>ActivateWindow(Pictures)</action>
+ </shortcut>
+
+ <!-- Catchup -->
+ <shortcut>
+  <label>Catchup</label>
+  <label2>Catchup</label2>
+  <defaultID>catchup</defaultID>
+  <icon>DefaultAddon.png</icon>
+  <action>noop</action>
+ </shortcut>
+
+ <!-- Streaming -->
+ <shortcut>
+  <label>Streaming</label>
+  <label2>Streaming</label2>
+  <defaultID>streaming</defaultID>
+  <icon>icons/big/Trailers.png</icon>
+  <action>noop</action>
  </shortcut>
 
  <!-- Videos -->
@@ -46,51 +73,13 @@
   <action>ActivateWindow(Music,root,return)</action>
  </shortcut>
 
- <!-- Pictures -->
+ <!-- Utilities -->
  <shortcut>
-  <label>$LOCALIZE[10002]</label>
-  <label2>32034</label2>
-  <defaultID>pictures</defaultID>
-  <icon>DefaultPicture.png</icon>
-  <action>ActivateWindow(Pictures)</action>
- </shortcut>
-
- <!-- Add-ons -->
- <shortcut>
-  <label>$LOCALIZE[24001]</label>
-  <label2>32034</label2>
-  <defaultID>addons</defaultID>
-  <icon>DefaultAddon.png</icon>
-  <action>ActivateWindow(AddonBrowser,return)</action>
- </shortcut>
-
-
-
- <!-- Trailers -->
- <shortcut>
-  <label>$LOCALIZE[31018]</label>
-  <label2>32034</label2>
-  <defaultID>trailers</defaultID>
-  <icon>icons/big/Trailers.png</icon>
-  <action>ActivateWindow(1120)</action>
- </shortcut>
-
- <!-- Weather -->
- <shortcut>
-  <label>$LOCALIZE[12600]</label>
-  <label2>32034</label2>
-  <defaultID>weather</defaultID>
-  <icon>icons/big/Weather.png</icon>
-  <action>ActivateWindow(Weather)</action>
- </shortcut>
-
- <!-- Settings -->
- <shortcut>
-  <label>$LOCALIZE[10004]</label>
-  <label2>32034</label2>
-  <defaultID>settings</defaultID>
+  <label>Utilities</label>
+  <label2>Utilities</label2>
+  <defaultID>utilities</defaultID>
   <icon>icons/big/Settings.png</icon>
-  <action>ActivateWindow(Settings)</action>
+  <action>noop</action>
  </shortcut>
 
 </shortcuts>

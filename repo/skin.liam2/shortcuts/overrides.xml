@@ -19,7 +19,7 @@
 		<node label="32029">
 			<content>common</content>
 		</node>
-	
+
 		<!-- ============= -->
 		<!-- Video Library -->
 		<!-- ============= -->
@@ -43,7 +43,7 @@
 				<content>upnp-video</content>
 			</node>
 		</node>
-	
+
 		<!-- ============= -->
 		<!-- Music Library -->
 		<!-- ============= -->
@@ -61,18 +61,18 @@
 				<content>upnp-music</content>
 			</node>
 		</node>
-	
+
 		<!-- ======= -->
 		<!-- Live TV -->
 		<!-- ======= -->
-		<node label="32017" condition="PVR.HasTVChannels | PVR.HasRadioChannels">
-			<node label="19020" condition="PVR.HasTVChannels">
+		<node label="hi" condition="PVR.HasTVChannels | PVR.HasRadioChannels">
+			<node label="hi" condition="PVR.HasTVChannels">
 				<content>pvr</content>
-				<node label="19023">
+				<node label="hi">
 					<content>pvr-tv</content>
 				</node>
 			</node>
-			
+
 			<node label="19021" condition="PVR.HasRadioChannels">
 				<content>radio</content>
 				<node label="19024">
@@ -80,14 +80,14 @@
 				</node>
 			</node>
 		</node>
-	
+
 		<!-- ======== -->
 		<!-- Pictures -->
 		<!-- ======== -->
 		<node label="32020">
 		 <content>picturesources</content>
 		</node>
-	
+
 		<!-- ======= -->
 		<!-- Add-Ons -->
 		<!-- ======= -->
@@ -110,21 +110,21 @@
 				<content>addon-program</content>
 			</node>
 		</node>
-	
+
 		<!-- ========== -->
 		<!-- Favourites -->
 		<!-- ========== -->
 		<node label="32006">
 			<content>favourite</content>
 		</node>
-	
+
 		<!-- ======== -->
 		<!-- Settings -->
 		<!-- ======== -->
 		<node label="10004">
 			<content>settings</content>
 		</node>
-	
+
 		<!-- ============= -->
 		<!-- Kodi Commands -->
 		<!-- ============= -->
@@ -133,7 +133,7 @@
 		</node>
 	</groupings>
 
-	
+
 	<!-- ======= -->
 	<!-- Widgets -->
 	<!-- ======= -->
@@ -163,7 +163,7 @@
 			<shortcut label="31279" type="32099" widget="BoxOfficeMovies" icon="DefaultMovies.png" widgetType="movies" widgetTarget="videos" condition="System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=trakt_boxoffice&amp;type=movie&amp;widget=True&amp;localdb=True</shortcut>
 			<shortcut label="31237" type="32099" widget="PopularPeople" icon="icons/big/Profiles.png" widgetType="movies" widgetTarget="videos" condition="System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=popular&amp;type=person&amp;widget=True&amp;localdb=True</shortcut>
 		</node>
-		
+
 		<!-- TVShows Widgets -->
 		<node label="31095">
 			<!-- Local -->
@@ -188,7 +188,7 @@
 			<shortcut label="31275" type="32099" widget="MostWatchedTVShows" icon="DefaultTVShows.png" widgetType="tvshows" widgetTarget="videos" condition="System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=trakt_mostwatched&amp;type=tv&amp;widget=True&amp;localdb=True</shortcut>
 			<shortcut label="31276" type="32099" widget="MostAnticipatedTVShows" icon="DefaultTVShows.png" widgetType="tvshows" widgetTarget="videos" condition="System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=trakt_anticipated&amp;type=tv&amp;widget=True&amp;localdb=True</shortcut>
 		</node>
-		
+
 		<!-- Music Widgets -->
 		<node label="31096">
 			<!-- Local -->
@@ -202,7 +202,7 @@
 			<shortcut label="31202" type="32099" widget="SmartishAlbums" icon="DefaultMusicAlbums.png" widgetType="albums" widgetTarget="music" condition="System.HasAddon(service.smartish.widgets) + Library.HasContent(music)">plugin://service.smartish.widgets?type=albums&amp;reload=$INFO[Window.Property(smartish.albums)]</shortcut>
 			-->
 		</node>
-		
+
 		<!-- Video Library Nodes Widgets -->
 		<node label="32030">
 			<content>video</content>
@@ -214,7 +214,7 @@
 				<content>upnp-video</content>
 			</node>
 		</node>
-		
+
 		<!-- Music Library Nodes Widgets -->
 		<node label="32031">
 			<content>music</content>
@@ -225,12 +225,12 @@
 			 <content>musicsources</content>
 			</node>
 		</node>
-		
+
 		<!-- Pictures Nodes Widgets -->
 		<node label="32020">
 			<content>picturesources</content>
 		</node>
-		
+
 		<!-- Add-ons Nodes Widgets -->
 		<node label="24001">
 			<node label="Video Add-ons">
@@ -251,7 +251,7 @@
 			<shortcut label="1043" type="32099" widget="addon" icon="DefaultAddonProgram.png" widgetType="addons" widgetTarget="programs">addons://sources/executable</shortcut>
 			<shortcut label="20244" type="32099" widget="addon" icon="DefaultAddonProgram.png" widgetType="addons" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps/</shortcut>
 		</node>
-		
+
 		<!-- Live TV Widgets -->
 		<node label="31000">
 			<shortcut label="19217" type="32099" widget="TVChannels" icon="DefaultLiveTV.png" widgetType="pvr" widgetTarget="pvr" condition="PVR.HasTVChannels">pvr://channels/tv/*</shortcut>
@@ -265,7 +265,7 @@
 			<shortcut label="31205" type="32099" widget="SmartishTVChannels" icon="DefaultLiveTV.png" widgetType="pvr" widgetTarget="pvr" condition="System.HasAddon(service.smartish.widgets) + PVR.HasTVChannels">plugin://service.smartish.widgets?type=pvr&amp;reload=$INFO[Window.Property(smartish.pvr)]</shortcut>
 			-->
 		</node>
-		
+
 		<!-- Common Widgets -->
 		<node label="32029">
 			<shortcut label="10134" type="32099" widget="Favourites" icon="icons/big/Favourites.png" widgetType="mixed">favourites://</shortcut>
@@ -273,7 +273,7 @@
 			<shortcut label="10508" type="32099" widget="WeatherForecast" icon="icons/big/Weather.png" widgetType="weather" condition="!System.HasAddon(resource.images.weatherfanart.single) + ![String.IsEmpty(Weather.Plugin) | String.IsEmpty(Window(Weather).Property(Current.Condition))]">::INSTALL::resource.images.weatherfanart.single</shortcut>
 			<shortcut label="10508" type="32099" widget="WeatherForecast" icon="icons/big/Weather.png" widgetType="weather" condition="System.HasAddon(resource.images.weatherfanart.single) + ![String.IsEmpty(Weather.Plugin) | String.IsEmpty(Window(Weather).Property(Current.Condition))]">$INCLUDE[WeatherDaily_Forecast]</shortcut>
 		</node>
-		
+
 		<!-- Submenus Widgets -->
 		<node label="31209">
 			<shortcut label="Movies Submenu" type="32099" widget="MoviesSubmenu" widgetType="submenu" condition="Library.HasContent(movies)">$INCLUDE[skinshortcuts-group-movies]</shortcut>

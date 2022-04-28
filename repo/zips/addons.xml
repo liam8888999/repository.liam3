@@ -39,7 +39,7 @@
     </extension>
 </addon>
 
-<addon id="skin.liam2" version="1.8.1.2" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="1.8.2" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.0.17"/>
@@ -50,7 +50,6 @@
     <import addon="chamchenko-dev" version="0.0.2"/>
     <import addon="repository.slyguy" version="0.0.3"/>
     <import addon="repository.aussieaddons" version="1.2.0"/>
-
 	</requires>
 	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
 		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
