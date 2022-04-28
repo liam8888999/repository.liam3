@@ -7,7 +7,7 @@
 		<import addon="script.embuary.helper" version="1.4.5"/>
 		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
 		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
-    <import addon="chamchenko-dev" version="0.0.2"/>
+    <import addon="chamchenko-dev" version="0.0.3"/>
     <import addon="repository.slyguy" version="0.0.3"/>
     <import addon="repository.aussieaddons" version="1.2.0"/>
 	</requires>

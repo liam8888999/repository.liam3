@@ -22,15 +22,23 @@
   </extension>
 </addon>
 
-    <addon id="chamchenko-dev" name="chamchenko-dev" version="0.0.2" provider-name="chamchenko">
+    <addon id="chamchenko-dev" name="chamchenko-dev" version="0.0.3" provider-name="chamchenko">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
         <extension point="xbmc.addon.repository" name="chamchenko">
-            <info compressed="false">https://raw.githubusercontent.com/chamchenko/repository.chamchenko/master/xmls/dev/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/chamchenko/repository.chamchenko/master/xmls/dev/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/chamchenko/repository.chamchenko/master/zips/dev/</datadir>
-            <hashes>false</hashes>
+		    <dir>
+                <info compressed="false">https://raw.githubusercontent.com/chamchenko/repository.chamchenko/master/xmls/dev/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/chamchenko/repository.chamchenko/master/xmls/dev/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/chamchenko/repository.chamchenko/master/zips/dev/</datadir>
+                <hashes>false</hashes>
+		    </dir>
+		    <dir>
+                <info compressed="false">https://raw.githubusercontent.com/chamchenko/repository.chamchenko/lfs/xmls/dev/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/chamchenko/repository.chamchenko/lfs/xmls/dev/addons.xml.md5</checksum>
+                <datadir zip="true">https://media.githubusercontent.com/media/chamchenko/repository.chamchenko/lfs/zips/dev/</datadir>
+			    <hashes>false</hashes>
+		    </dir>
         </extension>
         <extension point="xbmc.addon.metadata">
             <summary>Kodi Video Add-ons</summary>
@@ -47,7 +55,7 @@
 		<import addon="script.embuary.helper" version="1.4.5"/>
 		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
 		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
-    <import addon="chamchenko-dev" version="0.0.2"/>
+    <import addon="chamchenko-dev" version="0.0.3"/>
     <import addon="repository.slyguy" version="0.0.3"/>
     <import addon="repository.aussieaddons" version="1.2.0"/>
 	</requires>
@@ -96,7 +104,7 @@
   </extension>
 </addon>
 
-<addon id="repository.liam3" name="Liam Repo" version="1.2" provider-name="Liam">
+<addon id="repository.liam3" name="Liam Repo" version="1.2.2" provider-name="Liam">
     <extension point="xbmc.addon.repository" name="Example Repository">
       <dir>
           <info compressed="false">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml</info>
