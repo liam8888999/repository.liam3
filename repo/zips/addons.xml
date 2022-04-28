@@ -221,4 +221,21 @@
 		<description lang="zh_TW">Confluence 是從 Kodi 9.11 開始預設的佈景主題。它結合了許多受歡迎的佈景主題的概念，且試圖包含並整合它們的優點，使第一次使用 Kodi 的使用者可以簡單地上手。</description>
 	</extension>
 </addon>
+
+    <addon id="chamchenko-dev" name="chamchenko-dev" version="0.0.2" provider-name="chamchenko">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="chamchenko">
+            <info compressed="false">https://raw.githubusercontent.com/chamchenko/repository.chamchenko/master/xmls/dev/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/chamchenko/repository.chamchenko/master/xmls/dev/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/chamchenko/repository.chamchenko/master/zips/dev/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Kodi Video Add-ons</summary>
+            <description>This repository contain Kodi videos Add-ons</description>
+            <platform>all</platform>
+    </extension>
+</addon>
 </addons>
