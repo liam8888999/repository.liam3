@@ -19,9 +19,25 @@
  <shortcut>
   <label>10play</label>
   <label2>10play</label2>
-  <defaultID>13002</defaultID>
+  <defaultID>13111</defaultID>
   <icon>DefaultHardDisk.png</icon>
   <thumb />
   <action>ActivateWindow(Videos,"plugin://slyguy.10play",return)</action>
+ </shortcut>
+ <shortcut>
+  <label>SBS On Demand</label>
+  <label2>SBS On Demand</label2>
+  <defaultID>130110</defaultID>
+  <icon>DefaultHardDisk.png</icon>
+  <thumb />
+  <action>ActivateWindow(Videos,"plugin://plugin.video.sbs",return)</action>
+ </shortcut>
+ <shortcut>
+  <label>ABC iView</label>
+  <label2>ABC iView</label2>
+  <defaultID>13002</defaultID>
+  <icon>DefaultHardDisk.png</icon>
+  <thumb />
+  <action>ActivateWindow(Videos,"plugin://plugin.video.abc_iview",return)</action>
  </shortcut>
 </shortcuts>

@@ -1,3 +1,67 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
+  <shortcut>
+    <defaultID />
+    <label>Kayo</label>
+    <label2>Kayo</label2>
+    <icon>DefaultShortcut.png</icon>
+    <thumb />
+    <action>ActivateWindow(Videos,"plugin://plugin.video.kayo.sports",return)</action>
+    </shortcut>
+  <shortcut>
+      <defaultID />
+      <label>Paramount+Sport</label>
+      <label2>Paramount+Sport</label2>
+      <icon>DefaultShortcut.png</icon>
+      <thumb />
+      <action>ActivateWindow(Videos,"plugin://slyguy.paramount.plus/?_=featured&amp;slug=Sport",return)</action>
+    </shortcut>
+  <shortcut>
+    <shortcut>
+     <label>NBA International</label>
+     <label2>NBA International</label2>
+     <defaultID>138888</defaultID>
+     <icon>DefaultHardDisk.png</icon>
+     <thumb />
+     <action>ActivateWindow(Videos,"plugin://plugin.video.nbainternational",return)</action>
+    </shortcut>
+    <shortcut>
+      <defaultID />
+      <label>Stan Sport</label>
+      <label2>Stan Sport</label2>
+      <icon>DefaultShortcut.png</icon>
+      <thumb />
+      <action>ActivateWindow(Videos,"plugin://plugin.video.stan.au/?_=nav&amp;key=sport&amp;title=Sport",return)</action>
+      </shortcut>
+      <defaultID />
+      <label>Optus Sport</label>
+      <label2>Optus Sport</label2>
+      <icon>DefaultShortcut.png</icon>
+      <thumb />
+      <action>ActivateWindow(Videos,"plugin://plugin.video.optus.sport",return)</action>
+      </shortcut>
+      <shortcut>
+       <label>7 Sport</label>
+       <label2>7 Sport</label2>
+       <defaultID>138890</defaultID>
+       <icon>DefaultHardDisk.png</icon>
+       <thumb />
+       <action>ActivateWindow(Videos,"plugin://slyguy.7plus/?_=content&amp;slug=sport",return)</action>
+      </shortcut>
+      <shortcut>
+    		<defaultID />
+    		<label>9 Sports</label>
+    		<label2>9 Sports</label2>
+    		<icon>DefaultShortcut.png</icon>
+    		<thumb />
+    		<action>ActivateWindow(Videos,"plugin://slyguy.9now/?_=categories&amp;category=sport",return)</action>
+    		</shortcut>
+      <shortcut>
+   <label>10 Sports</label>
+   <label2>10 Sports</label2>
+   <defaultID>138889</defaultID>
+   <icon>DefaultHardDisk.png</icon>
+   <thumb />
+   <action>ActivateWindow(Videos,"plugin://slyguy.10play/?_=categories&amp;category=Sport",return)</action>
+  </shortcut>
 </shortcuts>

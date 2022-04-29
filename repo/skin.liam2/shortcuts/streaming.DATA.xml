@@ -1,14 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
   <shortcut>
-   <label>Binge</label>
-   <label2>Binge</label2>
-   <defaultID>13100</defaultID>
-   <icon>DefaultHardDisk.png</icon>
-   <thumb />
-   <action>ActivateWindow(Videos,"plugin://slyguy.binge",return)</action>
-  </shortcut>
-  <shortcut>
    <label>Disney+</label>
    <label2>Disney+</label2>
    <defaultID>13200</defaultID>
