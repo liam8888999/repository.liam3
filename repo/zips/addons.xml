@@ -47,7 +47,7 @@
     </extension>
 </addon>
 
-<addon id="skin.liam2" version="2.0" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="2.0.1" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.0.17"/>

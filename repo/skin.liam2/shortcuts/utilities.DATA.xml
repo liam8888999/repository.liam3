@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
   <shortcut>
+   <label>Exit</label>
+   <label2>Exit</label2>
+   <defaultID>166</defaultID>
+   <icon>icons/big/Skin.png</icon>
+   <thumb />
+   <action>Quit</action>
+  </shortcut>
+  <shortcut>
    <label>File Manager</label>
    <label2>File Manager</label2>
    <defaultID>31016</defaultID>
