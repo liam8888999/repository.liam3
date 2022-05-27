@@ -1,0 +1,701 @@
+# Kodi language file
+# Addon Name: Library Integration Tool
+# Addon id: script.library.integration.tool
+# Addon Provider: patrick-klein
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2014-10-26 17:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgctxt "#32000"
+msgid "Add selected item to library"
+msgstr "Adicionar item selecionado à Biblioteca"
+
+msgctxt "#32001"
+msgid "Sync directory to library"
+msgstr "Sincronizar diretório com à Biblioteca"
+
+msgctxt "#32002"
+msgid "[COLOR darkgreen]Managed Movies[/COLOR]"
+msgstr "[COLOR darkgreen]Filmes Gerenciados[/COLOR]"
+
+msgctxt "#32003"
+msgid "[COLOR darkgreen]Managed TV Shows[/COLOR]"
+msgstr "[COLOR darkgreen]Séries Gerenciadas[/COLOR]"
+
+msgctxt "#32004"
+msgid "[COLOR darkslateblue]Staged Movies[/COLOR]"
+msgstr "[COLOR darkslateblue]Filmes Armazenados[/COLOR]"
+
+msgctxt "#32005"
+msgid "[COLOR darkslateblue]Staged TV Shows[/COLOR]"
+msgstr "[COLOR darkslateblue]Séries Armazenadas[/COLOR]"
+
+msgctxt "#32006"
+msgid "Synced Directories"
+msgstr "Diretórios Sincronizados"
+
+msgctxt "#32007"
+msgid "Blocked Items"
+msgstr "Itens Bloqueados"
+
+msgctxt "#32008"
+msgid "No managed movies"
+msgstr "Sem Filmes Gerenciados"
+
+msgctxt "#32009"
+msgid "Remove all movies"
+msgstr "Remover Todos Os Filmes"
+
+msgctxt "#32010"
+msgid "Move all movies to staged"
+msgstr "Mover todos os Filmes para Armazenados"
+
+msgctxt "#32011"
+msgid "Back..."
+msgstr "Voltar..."
+
+msgctxt "#32013"
+msgid "Removing all movies..."
+msgstr "Removendo todos os Filmes..."
+
+msgctxt "#32014"
+msgid "All movies removed"
+msgstr "Todos os Filmes foram Removidos"
+
+msgctxt "#32015"
+msgid "Moving all movies to staged..."
+msgstr "Movendo todos os Filmes para Armazenados..."
+
+msgctxt "#32017"
+msgid "Remove"
+msgstr "Remover"
+
+msgctxt "#32018"
+msgid "Move back to staged"
+msgstr "Mover para Armazenados"
+
+msgctxt "#32019"
+msgid "Managed Movie Options"
+msgstr ""
+
+msgctxt "#32020"
+msgid "No managed TV shows"
+msgstr ""
+
+msgctxt "#32022"
+msgid "Move all TV shows to staged"
+msgstr "Mover todas as series de TV para armazenados"
+
+msgctxt "#32024"
+msgid "Removing all TV shows..."
+msgstr ""
+
+msgctxt "#32025"
+msgid "All TV shows removed"
+msgstr ""
+
+msgctxt "#32026"
+msgid "Moving all TV shows to staged..."
+msgstr "Movendo todas as series de TV para armazenados..."
+
+msgctxt "#32027"
+msgid "All TV shows moved to staged"
+msgstr ""
+
+msgctxt "#32028"
+msgid "No managed %s episodes"
+msgstr ""
+
+msgctxt "#32029"
+msgid "Remove all episodes"
+msgstr ""
+
+msgctxt "#32030"
+msgid "Move all episodes to staged"
+msgstr "Mover todos os episodios para armazenados"
+
+msgctxt "#32031"
+msgid "Managed episodes of %s"
+msgstr "Episodios gerenciados de %s"
+
+msgctxt "#32032"
+msgid "Removing all %s episodes..."
+msgstr ""
+
+msgctxt "#32033"
+msgid "All %s episodes removed"
+msgstr ""
+
+msgctxt "#32034"
+msgid "Moving all episodes to staged..."
+msgstr "Movendo todos os episodios para armazenados..."
+
+msgctxt "#32035"
+msgid "All %s episodes moved to staged"
+msgstr ""
+
+msgctxt "#32036"
+msgid "Managed Episode Options"
+msgstr ""
+
+msgctxt "#32037"
+msgid "No staged movies"
+msgstr ""
+
+msgctxt "#32038"
+msgid "Add all movies"
+msgstr ""
+
+msgctxt "#32039"
+msgid "Add all movies with metadata"
+msgstr ""
+
+msgctxt "#32040"
+msgid "Create metadata for all itens"
+msgstr "Criar metadados para todos os itens"
+
+msgctxt "#32042"
+msgid "Adding all movies..."
+msgstr ""
+
+msgctxt "#32043"
+msgid "All movies added"
+msgstr ""
+
+msgctxt "#32044"
+msgid "Adding all movies with metadata..."
+msgstr ""
+
+msgctxt "#32045"
+msgid "All movies with metadata added"
+msgstr ""
+
+msgctxt "#32046"
+msgid "Generating all movie metadata..."
+msgstr ""
+
+msgctxt "#32047"
+msgid "All movie metadata created"
+msgstr ""
+
+msgctxt "#32048"
+msgid "Add"
+msgstr ""
+
+msgctxt "#32049"
+msgid "Remove and block"
+msgstr ""
+
+msgctxt "#32050"
+msgid "Rename"
+msgstr ""
+
+msgctxt "#32052"
+msgid "Create metadata item"
+msgstr "Criar metadado do item"
+
+msgctxt "#32053"
+msgid "Staged Movie Options"
+msgstr ""
+
+msgctxt "#32054"
+msgid "No staged TV shows"
+msgstr ""
+
+msgctxt "#32055"
+msgid "Add all TV shows"
+msgstr ""
+
+msgctxt "#32056"
+msgid "Add all items with metadata"
+msgstr ""
+
+msgctxt "#32057"
+msgid "Remove all TV shows"
+msgstr ""
+
+msgctxt "#32059"
+msgid "Adding all TV shows..."
+msgstr ""
+
+msgctxt "#32060"
+msgid "All TV shows added"
+msgstr ""
+
+msgctxt "#32061"
+msgid "Adding all TV show items with metadata..."
+msgstr ""
+
+msgctxt "#32062"
+msgid "All TV show items with metadata added"
+msgstr ""
+
+msgctxt "#32063"
+msgid "Generating all TV show metadata..."
+msgstr ""
+
+msgctxt "#32064"
+msgid "All TV show metadata created"
+msgstr ""
+
+msgctxt "#32065"
+msgid "No staged %s episodes"
+msgstr ""
+
+msgctxt "#32066"
+msgid "Add all episodes"
+msgstr ""
+
+msgctxt "#32067"
+msgid "Add all episodes with metadata"
+msgstr ""
+
+msgctxt "#32068"
+msgid "Remove and block TV show"
+msgstr ""
+
+msgctxt "#32069"
+msgid "Automatically rename all episodes using metadata"
+msgstr ""
+
+msgctxt "#32070"
+msgid "Staged %s Episodes"
+msgstr "Episodios armazenados de %s"
+
+msgctxt "#32071"
+msgid "Adding all %s episodes..."
+msgstr ""
+
+msgctxt "#32072"
+msgid "All %s episodes added"
+msgstr ""
+
+msgctxt "#32073"
+msgid "Adding all %s episodes with metadata..."
+msgstr ""
+
+msgctxt "#32074"
+msgid "All %s episodes with metadata added"
+msgstr ""
+
+msgctxt "#32075"
+msgid "Renaming all %s episodes using metadata..."
+msgstr ""
+
+msgctxt "#32076"
+msgid "All %s episodes renamed using metadata"
+msgstr ""
+
+msgctxt "#32077"
+msgid "Generating all %s metadata..."
+msgstr ""
+
+msgctxt "#32078"
+msgid "All %s metadata created"
+msgstr ""
+
+msgctxt "#32079"
+msgid "Remove and block episode"
+msgstr ""
+
+msgctxt "#32080"
+msgid "Staged Episode Options"
+msgstr ""
+
+msgctxt "#32081"
+msgid "Update all"
+msgstr ""
+
+msgctxt "#32082"
+msgid "Remove all"
+msgstr ""
+
+msgctxt "#32083"
+msgid "Synced Directories"
+msgstr ""
+
+msgctxt "#32084"
+msgid "Update"
+msgstr ""
+
+msgctxt "#32085"
+msgid "Synced Directory Options"
+msgstr ""
+
+msgctxt "#32086"
+msgid "Remove all synced directories"
+msgstr ""
+
+msgctxt "#32087"
+msgid "All synced directories removed"
+msgstr ""
+
+msgctxt "#32088"
+msgid "Are you sure?"
+msgstr ""
+
+msgctxt "#32089"
+msgid "Getting all items from synced directories..."
+msgstr ""
+
+msgctxt "#32090"
+msgid "Finding items to remove..."
+msgstr ""
+
+msgctxt "#32092"
+msgid "Finding items to add..."
+msgstr ""
+
+msgctxt "#32093"
+msgid "%i items to remove. %i items to stage. Proceed?"
+msgstr ""
+
+msgctxt "#32094"
+msgid "Removing items..."
+msgstr ""
+
+msgctxt "#32095"
+msgid "Staging items..."
+msgstr ""
+
+msgctxt "#32096"
+msgid "All synced directories updated"
+msgstr "Todos os diretórios sincronizados atualizados"
+
+msgctxt "#32097"
+msgid "Add keyword"
+msgstr "Adicionar palavra-chave"
+
+msgctxt "#32098"
+msgid "Blocked Items"
+msgstr "Itens Bloqueados"
+
+msgctxt "#32099"
+msgid "Blocked Item Options"
+msgstr "Opções de item bloqueado"
+
+msgctxt "#32100"
+msgid "Unable to determine content. Choose type:"
+msgstr "Incapaz de determinar o conteúdo. Escolha o tipo:"
+
+msgctxt "#32101"
+msgid "TV Show"
+msgstr "Série de TV"
+
+msgctxt "#32102"
+msgid "Movie"
+msgstr "Filme"
+
+msgctxt "#32103"
+msgid "Item is already staged"
+msgstr "O item já está armazenado"
+
+msgctxt "#32104"
+msgid "Item is already managed"
+msgstr "Item já gerenciado"
+
+msgctxt "#32105"
+msgid "Movie staged"
+msgstr "Filme armazenado"
+
+msgctxt "#32106"
+msgid "%i new episodes staged. %i were already staged, and %i were already managed"
+msgstr "%i novos episódios armazenados. %i já foi armazenados e %i já foi gerenciado"
+
+msgctxt "#32107"
+msgid "%i new episodes staged"
+msgstr "%i novos episodios armazenados"
+
+msgctxt "#32108"
+msgid "TV Shows"
+msgstr "Series de TV"
+
+msgctxt "#32109"
+msgid "Movies"
+msgstr "Filmes"
+
+msgctxt "#32110"
+msgid "Current directory already synced. Looking for new items..."
+msgstr "Diretório atual já está sincronizado. Procurando por novos itens..."
+
+msgctxt "#32111"
+msgid "%i movies staged"
+msgstr "%i filmes armazenados"
+
+msgctxt "#32112"
+msgid "All TV shows staged. %i episodes staged"
+msgstr "Todos os programas de TV armazenados. %i episódios armazenados"
+
+msgctxt "#32113"
+msgid "Keyword"
+msgstr "Palavra-chave"
+
+msgctxt "#32114"
+msgid "Episode"
+msgstr "Episódio"
+
+msgctxt "#32115"
+msgid "Single TV Show"
+msgstr "Programa de TV individual"
+
+msgctxt "#32116"
+msgid "Single Movie"
+msgstr "Filme Único"
+
+msgctxt "#32117"
+msgid "General"
+msgstr "Geral"
+
+msgctxt "#32118"
+msgid "Managed Folder"
+msgstr "Pasta Gerenciada"
+
+msgctxt "#32119"
+msgid "No blocked items"
+msgstr "Nenhum item bloqueado"
+
+msgctxt "#32120"
+msgid "No synced directories"
+msgstr "Nenhum diretório sincronizado"
+
+msgctxt "#32121"
+msgid "All items are up-to-date"
+msgstr "Todos os itens estão atualizados"
+
+msgctxt "#32122"
+msgid "All items were successfully updated. Please clean library and review staged items."
+msgstr "Todos os itens foram atualizados. Limpe a biblioteca e reveja os itens armazenados."
+
+msgctxt "#32123"
+msgid ""
+msgstr ""
+
+msgctxt "#32124"
+msgid "Updating synced directory list..."
+msgstr "Atualizando lista de diretórios sincronizados ..."
+
+msgctxt "#32125"
+msgid "Getting all items in directory..."
+msgstr "Coletando todos os itens do diretório ..."
+
+msgctxt "#32126"
+msgid "Getting items of [COLOR blue][B]%s[/B][/COLOR]..."
+msgstr "Coletando items de [COLOR blue][B]%s[/B][/COLOR]..."
+
+msgctxt "#32127"
+msgid "[B]Configured managed[/B] folder"
+msgstr "[B]Pasta gerenciada[/B] configurada"
+
+msgctxt "#32128"
+msgid "Synced Directories"
+msgstr "Diretórios sincronizados"
+
+msgctxt "#32129"
+msgid "Use TV show artwork if episode thumb is unavailable"
+msgstr "Usar arte do programa de TV se as miniaturas não estiverem disponíveis"
+
+msgctxt "#32130"
+msgid "Development"
+msgstr "Desenvolvimento"
+
+msgctxt "#32131"
+msgid "Run Test Suite"
+msgstr "Executar suíte de teste"
+
+msgctxt "#32132"
+msgid "Run Fuzzer"
+msgstr "Executar Fuzzer"
+
+msgctxt "#32133"
+msgid "Updating addon settings..."
+msgstr "Atualizando configurações do addon..."
+
+msgctxt "#32134"
+msgid "Add-on updated. See change log for details."
+msgstr "Atualização. Olhe o Log de mudanças"
+
+msgctxt "#32135"
+msgid "Clean up movie metadata"
+msgstr "Limpar metadados do filme"
+
+msgctxt "#32136"
+msgid "All metadata for movies cleaned"
+msgstr "Todos os metadados de filmes deletados"
+
+msgctxt "#32137"
+msgid "Update TV shows"
+msgstr "Atualizar Series de TV"
+
+msgctxt "#32138"
+msgid "Update movies"
+msgstr "Atualizar Filmes"
+
+msgctxt "#32139"
+msgid "Max recursion when finding videos (0 for unlimited)"
+msgstr "Recursão máxima ao encontrar vídeos (0 para ilimitado)"
+
+msgctxt "#32140"
+msgid "Use custom managed folder"
+msgstr "Usar Pasta Gerenciada personalizada"
+
+msgctxt "#32141"
+msgid "Select managed folder"
+msgstr "Selecione Pasta Gerenciada"
+
+msgctxt "#32142"
+msgid "Use custom metadata folder"
+msgstr "Usar pasta de metadados customizada"
+
+msgctxt "#32143"
+msgid "Select metadata folder"
+msgstr "Selecione a pasta de metadados"
+
+msgctxt "#32144"
+msgid "Enable development options"
+msgstr "Habilitar opções de desenvolvimento"
+
+msgctxt "#32153"
+msgid "Automatically add to library?"
+msgstr "Adicionar automaticamente a biblioteca?"
+
+msgctxt "#32154"
+msgid "[B]Library Integration Tool Menu[/B]"
+msgstr "[B]Menu Library Integration Tool[/B]"
+
+msgctxt "#32155"
+msgid "It is a Movie"
+msgstr "É um Filme"
+
+msgctxt "#32156"
+msgid "It is a Show"
+msgstr "É um Série de TV"
+
+msgctxt "#32157"
+msgid "[COLOR red][B]Cancelar[/B][/COLOR]"
+msgstr "[COLOR red][B]Cancel[/B][/COLOR]"
+
+msgctxt "#32158"
+msgid "Type not selected, Try again."
+msgstr "Tipo não selecionado, tente novamente."
+
+msgctxt "#32159"
+msgid "Choose the type of this content:"
+msgstr "Escolha o tipo deste conteúdo:"
+
+msgctxt "#32160"
+msgid "All Items"
+msgstr "Todos os Itens"
+
+msgctxt "#32161"
+msgid "Only Movies"
+msgstr "Apenas Filmes"
+
+msgctxt "#32162"
+msgid "Only Shows"
+msgstr "Apenas Séries de TV"
+
+msgctxt "#32163"
+msgid "could not be identified, not added!"
+msgstr "não pôde ser identificado, não adicionado!"
+
+msgctxt "#32164"
+msgid "Choose the type of content you want to sync?"
+msgstr "Que tipo de conteúdo que deseja sincronizar?"
+
+msgctxt "#32165"
+msgid "Staged Movie: [COLOR blue][B]%s[/B][/COLOR]"
+msgstr "Filme Armazenado: [COLOR blue][B]%s[/B][/COLOR]"
+
+msgctxt "#32166"
+msgid "Something went wrong, try again, maybe this isn't a Tvshow."
+msgstr "Algo deu errado, tente novamente, talvez esta não seja uma série de TV."
+
+msgctxt "#32167"
+msgid "Filter items"
+msgstr "Filtrar itens"
+
+msgctxt "#32168"
+msgid "Removing seasons from: %s"
+msgstr "Removendo temporadas de: %s"
+
+msgctxt "#32169"
+msgid "All seasons of %s have been removed."
+msgstr "Todas as temporadas de %s, foram removidas"
+
+msgctxt "#32170"
+msgid "No managed %s seasons"
+msgstr "Nenhuma %s temporada gerenciada"
+
+msgctxt "#32171"
+msgid "Remove all seasons"
+msgstr "Remover todas as temporadas"
+
+msgctxt "#32172"
+msgid "Move all seasons to staged"
+msgstr "Mover todas as temporadas para armazenados"
+
+msgctxt "#32173"
+msgid "All seasons of %s moved to staged"
+msgstr "Todas as temporadas de %s movidas para gerenciados"
+
+msgctxt "#32174"
+msgid "Clean up metadata for all itens"
+msgstr "Limpar metadados para todos os itens"
+
+msgctxt "#32175"
+msgid "Managed seasons of %s"
+msgstr "Temporadas gerenciadas de %s"
+
+msgctxt "#32176"
+msgid "Staged seasons of %s"
+msgstr "Temporadas armazenadas de %s"
+
+msgctxt "#32177"
+msgid "'Add all seasons'"
+msgstr "Adicionar todas as temporadas"
+
+msgctxt "#32178"
+msgid "Add all seasons with metadata"
+msgstr "Adicionar todas as temporadas com metadados"
+
+msgctxt "#32179"
+msgid "Library Integration Tool settings"
+msgstr "Library Integration Tool configurações"
+
+msgctxt "#32180"
+msgid "Library options"
+msgstr "Opções da biblioteca"
+
+msgctxt "#32181"
+msgid "Generating all seasons metadata..."
+msgstr "Gerando metadados de todas as temporadas"
+
+msgctxt "#32182"
+msgid "All seasons metadata created"
+msgstr "Os metadados de todas as temporadas foram criados"
+
+msgctxt "#32183"
+msgid "Generating all episodes metadata..."
+msgstr "Gerando metadados de todas os episodios"
+
+msgctxt "#32184"
+msgid "All episodes metadata created"
+msgstr "Os metadados de todas os episodios foram criados"
+
+msgctxt "#32185"
+msgid "Create metadada for episode"
+msgstr "Criar metadado para o episódio"
+
+msgctxt "#32186"
+msgid "Create nfo automatically?"
+msgstr "Criar nfo de forma automatica?"

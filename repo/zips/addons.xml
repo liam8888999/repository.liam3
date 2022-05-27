@@ -101,7 +101,7 @@
   </extension>
 </addon>
 
-<addon id="repository.liam3" name="Liam Repo" version="1.2.5" provider-name="Liam">
+<addon id="repository.liam3" name="Liam Repo" version="1.2.6" provider-name="Liam">
     <extension point="xbmc.addon.repository" name="Example Repository">
       <dir>
           <info compressed="false">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml</info>
@@ -121,40 +121,20 @@
     </extension>
 </addon>
 
-<addon id="repository.googlecode.xbmc-catchuptv-au" name="Aussie Add-ons (formerly XBMC CatchupTV AU)" provider-name="Aussie Add-ons" version="1.6">
-  <extension name="Aussie Add-ons Repository" point="xbmc.addon.repository">
-    <dir minversion="1.0.0" maxversion="18.9.0">
-      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml</info>
-      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml.md5</checksum>
-      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/leia/</datadir>
-    </dir>
-    <dir minversion="18.9.701">
-      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml</info>
-      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml.md5</checksum>
-      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/matrix/</datadir>
-    </dir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Install Aussie Add-ons (formerly XBMC CatchupTV AU)</summary>
-    <description>Download and install add-ons from the Aussie Add-ons repository. See http://aussieaddons.com for more information.</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.4.1" provider-name="patrick-klein">
+<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.8.34" provider-name="luizoti|patrick-klein">
   <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="xbmc.addon" version="12.0.0"/>
-    <import addon="script.module.beautifulsoup4" version="1.0.0"/>
-    <import addon="script.module.simplejson" version="1.0.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="xbmc.addon" version="18.9.701"/>
   </requires>
-
   <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
   </extension>
-
   <extension point="kodi.context.item">
     <menu id="kodi.core.main">
+      <item library="default.py">
+        <label>32154</label>
+        <visible>String.StartsWith(ListItem.Path,plugin) + !Container.Content(addons)</visible>
+      </item>
       <item library="context.py">
         <label>32000</label>
         <visible>String.StartsWith(ListItem.Path,plugin) + !Container.Content(addons)</visible>
@@ -191,24 +171,33 @@ See the README for a full tutorial.
       <screenshot>resources/media/screenshot-02.jpg</screenshot>
       <screenshot>resources/media/screenshot-03.jpg</screenshot>
     </assets>
-    <news>v0.4.1 (2018-8-12)
-- Fix xml parsing issue
-
-v0.4.0 (2018-8-12)
-- Allow directories to be loaded recursively
-- Added recursion limit in settings
-- Updating synced directories moved to background
-- Added percentage to all progress windows
-- Option to update only movies or tv shows
-- Option to remove unused movie metadata stubs
-- Option to read metadata to get episode id
-- Option to skip staging for items
-- Use addon folder as default managed folder
-- Added setting to use custom metadata folder
-- Cleaned and refactored project
+    <news>v0.8.34 (2021-8-13)
+        fix: :bug: nfo creation problems
+        feat: :sparkles: added HBOMAX support
+        feat: :sparkles: added CRACKLE support
+        feat: :sparkles: added PARAMOUNTPLUS support
     </news>
   </extension>
+</addon>
 
+<addon id="repository.googlecode.xbmc-catchuptv-au" name="Aussie Add-ons (formerly XBMC CatchupTV AU)" provider-name="Aussie Add-ons" version="1.6">
+  <extension name="Aussie Add-ons Repository" point="xbmc.addon.repository">
+    <dir minversion="1.0.0" maxversion="18.9.0">
+      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml</info>
+      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml.md5</checksum>
+      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/leia/</datadir>
+    </dir>
+    <dir minversion="18.9.701">
+      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml</info>
+      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml.md5</checksum>
+      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/matrix/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Install Aussie Add-ons (formerly XBMC CatchupTV AU)</summary>
+    <description>Download and install add-ons from the Aussie Add-ons repository. See http://aussieaddons.com for more information.</description>
+    <platform>all</platform>
+  </extension>
 </addon>
 
 <addon id="skin.liam.confluence" version="1.0.23" name="Liam - Confluence" provider-name="Liam">
