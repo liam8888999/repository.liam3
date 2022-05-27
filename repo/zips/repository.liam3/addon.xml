@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.liam3" name="Liam Repo" version="1.2.3" provider-name="Liam">
+<addon id="repository.liam3" name="Liam Repo" version="1.2.4" provider-name="Liam">
     <extension point="xbmc.addon.repository" name="Example Repository">
       <dir>
           <info compressed="false">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml</info>
