@@ -411,7 +411,7 @@ def list_reorder(contents_json, showtitle, sync_type=False):
                             pass
 
                                     # 7plus
-                                    if 'slyguy.paramount.plus' in item['file']:
+                                    if 'slyguy.7plus' in item['file']:
                                         # 7plus
                                         if item['filetype'] == 'directory':
                                             if re_search(item['type'], ['tvshow', 'unknown']):
