@@ -433,10 +433,6 @@ def list_reorder(contents_json, showtitle, sync_type=False):
                             # 7PLUS EPISODE FILE
                             if item['type'] == 'episode':
                                 try:
-                                    years.append(item['year'])
-                                except KeyError:
-                                    pass
-                                try:
                                     reordered[item['episode'] - 1] = item
                                 except IndexError:
                                     pass

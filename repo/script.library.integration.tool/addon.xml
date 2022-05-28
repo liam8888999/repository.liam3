@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.1.4" provider-name="liam2003">
+<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.1.5" provider-name="liam2003">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="xbmc.addon" version="18.9.701"/>
