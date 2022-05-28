@@ -410,37 +410,6 @@ def list_reorder(contents_json, showtitle, sync_type=False):
                         except IndexError:
                             pass
 
-                                    # 7plus
-                                    if 'slyguy.7plus' in item['file']:
-                                        # 7plus
-                                        if item['filetype'] == 'directory':
-                                            if re_search(item['type'], ['tvshow', 'unknown']):
-                                                if item['season'] == -1:
-                                                    if not is_season(item['label']):
-                                                        item['showtitle'] = item['title']
-                                                        item['type'] = 'tvshow'
-                                                        del item['episode']
-                                                        del item['season']
-                                                        reordered[index] = item
-                                            # 7plus
-                                            if item['type'] == 'unknown':
-                                                if is_season(item['label']):
-                                                    item['showtitle'] = showtitle
-                                                    del item['episode']
-                                                    item['type'] = 'season'
-                                                    item['season'] = item['number']
-                                                    reordered[item['season'] - 1] = item
-                                        elif item['filetype'] == 'file':
-                                            # 7plus
-                                            if item['type'] == 'episode':
-                                                try:
-                                                    years.append(item['year'])
-                                                except KeyError:
-                                                    pass
-                                                try:
-                                                    reordered[item['episode'] - 1] = item
-                                                except IndexError:
-                                                    pass
             # RAIPLAY
             if 'plugin.video.raitv' in item['file']:
                 if item['filetype'] == 'directory':
