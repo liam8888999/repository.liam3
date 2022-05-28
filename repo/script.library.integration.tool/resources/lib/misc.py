@@ -19,7 +19,13 @@ SKIP_STRINGS = [
     'resumo',
     'suggested',
     'extras',
-    # 'trailer',
+     'trailer',
+     'related',
+     'suggested',
+     'similar',
+     'you may like',
+     'you might like',
+     'for you',
     r'\#(?:\d{1,5}\.\d{1,5}|SP)',
 ]
 

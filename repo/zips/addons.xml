@@ -107,7 +107,7 @@
   </extension>
 </addon>
 
-<addon id="repository.liam3" name="Liam Repo" version="1.2.7" provider-name="Liam">
+<addon id="repository.liam3" name="Liam Repo" version="1.2.8" provider-name="Liam">
     <extension point="xbmc.addon.repository" name="Example Repository">
       <dir>
           <info compressed="false">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml</info>
@@ -127,7 +127,27 @@
     </extension>
 </addon>
 
-<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.8.23" provider-name="luizoti|patrick-klein">
+<addon id="repository.googlecode.xbmc-catchuptv-au" name="Aussie Add-ons (formerly XBMC CatchupTV AU)" provider-name="Aussie Add-ons" version="1.6">
+  <extension name="Aussie Add-ons Repository" point="xbmc.addon.repository">
+    <dir minversion="1.0.0" maxversion="18.9.0">
+      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml</info>
+      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml.md5</checksum>
+      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/leia/</datadir>
+    </dir>
+    <dir minversion="18.9.701">
+      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml</info>
+      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml.md5</checksum>
+      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/matrix/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Install Aussie Add-ons (formerly XBMC CatchupTV AU)</summary>
+    <description>Download and install add-ons from the Aussie Add-ons repository. See http://aussieaddons.com for more information.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.1" provider-name="liam2003">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="xbmc.addon" version="18.9.701"/>
@@ -183,26 +203,6 @@ See the README for a full tutorial.
         feat: :sparkles: added CRACKLE support
         feat: :sparkles: added PARAMOUNTPLUS support
     </news>
-  </extension>
-</addon>
-
-<addon id="repository.googlecode.xbmc-catchuptv-au" name="Aussie Add-ons (formerly XBMC CatchupTV AU)" provider-name="Aussie Add-ons" version="1.6">
-  <extension name="Aussie Add-ons Repository" point="xbmc.addon.repository">
-    <dir minversion="1.0.0" maxversion="18.9.0">
-      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml</info>
-      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml.md5</checksum>
-      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/leia/</datadir>
-    </dir>
-    <dir minversion="18.9.701">
-      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml</info>
-      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml.md5</checksum>
-      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/matrix/</datadir>
-    </dir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Install Aussie Add-ons (formerly XBMC CatchupTV AU)</summary>
-    <description>Download and install add-ons from the Aussie Add-ons repository. See http://aussieaddons.com for more information.</description>
-    <platform>all</platform>
   </extension>
 </addon>
 
