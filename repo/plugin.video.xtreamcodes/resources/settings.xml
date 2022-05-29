@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="General">
+        <setting id="Enable_Debugging" type="bool" label="30000"  default="false" />
+    </category>
+    <category label="Server">
+        <setting id="Host"      type="text" label="30003"   default=""  visible="true"/>
+        <setting id="Port"      type="text" label="30004"   default=""  visible="true"/>
+        <setting id="User"      type="text" label="30005"   default=""  visible="true" />
+        <setting id="Password"  type="text" label="30006"   default=""  visible="true"/>
+    </category>
+</settings>

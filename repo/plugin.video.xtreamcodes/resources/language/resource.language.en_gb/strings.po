@@ -1,0 +1,51 @@
+# Kodi Media Center language file
+# Addon Name: XTREAM CODES
+# Addon id: plugin.video.xtreamcodes
+# Addon Provider: Chamchenko
+msgid ""
+msgstr ""
+"Project-Id-Version: plugin.video.cbs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "Enable Debugging [Log errors]"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Something went wrong, Try again..."
+msgstr ""
+
+msgctxt "#30003"
+msgid "Hostname/IP:"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Port:"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Username:"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Password:"
+msgstr ""
+
+msgctxt "#30100"
+msgid "Your subscription has expired"
+msgstr ""
+
+msgctxt "#30101"
+msgid "Login Failed"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Expires: %s"
+msgstr ""
