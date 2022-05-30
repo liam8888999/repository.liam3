@@ -14,7 +14,6 @@ from . import queries
 from .constants import *
 from .language import _
 
-
 class APIError(Error):
     pass
 

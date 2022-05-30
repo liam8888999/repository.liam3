@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="repository.slyguy" name="SlyGuy Repository" provider-name="SlyGuy" version="0.0.3">
-  <extension point="xbmc.addon.repository" name="SlyGuy Repository">
-    <dir>
-      <info compressed="false">https://k.slyguy.xyz/.repo/addons.xml</info>
-      <checksum>https://k.slyguy.xyz/.repo/addons.xml.md5</checksum>
-      <datadir zip="true">https://k.slyguy.xyz/.repo/</datadir>
-    </dir>
+<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.3.1">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <description lang="en">Addons by SlyGuy</description>
+    <description lang="en">Watch your favourite shows for free as seen on Channel 7, 7mate, 7TWO and 7flix and explore our collection of 7plus exclusives</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Move EPG into Playlist</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.3.7">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Binge on the world's best TV Shows and Movies.
+
+Subscription required.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Fix no chno bug</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -107,29 +129,10 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.xtreamcodes" version="0.0.2" name="Xtream-Codes" provider-name="Chamchenko">
-    <requires>
-        <import addon="script.module.codequick" version="0.9.13"/>
-        <import addon="script.module.future" version="0.17.1"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB"></summary>
-        <description lang="en_GB"></description>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <source>https://github.com/chamchenko/plugin.video.xtreamcodes</source>
-        <website>https://xtream-codes.com/</website>
-        <assets>
-            <icon>resources/images/icon.png</icon>
-            <fanart>resources/images/fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.14.8.2">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.11.8">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
   </extension>
@@ -148,6 +151,25 @@ Abonnement requis.</description>
     <language></language>
     <website></website>
     <news>Add Polish language. Thanks @hevet</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.5">
+  <requires>
+    <import addon="repository.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Dependencies required by all Slyguy add-ons</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Bump requests > 2.27.1</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -175,6 +197,71 @@ Abonnement requis.</description>
     </extension>
 </addon>
 
+<addon id="slyguy.10play" name="10 play" provider-name="SlyGuy" version="0.0.9">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite TV shows from Channel 10, 10 Peach and 10 Bold on demand, plus much more on 10 play!</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Fix some VOD not working</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.13.0">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite sports live &amp; on demand with Kayo Sports.
+
+Subscription required.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Move EPG URL into Playlist</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.1.3">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite shows from 9Now</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>New setting to change region for live streams</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="repository.googlecode.xbmc-catchuptv-au" name="Aussie Add-ons (formerly XBMC CatchupTV AU)" provider-name="Aussie Add-ons" version="1.6">
   <extension name="Aussie Add-ons Repository" point="xbmc.addon.repository">
     <dir minversion="1.0.0" maxversion="18.9.0">
@@ -192,6 +279,52 @@ Abonnement requis.</description>
     <summary>Install Aussie Add-ons (formerly XBMC CatchupTV AU)</summary>
     <description>Download and install add-ons from the Aussie Add-ons repository. See http://aussieaddons.com for more information.</description>
     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.4.9">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch thousands of episodes of your favorite shows on any device. Paramount+ includes on-demand and live content from CBS, BET, Comedy Central, Nickelodeon, MTV, VH1, Paramount, and more.
+
+Subscription required.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Rework playback urls</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.3.6">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Stan offers unlimited access to thousands of hours of entertainment, first-run exclusives, award-winning TV shows, blockbuster movies and kids content.
+
+Subscription required.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>fix rugby minis</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
   </extension>
 </addon>
 
@@ -251,6 +384,65 @@ See the README for a full tutorial.
         feat: :sparkles: added CRACKLE support
         feat: :sparkles: added PARAMOUNTPLUS support
     </news>
+  </extension>
+</addon>
+
+<addon id="plugin.video.osmosis" name="OSMOSIS" version="1.3.16-beta" provider-name="Stereodruid, Maven, gismo112">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.common.plugin.cache" version="2.5.2" />
+		<import addon="script.module.myconnpy" version="1.1.7"/>
+		<import addon="script.module.requests" version="2.18.4" />
+		<import addon="script.module.kodi-six" version="0.1.0"/>
+		<import addon="script.module.fuzzywuzzy" version="0.17.0"  optional="true"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>audio video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Generates Strm files form streams that can be scraped to the library</summary>
+		<description lang="en_GB">Generate Strm files from Kodi Plugins,that can be scraped to the library. Supported content: Movies, TV-Shows, Music.[CR][CR]Attention: This addon uses the TVDb API (https://api.thetvdb.com) to search for episode data, if necessary.</description>
+		<disclaimer lang="en_GB"></disclaimer>
+		<summary lang="de_DE">Erstellt Strm-Dateien die mit einem Scraper zur Datenbank hinzugefügt werden können.</summary>
+		<description lang="de_DE">Erstellt Strm-Dateien die von Kodi-Plugins bereitgestellt werden wie zB Youtube, die mit einem Scraper zur Datenbank hinzugefügt werden können. Unterstützte Formate: Serien, Filme und Musik.[CR][CR]Hinweis: Dieses Addon verwendet die TVDb API (https://api.thetvdb.com), um nach Episodendaten zu suchen, wenn nötig.</description>
+		<disclaimer lang="de_DE"></disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3</license>
+		<forum>https://www.kodinerds.net/index.php/Thread/53307-Beta-Version-OSMOSIS-Streams-zur-DB-hinzuf%C3%BCgen/?postID=328166#post327429
+		</forum>
+		<website>https://www.youtube.com/channel/UCFC6pKk0cshN1sG15FEO5TQ</website>
+		<email></email>
+		<source>https://github.com/stereodruid/OSMOSIS</source>
+		<news></news>
+		<assets>
+			<icon>resources/media/icon.png</icon>
+			<fanart>resources/media/fanart.jpg</fanart>
+			<screenshot>resources/media/fanart.jpg</screenshot>
+		</assets>
+		<language>en de</language>
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+	</extension>
+</addon>
+
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.52.6">
+  <requires>
+    <import addon="slyguy.dependencies"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="xbmc.python.pluginsource" library="default.py" />
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Common code required by all Slyguy add-ons</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Improved Proxy support. Polish language thanks to @hevet</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
   </extension>
 </addon>
 
@@ -400,5 +592,28 @@ See the README for a full tutorial.
 		<description lang="zh_CN">Confluence 集合了许多流行皮肤的创意，力求把这些优点融合到一个皮肤中，使得首次使用 Kodi 的用户能更容易上手。</description>
 		<description lang="zh_TW">Confluence 是從 Kodi 9.11 開始預設的佈景主題。它結合了許多受歡迎的佈景主題的概念，且試圖包含並整合它們的優點，使第一次使用 Kodi 的使用者可以簡單地上手。</description>
 	</extension>
+</addon>
+
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.7.2">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite sports live &amp; on demand with Optus Sport.
+
+Subscription required.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>fix 50fps hack</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
 </addon>
 </addons>

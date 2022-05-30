@@ -1,2 +1,0 @@
-password fix top of resources/lib/plugin.py
-replace everything else and copy those lines to same spot. fill out according to _userdata token in settings.xml. has category matching userdata.set item followed by string
