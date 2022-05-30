@@ -159,9 +159,6 @@ Abonnement requis.</description>
 </addon>
 
 <addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.5">
-  <requires>
-    <import addon="repository.slyguy"/>
-  </requires>
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Dependencies required by all Slyguy add-ons</description>
