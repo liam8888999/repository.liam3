@@ -124,7 +124,7 @@ Subscription required.</description>
     </extension>
 </addon>
 
-<addon id="skin.liam2" version="2.0.4" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="2.0.5" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.0.17"/>
@@ -132,7 +132,6 @@ Subscription required.</description>
 		<import addon="script.embuary.helper" version="1.4.5"/>
 		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
 		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
-    <import addon="plugin.program.iptv.merge" version="0.0"/>
     <import addon="plugin.video.kayo.sports" version="0.0"/>
     <import addon="plugin.video.optus.sport" version="0.0"/>
     <import addon="plugin.video.stan.au" version="0.0"/>
@@ -153,6 +152,7 @@ Subscription required.</description>
     <import addon="script.trakt" version="0.0"/>
     <import addon="script.xbmc.unpausejumpback" version="0.0"/>
     <import addon="script.service.checkpreviousepisode" version="0.0"/>
+    <import addon="plugin.program.iptv.merge" version="0.22.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
 		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
