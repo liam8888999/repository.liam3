@@ -981,7 +981,7 @@
 			<onleft>50</onleft>
 			<onright>50</onright>
 			<onback condition="![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]">50</onback>
-			<visible>!Skin.HasSetting(EnableKioskMode)</visible>
+			<visible>!Skin.HasSetting(EnableKioskMode) + !Skin.HasSetting(Jodie)</visible>
 			<control type="image" id="$PARAM[top_id]">
 				<width>405</width>
 				<height>75</height>
