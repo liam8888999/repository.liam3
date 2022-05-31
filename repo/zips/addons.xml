@@ -98,8 +98,8 @@ Subscription required.</description>
 </addon>
 
 <addon id="script.advancedsettings"
-       name="Unlock Kodi Advanced Settings"
-       version="1.0"
+       name="Advanced Settings"
+       version="1.1"
        provider-name="Liam Robson">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -124,7 +124,7 @@ Subscription required.</description>
     </extension>
 </addon>
 
-<addon id="skin.liam2" version="2.0.6" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="2.0.7" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.0.17"/>
@@ -133,25 +133,25 @@ Subscription required.</description>
 		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
 		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
     <import addon="plugin.video.kayo.sports" version="0.13.0"/>
-    <import addon="plugin.video.optus.sport" version="0.0"/>
-    <import addon="plugin.video.stan.au" version="0.0"/>
-    <import addon="repository.googlecode.xbmc-catchuptv-au" version="0.0"/>
-    <import addon="repository.Rockcrusher" version="0.0"/>
-    <import addon="script.module.slyguy" version="0.0"/>
-    <import addon="script.advancedsettings" version="0.0"/>
-    <import addon="slyguy.7plus" version="0.0"/>
-    <import addon="slyguy.9now" version="0.0"/>
-    <import addon="slyguy.10play" version="0.0"/>
-    <import addon="slyguy.binge" version="0.0"/>
-    <import addon="slyguy.dependencies" version="0.0"/>
-    <import addon="slyguy.disney.plus" version="0.0"/>
-    <import addon="slyguy.paramount.plus" version="0.0"/>
-    <import addon="pvr.hts" version="0.0"/>
-    <import addon="pvr.iptvsimple" version="0.0"/>
-    <import addon="script.keymap" version="0.0"/>
-    <import addon="script.trakt" version="0.0"/>
-    <import addon="script.xbmc.unpausejumpback" version="0.0"/>
-    <import addon="script.service.checkpreviousepisode" version="0.0"/>
+    <import addon="plugin.video.optus.sport" version="0.7.2"/>
+    <import addon="plugin.video.stan.au" version="0.3.6"/>
+    <import addon="repository.googlecode.xbmc-catchuptv-au" version="1.6"/>
+    <import addon="repository.Rockcrusher" version="2.8"/>
+    <import addon="script.module.slyguy" version="0.52.6"/>
+    <import addon="script.advancedsettings" version="1.1"/>
+    <import addon="slyguy.7plus" version="0.3.1"/>
+    <import addon="slyguy.9now" version="0.1.3"/>
+    <import addon="slyguy.10play" version="0.0.9"/>
+    <import addon="slyguy.binge" version="0.3.7"/>
+    <import addon="slyguy.dependencies" version="0.0.5"/>
+    <import addon="slyguy.disney.plus" version="0.11.8"/>
+    <import addon="slyguy.paramount.plus" version="0.4.9"/>
+    <import addon="pvr.hts" version="19.0.6"/>
+    <import addon="pvr.iptvsimple" version="19.1.0"/>
+    <import addon="script.keymap" version="1.1.4"/>
+    <import addon="script.trakt" version="3.5.0"/>
+    <import addon="script.xbmc.unpausejumpback" version="3.0.3"/>
+    <import addon="script.service.checkpreviousepisode" version="0.4.5"/>
     <import addon="plugin.program.iptv.merge" version="0.22.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
