@@ -99,7 +99,7 @@ Subscription required.</description>
 
 <addon id="script.advancedsettings"
        name="Unlock Kodi Advanced Settings"
-       version="0.1"
+       version="1.0"
        provider-name="Liam Robson">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
