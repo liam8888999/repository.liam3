@@ -1,1 +1,0 @@
-ALTER TABLE stream_ref ADD COLUMN metadata TEXT;

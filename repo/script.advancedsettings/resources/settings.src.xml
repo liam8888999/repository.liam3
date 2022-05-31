@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+      <category id="settings" label="Settings" root="true">
+        <setting id="" type="" label="Set Setting below to 90" help="" />
+        <setting id="playcountminimumpercent" label="playcountminimumpercent" type="number" default="89" />
+        <setting id="" type="" label="Turn on both Settings below" help="" />
+        <setting id="videolibrary/cleanonupdate" label="cleanvideolibraryonupdate" type="bool" default="false" />
+        <setting id="musiclibrary/cleanonupdate" label="cleanmusiclibraryonupdate" type="bool" default="false"  />
+    </category>
+</settings>

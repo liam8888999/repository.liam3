@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.liam2" version="2.0.1" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="2.0.2" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.0.17"/>
@@ -7,6 +7,21 @@
 		<import addon="script.embuary.helper" version="1.4.5"/>
 		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
 		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
+    <import addon="plugin.program.iptv.merge" version="0.0"/>
+    <import addon="plugin.video.kayo.sports" version="0.0"/>
+    <import addon="plugin.video.optus.sports" version="0.0"/>
+    <import addon="plugin.video.stan.au" version="0.0"/>
+    <import addon="repository.googlecode.xbmc-catchuptv-au" version="0.0"/>
+    <import addon="repository.rockcrusher" version="0.0"/>
+    <import addon="script.module.slyguy" version="0.0"/>
+    <import addon="script.advancedsettings" version="0.0"/>
+    <import addon="slyguy.7plus" version="0.0"/>
+    <import addon="slyguy.9now" version="0.0"/>
+    <import addon="slyguy.10play" version="0.0"/>
+    <import addon="slyguy.binge" version="0.0"/>
+    <import addon="slyguy.dependencies" version="0.0"/>
+    <import addon="slyguy.disney.plus" version="0.0"/>
+    <import addon="slyguy.paramount.plus" version="0.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
 		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />

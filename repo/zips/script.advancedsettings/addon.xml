@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.unlock.advancedsettings"
+       name="Unlock Kodi Advanced Settings"
+       version="0.1"
+       provider-name="Liam Robson">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <news>Fixed bugs</news>
+        <platform>all</platform>
+        <summary lang="en_GB">Unlock Kodi advanced settings</summary>
+        <description lang="en_GB">This plugin allows you to unlock and edit the hidden advanced system settings of Kodi. Please note that Kodi restart is required so that the advanced settings become in effect.</description>
+        <disclaimer lang="en_GB">This plugin was created just fo fun and has no relation to official Kodi software. PLease use at your own risk. Author bears no liability for any changes made by this plugin in your system.</disclaimer>
+            <platform>all</platform>
+        <language>en</language>
+        <license>GPL-3.0-or-later</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/screenshot-01.png</screenshot>
+        </assets>
+    </extension>
+</addon>
