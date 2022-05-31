@@ -124,7 +124,7 @@ Subscription required.</description>
     </extension>
 </addon>
 
-<addon id="skin.liam2" version="2.0.7" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="2.0.8" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.0.17"/>
@@ -135,8 +135,6 @@ Subscription required.</description>
     <import addon="plugin.video.kayo.sports" version="0.13.0"/>
     <import addon="plugin.video.optus.sport" version="0.7.2"/>
     <import addon="plugin.video.stan.au" version="0.3.6"/>
-    <import addon="repository.googlecode.xbmc-catchuptv-au" version="1.6"/>
-    <import addon="repository.Rockcrusher" version="2.8"/>
     <import addon="script.module.slyguy" version="0.52.6"/>
     <import addon="script.advancedsettings" version="1.1"/>
     <import addon="slyguy.7plus" version="0.3.1"/>
