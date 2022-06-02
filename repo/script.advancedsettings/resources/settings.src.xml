@@ -6,5 +6,8 @@
         <setting id="" type="" label="Turn on both Settings below" help="" />
         <setting id="videolibrary/cleanonupdate" label="cleanvideolibraryonupdate" type="bool" default="false" />
         <setting id="musiclibrary/cleanonupdate" label="cleanmusiclibraryonupdate" type="bool" default="false"  />
+        <setting id="" type="" label="Set both Settings below to 480" help="" />
+      <setting id="imageres" label="imageres" type="number" default="481" />
+      <setting id="fanartres" label="fanartres" type="number" default="481" />
     </category>
 </settings>
