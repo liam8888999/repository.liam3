@@ -197,7 +197,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.11.8">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.11.9">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -218,7 +218,7 @@ Abonnement requis.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add Polish language. Thanks @hevet</news>
+    <news>Add Dutch language. Thanks @djdirty60</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -347,7 +347,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.4.9">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.5.0">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -362,7 +362,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Rework playback urls</news>
+    <news>Add Dutch language. Thanks @djdirty60</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
