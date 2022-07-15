@@ -24,7 +24,6 @@
     <import addon="script.keymap" version="1.1.4"/>
     <import addon="script.trakt" version="3.5.0"/>
     <import addon="script.xbmc.unpausejumpback" version="3.0.3"/>
-    <import addon="script.service.checkpreviousepisode" version="0.4.5"/>
     <import addon="plugin.program.iptv.merge" version="0.22.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
