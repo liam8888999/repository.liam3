@@ -196,7 +196,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.12.0">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.12.2">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -213,11 +213,14 @@ Abbonamento richiesto.</description>
     <description lang="fr">Disney+ est la destination exclusive de vos films et séries TV préférés des univers Disney, Pixar, Marvel, Star Wars et National Geographic.
 
 Abonnement requis.</description>
+    <description lang="cs">Disney+ je exkluzivní místo pro vaše oblíbené filmy a televizní pořady ze světa Disney, Pixar, Marvel, Star Wars a National Geographic.
+
+Je nutné předplatné.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add Dutch language. Thanks @djdirty60</news>
+    <news>Add Czech translation. Thanks Ludek</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -369,7 +372,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.3.6">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.3.7">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -384,7 +387,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>fix rugby minis</news>
+    <news>improve sports</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -392,7 +395,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.54.2">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.54.3">
   <requires>
     <import addon="slyguy.dependencies"/>
   </requires>
@@ -561,7 +564,7 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.7.2">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.7.4">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -576,7 +579,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>fix 50fps hack</news>
+    <news>1080p Live!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
