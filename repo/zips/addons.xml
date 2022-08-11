@@ -196,7 +196,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.12.2">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.12.3">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -564,7 +564,7 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.7.4">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.7.6">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
