@@ -12,7 +12,7 @@ from slyguy import plugin, gui, settings, userdata, signals, inputstream
 from slyguy.log import log
 from slyguy.monitor import monitor
 from slyguy.exceptions import PluginError
-from slyguy.constants import ROUTE_LIVE_TAG, PLAY_FROM_TYPES, PLAY_FROM_ASK, PLAY_FROM_LIVE, PLAY_FROM_START
+from slyguy.constants import ROUTE_LIVE_TAG, PLAY_FROM_TYPES, PLAY_FROM_ASK, PLAY_FROM_LIVE, PLAY_FROM_START, LIVE_HEAD
 
 from .api import API
 from .language import _
@@ -21,7 +21,7 @@ from .constants import *
 #Fix LOGIN
 #run string through https://www.freeformatter.com/xml-escape.html#ad-output and press unescape before pasting here
 a = xbmcaddon.Addon()
-a.setSettingString('_userdata', '{"username":"a301uuv@gmail.com","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik56aEJPVFJHT0RjNE1FUkRSRFJEUTBVd1FrVkdNRGt4TVVVNVF6RTRRa0UzTkVVMk1rVkRRZyJ9.eyJodHRwOi8vZm94c3BvcnRzLmNvbS5hdS9tYXJ0aWFuX2lkIjoiYXV0aDB8NWU1Y2E3MTJlNWIyNDIwZDkyNzliYjYzIiwiaHR0cHM6Ly92aW1vbmQvZW50aXRsZW1lbnRzIjpbeyJzdm9kIjoiNCIsInF1YWxpdHkiOiJmaGQiLCJzdHJlYW1jb3VudCI6Mn1dLCJodHRwczovL2theW9zcG9ydHMuY29tLmF1L3N0YXR1cyI6eyJhY2NvdW50X3N0YXR1cyI6IklOQUNUSVZFX1NVQlNDUklQVElPTiIsInN1Yl9hY2NvdW50X3N0YXR1cyI6IlNVQlNDUklQVElPTl9DQU5DRUxMRUQiLCJwcHZfZXZlbnRzIjpbXSwidXBkYXRlZF9hdCI6IjIwMjItMDctMzBUMDI6Mjc6MTMuOTk2WiJ9LCJodHRwczovL2FyZXMuY29tLmF1L3N0YXR1cyI6eyJhY2NvdW50X3N0YXR1cyI6IkFDVElWRV9TVUJTQ1JJUFRJT04iLCJzdWJfYWNjb3VudF9zdGF0dXMiOiJQQVlJTkdfU1VCU0NSSVBUSU9OIiwicHB2X2V2ZW50cyI6W10sInVwZGF0ZWRfYXQiOiIyMDIyLTA3LTMwVDAyOjI3OjEzLjk5NloifSwiaHR0cDovL2lyZGV0by5jb20vY29udHJvbC9lbnQiOlt7ImVwaWQiOiJBbmRyb2lkVFZfQVJFU18ySEQiLCJiaWQiOiJCQVNJQyJ9XSwiaHR0cDovL2lyZGV0by5jb20vY29udHJvbC9qdGkiOiIzZTg1YWRlZC0yOTYwLTQ3MzItODczMS0xZDE4MDEzMWUyMzciLCJodHRwOi8vaXJkZXRvLmNvbS9jb250cm9sL2FpZCI6InN0cmVhbW90aW9uIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnN0cmVhbW90aW9uLmNvbS5hdS8iLCJzdWIiOiJhdXRoMHw1ZTVjYTcxMmU1YjI0MjBkOTI3OWJiNjMiLCJhdWQiOlsic3RyZWFtb3Rpb24uY29tLmF1IiwiaHR0cHM6Ly9wcm9kLW1hcnRpYW4uYXUuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY2MDIxNDcxNCwiZXhwIjoxNjYwMjI1NTE0LCJhenAiOiJRUWR0UGxWdHgxaDlCa08wOUJETTJPckZpNXZUUEN0eSIsInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIGRybTpoaWdoIGVtYWlsIHVzZXI6cGhvbmVfdmVyaWZpZWQifQ.P0WJW_EQeMOPVmhwzxXMDuHWiH-9_rTMS3rJkyD2YMu3yTblA-KPQErqMBSAtyVPvEtHEASm9NTZEU7dEOYT1PVFnHinuJv7FHNlWDPw2K-bPNt5W8IhlT4qFRiv2sbU98cAq96JbZBFV4KeD5PZdpWH1qs9mmZmQPvn0blSM3WKQVzaS3_l1UIhXGnSvsg_MtnbDvB4eKAD5UY56wKEW1p18Byhply8SZV9giHyuTiLe2WMSyPRdfio3wuH9rWwDAQvOcsi857OY1V74ENCjEmO8q7JF-8AXTw56ncUKxwVzhE-QXbl2QiTPqJmcs1TM81x0urcUxaVJgHXR0ylww","expires":1660225499,"refresh_token":"l6zu6BBRM7at05DOchFhphB0PtuBfZshRKA4QHhj2aVnd"}')
+a.setSettingString('_userdata', '{"username":"a301uuv@gmail.com","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik56aEJPVFJHT0RjNE1FUkRSRFJEUTBVd1FrVkdNRGt4TVVVNVF6RTRRa0UzTkVVMk1rVkRRZyJ9.eyJodHRwOi8vZm94c3BvcnRzLmNvbS5hdS9tYXJ0aWFuX2lkIjoiYXV0aDB8NWRhYWJiN2JiYzE4ZjIwZDgzNDVlNWU0IiwiaHR0cHM6Ly92aW1vbmQvZW50aXRsZW1lbnRzIjpbeyJzdm9kIjoiNCIsInF1YWxpdHkiOiJmaGQiLCJzdHJlYW1jb3VudCI6Mn1dLCJodHRwczovL2theW9zcG9ydHMuY29tLmF1L3N0YXR1cyI6eyJhY2NvdW50X3N0YXR1cyI6IklOQUNUSVZFX1NVQlNDUklQVElPTiIsInN1Yl9hY2NvdW50X3N0YXR1cyI6IlNVQlNDUklQVElPTl9DQU5DRUxMRUQiLCJwcHZfZXZlbnRzIjpbXSwidXBkYXRlZF9hdCI6IjIwMjItMDMtMDJUMTM6MTc6NDkuNjY2WiJ9LCJodHRwczovL2FyZXMuY29tLmF1L3N0YXR1cyI6eyJhY2NvdW50X3N0YXR1cyI6IkFDVElWRV9TVUJTQ1JJUFRJT04iLCJzdWJfYWNjb3VudF9zdGF0dXMiOiJQQVlJTkdfU1VCU0NSSVBUSU9OIiwicHB2X2V2ZW50cyI6W10sInVwZGF0ZWRfYXQiOiIyMDIyLTAzLTAyVDEzOjE3OjQ5LjY2NloifSwiaHR0cDovL2lyZGV0by5jb20vY29udHJvbC9lbnQiOlt7ImVwaWQiOiJBbmRyb2lkVFZfQVJFU18ySEQiLCJiaWQiOiJCQVNJQyJ9XSwiaHR0cDovL2lyZGV0by5jb20vY29udHJvbC9qdGkiOiJlY2FlYzBkZi1jODBhLTRlZTctYmQ4ZS03OTU0MWVkMTZjZTgiLCJodHRwOi8vaXJkZXRvLmNvbS9jb250cm9sL2FpZCI6InN0cmVhbW90aW9uIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnN0cmVhbW90aW9uLmNvbS5hdS8iLCJzdWIiOiJhdXRoMHw1ZGFhYmI3YmJjMThmMjBkODM0NWU1ZTQiLCJhdWQiOlsic3RyZWFtb3Rpb24uY29tLmF1IiwiaHR0cHM6Ly9wcm9kLW1hcnRpYW4uYXUuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY0NjgyODU1NiwiZXhwIjoxNjQ2ODM5MzU2LCJhenAiOiJRUWR0UGxWdHgxaDlCa08wOUJETTJPckZpNXZUUEN0eSIsInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIGRybTpoaWdoIGVtYWlsIHVzZXI6cGhvbmVfdmVyaWZpZWQifQ.rrEJsBX9OAbRu5qNRX1W06EI2jegSwlkL24N1tTV9tz-NSyqNtw3b0f1aZrl2AsrX-En5xk-RAMKfT_V7y2St5Iq6MIoW164KkICHTKiszsshYgW-FrGk9yj9cQnqlpyrmx1Dq5XRbqgzC77TjxNT3iBTaPQMG5RcDy1jK8Joc3XZAg0C6Xw3GfJjh3k-w7vo6FHkbxhK7xYS3Ji2ItaN0sm5JvmLgnpySzUXEE_1BVZJlH30-thJPX21kwdy1SbsRoQqkEZ5I3D4ZkBBZ-EqbDSrrY-rl5q8hv59QMRTxIbGZWJc-XiyCgVViY-fIpNIctgJLe6TTISxMEmvluQqQ","expires":1646839342,"refresh_token":"hPcE4hYDZRejvwpqWboVGjoD3ChryP-HGgGP_o2nGrKXC","avatar_id":1,"profile_name":"Andy","profile_id":"d46a5526-3510-44f7-9842-58d28c4fec59"}')
 #End Fix Login
 
 
@@ -476,6 +476,7 @@ def _parse_video(asset):
         is_live = True
         start_from = 0
         play_type = PLAY_FROM_START
+        item.info['mediatype'] = 'video'
 
     elif asset['playbackType'] == 'LIVE' and click['isStreaming']:
         is_live = True
@@ -551,23 +552,48 @@ def license_request(**kwargs):
 @plugin.route()
 @plugin.login_required()
 def play(id, start_from=0, play_type=PLAY_FROM_LIVE, **kwargs):
-    asset = api.stream(id)
-
     start_from = int(start_from)
     play_type = int(play_type)
     is_live = ROUTE_LIVE_TAG in kwargs
 
+    if is_live:
+        if play_type == PLAY_FROM_LIVE:
+            start_from = 0
+        elif play_type == PLAY_FROM_ASK:
+            start_from = plugin.live_or_start(start_from)
+            if start_from == -1:
+                return
+
+    asset = api.stream(id)
     streams = [asset['recommendedStream']]
     streams.extend(asset['alternativeStreams'])
     streams = [s for s in streams if s['mediaFormat'] in SUPPORTED_FORMATS]
-
     if not streams:
         raise PluginError(_.NO_STREAM)
 
-    providers = SUPPORTED_PROVIDERS[:]
+    prefer_cdn = settings.getEnum('prefer_cdn', AVAILABLE_CDNS)
+    prefer_format = SUPPORTED_FORMATS[0]
+
+    if prefer_cdn == CDN_AUTO:
+        try:
+            data = api.use_cdn(is_live)
+            prefer_cdn = data['useCDN']
+            prefer_format = 'ssai-{}'.format(data['mediaFormat']) if data.get('ssai') else data['mediaFormat']
+            if prefer_format.startswith('ssai-'):
+                log.debug('Stream Format: Ignoring prefer ssai format')
+                prefer_format = prefer_format[5:]
+        except Exception as e:
+            log.exception(e)
+            log.debug('Failed to get preferred cdn')
+            prefer_cdn = AVAILABLE_CDNS[0]
+
+    providers = [prefer_cdn]
     providers.extend([s['provider'] for s in streams])
 
-    streams = sorted(streams, key=lambda k: (providers.index(k['provider']), SUPPORTED_FORMATS.index(k['mediaFormat'])))
+    formats = [prefer_format]
+    formats.extend(SUPPORTED_FORMATS)
+
+    streams = sorted(streams, key=lambda k: (providers.index(k['provider']), formats.index(k['mediaFormat'])))
     stream = streams[0]
 
     log.debug('Stream CDN: {provider} | Stream Format: {mediaFormat}'.format(**stream))
@@ -577,30 +603,32 @@ def play(id, start_from=0, play_type=PLAY_FROM_LIVE, **kwargs):
         headers = HEADERS,
     )
 
-    if is_live and (play_type == PLAY_FROM_LIVE or (play_type == PLAY_FROM_ASK and gui.yes_no(_.PLAY_FROM, yeslabel=_.PLAY_FROM_LIVE, nolabel=_.PLAY_FROM_START))):
-        play_type = PLAY_FROM_LIVE
-        start_from = 0
-
     if stream['mediaFormat'] == FORMAT_DASH:
         item.inputstream = inputstream.MPD()
 
-    elif stream['mediaFormat'] == FORMAT_HLS_TS:
-        force = (is_live and play_type == PLAY_FROM_LIVE)
+    elif stream['mediaFormat'] in (FORMAT_HLS_TS, FORMAT_HLS_TS_SSAI):
+        force = stream['mediaFormat'] == FORMAT_HLS_TS_SSAI or (is_live and play_type == PLAY_FROM_LIVE and asset['assetType'] != 'live-linear')
         item.inputstream = inputstream.HLS(force=force, live=is_live)
-
         if force and not item.inputstream.check():
             raise PluginError(_.HLS_REQUIRED)
 
-    elif stream['mediaFormat'] == FORMAT_HLS_FMP4:
+    elif stream['mediaFormat'] in (FORMAT_HLS_FMP4, FORMAT_HLS_FMP4_SSAI):
+        ## No audio on ffmpeg or IA
         item.inputstream = inputstream.HLS(force=True, live=is_live)
         if not item.inputstream.check():
             raise PluginError(_.HLS_REQUIRED)
 
     elif stream['mediaFormat'] in (FORMAT_DRM_DASH, FORMAT_DRM_DASH_HEVC):
-        item.inputstream = inputstream.Widevine(license_key=plugin.url_for(license_request))
+        item.inputstream = inputstream.Widevine(
+            license_key=plugin.url_for(license_request),
+        )
 
-    if start_from:
+    if start_from and not ROUTE_RESUME_TAG in kwargs:
         item.resume_from = start_from
+
+    if not item.resume_from and ROUTE_LIVE_TAG in kwargs:
+        ## Need below to seek to live over multi-periods
+        item.resume_from = LIVE_HEAD
 
     return item
 
@@ -613,4 +641,4 @@ def playlist(output, **kwargs):
         for row in _live_channels():
             f.write(u'\n#EXTINF:-1 tvg-id="{id}" tvg-chno="{channel}" channel-id="{channel}" tvg-logo="{logo}",{name}\n{url}'.format(
                 id=row['playback']['info']['assetId'], channel=row['chno'] or '', logo=row['contentDisplay']['images']['tile'].replace('${WIDTH}', str(768)),
-                    name=row['playback']['info']['title'], url=plugin.url_for(play, id=row['playback']['info']['assetId'], play_type=PLAY_FROM_START, _is_live=True)))
+                    name=row['playback']['info']['title'], url=plugin.url_for(play, id=row['playback']['info']['assetId'], _is_live=True)))
