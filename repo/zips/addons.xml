@@ -196,7 +196,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.12.5">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.12.6">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -285,7 +285,7 @@ Je nutné předplatné.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.13.1">
+<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.13.2">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -300,7 +300,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Move EPG URL into Playlist</news>
+    <news>fix live channels</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -349,7 +349,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.5.2">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.5.3">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
