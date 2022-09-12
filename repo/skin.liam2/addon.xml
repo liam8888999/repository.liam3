@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.liam2" version="2.0.9" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="2.0.10" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
+    <import addon="service.libraryupdater" version="1.0"/>
 		<import addon="script.skinshortcuts" version="1.0.17"/>
 		<import addon="plugin.video.themoviedb.helper" version="2.0.18"/>
 		<import addon="script.embuary.helper" version="1.4.5"/>
