@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: XBMC Library Auto Update
-# Addon id: service.libraryautoupdate
+# Addon id: service.libraryupdater
 # Addon Provider: robweber
 # Translators:
 # A B, 2016

@@ -331,7 +331,7 @@ Subscription required.</description>
 </addon>
 
 <addon id="service.libraryupdater"
-    name="Library Updater" version="1.1" provider-name="liam">
+    name="Library Updater" version="1.1.1" provider-name="liam">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.dateutil" version="2.7.3" />
