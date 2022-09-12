@@ -36,7 +36,7 @@
         </setting>
     		<setting id="check_sources" type="boolean" label="30017" help="">
           <level>2</level>
-          <default>false</default>
+          <default>true</default>
           <control type="toggle" />
         </setting>
         <setting id="disable_manual_prompt" type="boolean" label="30015" help="30077">
