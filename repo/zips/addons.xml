@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.22.4">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.22.5">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -434,7 +434,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.5.5">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.5.7">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -480,7 +480,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.56.0">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.56.3">
   <requires>
     <import addon="slyguy.dependencies"/>
   </requires>
@@ -649,7 +649,7 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.7.7">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.7.8">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -664,7 +664,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Support CMAF for IA version 20.3.1 (Kodi 20) or higher</news>
+    <news>Add Device Code login</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
