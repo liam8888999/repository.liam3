@@ -309,7 +309,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.1.4">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.1.6">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -322,7 +322,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add playback settings for audio/subs</news>
+    <news>1080 live</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
