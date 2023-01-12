@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.22.8">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.23.2">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -14,7 +14,7 @@
     <license></license>
     <language/>
     <website></website>
-    <news>Add setting to do merge at specific hour each day</news>
+    <news></news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -197,7 +197,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.12.7">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.3">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -221,7 +221,7 @@ Je nutné předplatné.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Support for new ad-tier logins. Support Atmos and h265 for L3 widevine devices</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -434,7 +434,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.5.7">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.5.9">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -449,7 +449,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>add live for INTL</news>
+    <news>Add German translation. Thanks @GTSFWL</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -480,7 +480,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.56.6">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.56.8">
   <requires>
     <import addon="slyguy.dependencies"/>
   </requires>
@@ -493,7 +493,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fixed content views. Thanks @drinfernoo</news>
+    <news>Add Ignore Display Resolution logic and setting</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
