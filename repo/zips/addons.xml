@@ -434,7 +434,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.5.9">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.6.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -449,7 +449,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add German translation. Thanks @GTSFWL</news>
+    <news>Move some playback settings to SlyGuy common settings</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -480,7 +480,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.56.8">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.57.2">
   <requires>
     <import addon="slyguy.dependencies"/>
   </requires>
