@@ -480,7 +480,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.57.2">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.57.5">
   <requires>
     <import addon="slyguy.dependencies"/>
   </requires>
