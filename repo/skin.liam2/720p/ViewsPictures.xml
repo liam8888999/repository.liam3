@@ -153,7 +153,7 @@
 								<shadowcolor>77000000</shadowcolor>
 								<align>center</align>
 								<aligny>center</aligny>
-								<label>҈  ҈  ҈</label>
+								<label>◎  ◎  ◎</label>
 								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 							<control type="label">
@@ -240,7 +240,7 @@
 								<shadowcolor>77000000</shadowcolor>
 								<align>center</align>
 								<aligny>center</aligny>
-								<label>҈  ҈  ҈</label>
+								<label>◎  ◎  ◎</label>
 								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 							<control type="label">

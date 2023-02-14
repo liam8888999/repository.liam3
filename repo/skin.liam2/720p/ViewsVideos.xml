@@ -162,7 +162,7 @@
 							<textcolor>white</textcolor>
 							<shadowcolor>77000000</shadowcolor>
 							<align>center</align>
-							<label fallback="҈  ҈  ҈">$INFO[ListItem.Year]</label>
+							<label fallback="◎  ◎  ◎">$INFO[ListItem.Year]</label>
 							<visible>!ListItem.IsParentFolder</visible>
 						</control>
 						<control type="image">
@@ -3770,7 +3770,7 @@
 							<shadowcolor>77000000</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label fallback="҈  ҈  ҈">$INFO[ListItem.Year]</label>
+							<label fallback="◎  ◎  ◎">$INFO[ListItem.Year]</label>
 							<visible>!ListItem.IsParentFolder</visible>
 						</control>
 						<control type="image">
