@@ -86,7 +86,7 @@
 								<textcolor>white</textcolor>
 								<shadowcolor>77000000</shadowcolor>
 								<align>center</align>
-								<label fallback="◎  ◎  ◎">$VAR[FirstMusicLabel]</label>
+								<label fallback="҈  ҈  ҈">$VAR[FirstMusicLabel]</label>
 								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 							<control type="label">
