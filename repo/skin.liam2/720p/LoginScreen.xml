@@ -194,7 +194,7 @@
 			  <textcolor>white</textcolor>
 			  <font>FontSize_50</font>
 			  <align>center</align>
-			  <label>Welcome</label>
+			  <label>$LOCALIZE[31042]</label>
 			</control>
 			<control type="button" id="10">
 			  <centerleft>50%</centerleft>
@@ -205,7 +205,7 @@
 			  <font>FontSize_40</font>
 			  <align>center</align>
 			  <texturefocus></texturefocus>
-			  <label>Loading...</label>
+			  <label>$LOCALIZE[31044]...</label>
 			  <onfocus>AlarmClock(Close,SetFocus(52),00:04,silent)</onfocus>
 			</control>
 			<!--
