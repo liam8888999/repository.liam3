@@ -286,7 +286,7 @@ Je nutné předplatné.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.13.7">
+<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.13.7.0.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
