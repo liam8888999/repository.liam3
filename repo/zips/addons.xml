@@ -43,7 +43,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.3.9.0.1">
+<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.4.0">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -278,7 +278,7 @@ Je nutné předplatné.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.13.7.0.1">
+<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.13.8">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -641,7 +641,7 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.8.0">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.8.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
