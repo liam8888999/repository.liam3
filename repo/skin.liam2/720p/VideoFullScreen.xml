@@ -196,21 +196,6 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
-				<control type="label" id="1">
-					<description>Label</description>
-					<left>2</left>
-					<top>40</top>
-					<height>40</height>
-					<width>510</width>
-					<label>$VAR[PlayerSubLabel]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<shadowcolor>77000000</shadowcolor>
-					<include>OSDAnimation</include>
-					<visible>[String.IsEmpty(Window(VideoOSD).Property(ShowPlot)) | String.IsEmpty(VideoPlayer.Plot)]</visible>
-				</control>
 			</control>
 
 			<!-- Movies/Episodes Cover -->
@@ -328,18 +313,6 @@
 						<aligny>center</aligny>
 						<font>NotificationsFont</font>
 						<textcolor>white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
-					</control>
-					<control type="label" id="1">
-						<left>0</left>
-						<top>25</top>
-						<width>980</width>
-						<height>25</height>
-						<label>$VAR[PlayerSubLabel]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>NotificationsFont</font>
-						<textcolor>viewsinfo</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					</control>
 				</control>
