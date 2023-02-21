@@ -959,42 +959,7 @@
 	</include>
 
 
-	<include name="HomeWidgets_ContentInfo">
-		<control type="group">
-			<left>45</left>
-			<top>25</top>
-			<include>ShutdownMenuAnimation</include>
-			<include>OpenCloseSlideAnimationTwo</include>
-			<include>TopRightSlideAnimations</include>
-			<include>InfoDialogs_ContentInfoAnimation</include>
-			<visible>ControlGroup(22).HasFocus()</visible>
-			<control type="grouplist">
-				<left>0</left>
-				<top>0</top>
-				<height>70</height>
-				<width>1000</width>
-				<align>left</align>
-				<itemgap>15</itemgap>
-				<orientation>horizontal</orientation>
-				<include>LogoBig</include>
-				<control type="label">
-					<include>TopBigLabel</include>
-					<label>$VAR[HomeWidgetsHeaderLabels]</label>
-				</control>
-			</control>
-			<control type="label">
-				<description>Page Count Label</description>
-				<left>66</left>
-				<top>45</top>
-				<width>300</width>
-				<height>20</height>
-				<font>FontSize_18</font>
-				<textcolor>$VAR[Text.GlobalColor]</textcolor>
-				<scroll>false</scroll>
-				<label>$VAR[ContainerNumItems]</label>
-			</control>
-		</control>
-	</include>
+
 
 	<variable name="HomeWidgetsHeaderLabels">
 		<value condition="Control.HasFocus(150)">$VAR[QuickNav_WidgetName]</value>
@@ -1025,16 +990,16 @@
 
 	<variable name="HomeWidgetsListItemLabel2">
 		<value condition="String.StartsWith(Container(20).ListItem.Property(widgetPath),addons://) + !String.IsEmpty(Container(25).ListItem.AddonVersion)">$INFO[Container(25).ListItem.AddonVersion]</value>
-		<value condition="String.IsEqual(Container(20).ListItem.Property(widgetType),movies) + ![String.IsEmpty(Container(25).ListItem.Year) | String.IsEmpty(Container(25).ListItem.Rating) | String.IsEmpty(Container(25).ListItem.Duration)]">$INFO[Container(25).ListItem.Year]$INFO[Container(25).ListItem.Rating, • ]$INFO[Container(25).ListItem.Duration(h), • ,h ]$INFO[Container(25).ListItem.Duration(mm),,min]</value>
-		<value condition="String.IsEqual(Container(20).ListItem.Property(widgetType),tvshows) + !String.IsEmpty(Container(25).ListItem.Year)">$INFO[Container(25).ListItem.Year]$INFO[Container(25).ListItem.Rating, • ]$INFO[Container(25).ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[16101]]</value>
+		<value condition="String.IsEqual(Container(20).ListItem.Property(widgetType),movies) + ![String.IsEmpty(Container(25).ListItem.Year) | String.IsEmpty(Container(25).ListItem.Rating) | String.IsEmpty(Container(25).ListItem.Duration)]">$INFO[Container(25).ListItem.Year]$INFO[Container(25).ListItem.Duration(h), • ,h ]$INFO[Container(25).ListItem.Duration(mm),,min]</value>
+		<value condition="String.IsEqual(Container(20).ListItem.Property(widgetType),tvshows) + !String.IsEmpty(Container(25).ListItem.Year)">$INFO[Container(25).ListItem.Year]$INFO[Container(25).ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[16101]]</value>
 		<value condition="String.IsEqual(Container(20).ListItem.Property(widgetType),episodes) + !String.IsEmpty(Container(25).ListItem.Episode)">$INFO[Container(25).ListItem.Season]$INFO[Container(25).ListItem.Episode,x,. ]$INFO[Container(25).ListItem.Title]</value>
 		<value condition="String.IsEqual(Container(20).ListItem.Property(widgetType),artists) + !String.IsEmpty(Container(25).ListItem.Artist)">$INFO[Container(25).ListItem.Genre]$INFO[Container(25).ListItem.Property(Artist_YearsActive), • $LOCALIZE[21898] ,]</value>
 		<value condition="String.IsEqual(Container(20).ListItem.Property(widgetType),albums) + !String.IsEmpty(Container(25).ListItem.Album)">$INFO[Container(25).ListItem.Artist]$INFO[Container(25).ListItem.Year, • ]</value>
 		<value condition="String.IsEqual(Container(20).ListItem.Property(widgetType),songs) + !String.IsEmpty(Container(25).ListItem.Artist)">$INFO[Container(25).ListItem.Artist]$INFO[Container(25).ListItem.Album, - ]$INFO[Container(25).ListItem.TrackNumber, ($LOCALIZE[554] #,)]</value>
 		<value condition="String.IsEqual(Container(20).ListItem.Property(widgetType),pvr) + !String.IsEmpty(Container(25).ListItem.Title)">$INFO[Container(25).ListItem.Title]</value>
 		<value condition="Window.IsVisible(PlayerControls) + ControlGroup(100).HasFocus">$VAR[PlayerSubLabel]</value>
-		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Year]$INFO[Container(200).ListItem.Rating, • ]$INFO[ListItem.Duration(h), • ,h ]$INFO[ListItem.Duration(mm),,min]</value>
-		<value condition="Control.HasFocus(250) + String.IsEqual(Container(250).ListItem.DBType,tvshow) + !String.IsEmpty(Container(250).ListItem.Year)">$INFO[Container(250).ListItem.Year]$INFO[Container(250).ListItem.Rating, • ]$INFO[Container(250).ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[16101]]</value>
+		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Year]$INFO[ListItem.Duration(h), • ,h ]$INFO[ListItem.Duration(mm),,min]</value>
+		<value condition="Control.HasFocus(250) + String.IsEqual(Container(250).ListItem.DBType,tvshow) + !String.IsEmpty(Container(250).ListItem.Year)">$INFO[Container(250).ListItem.Year]$INFO[Container(250).ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[16101]]</value>
 		<value condition="Control.HasFocus(250) + String.IsEqual(Container(250).ListItem.DBType,episode) + !String.IsEmpty(Container(250).ListItem.Episode)">$INFO[Container(250).ListItem.Season]$INFO[Container(250).ListItem.Episode,x,. ]$INFO[Container(250).ListItem.Title]</value>
 		<value condition="Control.HasFocus(250) + !String.IsEmpty(Container(250).ListItem.Episode)">$INFO[Container(250).ListItem.Season]$INFO[Container(250).ListItem.Episode,x,. ]$INFO[Container(250).ListItem.Title]</value>
 		<value condition="Control.HasFocus(300) + String.IsEqual(Container(300).ListItem.DBType,artist) + !String.IsEmpty(Container(300).ListItem.Artist)">$INFO[Container(300).ListItem.Genre]$INFO[Container(300).ListItem.Property(Artist_YearsActive), • $LOCALIZE[21898] ,]</value>

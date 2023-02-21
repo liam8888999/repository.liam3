@@ -13,6 +13,8 @@
 			<top>185</top>
 			<width>2900</width>
 			<height>533</height>
+			<onup condition="Control.IsVisible(25)">SetFocus(25)</onup>
+			<onup condition="String.IsEmpty(Container(20).ListItem.Property(widgetPath)) | String.IsEqual(Container(25).NumItems,0)">SetFocus(21)</onup>
 			<ondown condition="[String.Contains(Container(20).ListItem.Property(hasSubmenu),True) + Integer.IsGreater(Container(23).NumItems,0)]">SetFocus(23)</ondown>
 			<onleft>20</onleft>
 			<onright>20</onright>
