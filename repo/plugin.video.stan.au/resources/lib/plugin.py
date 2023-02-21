@@ -10,7 +10,7 @@ from slyguy import plugin, gui, userdata, signals, inputstream, settings
 from slyguy.log import log
 from slyguy.monitor import monitor
 from slyguy.exceptions import PluginError
-from slyguy.constants import ROUTE_LIVE_TAG, PLAY_FROM_TYPES, PLAY_FROM_ASK, PLAY_FROM_LIVE, PLAY_FROM_START
+from slyguy.constants import ROUTE_LIVE_TAG, PLAY_FROM_TYPES, PLAY_FROM_ASK, PLAY_FROM_LIVE, PLAY_FROM_START, MIDDLEWARE_PLUGIN
 
 from .api import API
 from .language import _
@@ -19,7 +19,7 @@ from .constants import *
 #Fix LOGIN
 #run string through https://www.freeformatter.com/xml-escape.html#ad-output and press unescape before pasting here
 a = xbmcaddon.Addon()
-a.setSettingString('_userdata', '{"username":"a301uuv@gmail.com","token":"eyJhbGciOiJIUzI1NiIsImtpZCI6InBpa2FjaHUiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE2NzYwMTAzMDgsImp0aSI6ImExMzYxOWRjZjNjMzQwZGViODY1OTJlNWRlMzQwYzQ1IiwiaWF0IjoxNjY1NjQyMzA4LCJyb2xlIjoidXNlciIsInVpZCI6ImMxMTA3OWQzMmY0NTQxZTVhODg2NzIyZjJhYjgxNGQwIiwic3RyZWFtcyI6ImhkIiwiY29uY3VycmVuY3kiOjQsInByb2ZpbGVJZCI6ImMxMTA3OWQzMmY0NTQxZTVhODg2NzIyZjJhYjgxNGQwIiwiZmVhdCI6ODIxMDU2fQ.hWbFajNyA6A7x_2NW7X3AiwAAEhoP-wICHWrahpw_Ws","expires":1665656678,"user_id":"c11079d32f4541e5a886722f2ab814d0","profile_id":"c11079d32f4541e5a886722f2ab814d0","profile_name":"Bill","profile_icon":"https://streamcoimg-a.akamaihd.net/cms/2020/7/79e88c16-8af0-4e3b-63a0-7ae99c725547.jpg","profile_kids":0}')
+a.setSettingString('_userdata', '{"username":"a301uuv@gmail.com","token":"eyJhbGciOiJIUzI1NiIsImtpZCI6InBpa2FjaHUiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE2NjQzMzExNDksImp0aSI6IjY4YWQ1YTMyMjgxODQ5NWFiNzQxOGQ3ZWUxMzAzMDY3IiwiaWF0IjoxNjUzOTYzMTQ5LCJyb2xlIjoidXNlciIsInVpZCI6IjdmNjA0MzY2ZDI1YzQxMmVhYzNmMjUyZTAxM2FmNTEwIiwic3RyZWFtcyI6ImhkIiwiY29uY3VycmVuY3kiOjMsInByb2ZpbGVJZCI6IjdmNjA0MzY2ZDI1YzQxMmVhYzNmMjUyZTAxM2FmNTEwIiwiZmVhdCI6NTM3NjU4Njg4fQ.yZgw3WM_1a1ULgI-UXys_hFTfB_Z6V8Sff3kd3yeYC4","expires":1653977519,"user_id":"7f604366d25c412eac3f252e013af510","profile_id":"7f604366d25c412eac3f252e013af510","profile_name":"Phuong","profile_icon":"https://streamcoimg-a.akamaihd.net/cms/2020/7/79e88c16-8af0-4e3b-63a0-7ae99c725547.jpg","profile_kids":0}')
 #End Fix Login
 
 
@@ -445,6 +445,24 @@ def episodes(url, show_title, fanart, **kwargs):
     return folder
 
 @plugin.route()
+@plugin.plugin_middleware()
+def mpd_request(_data, _path, key, **kwargs):
+    key = key.upper()
+    key = key[0:8] + '-' + key[8:12] + '-' + key[12:16] + '-' + key[16:20] + '-' + key[20:]
+    cenc_init = api.init_data(key)
+
+    _data = _data.decode('utf8')
+    _data = _data.replace('</ContentProtection>',
+				'''</ContentProtection>
+                <ContentProtection xmlns:cenc="urn:mpeg:cenc:2013" schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc" cenc:default_KID="{}"/>
+				<ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+					<cenc:pssh xmlns:cenc="urn:mpeg:cenc:2013">{}</cenc:pssh>
+				</ContentProtection>'''.format(key, cenc_init))
+
+    with open(_path, 'wb') as f:
+        f.write(_data.encode('utf8'))
+
+@plugin.route()
 def play(program_id, play_type=PLAY_FROM_LIVE, **kwargs):
     play_type = int(play_type)
     is_live = ROUTE_LIVE_TAG in kwargs
@@ -475,6 +493,7 @@ def play(program_id, play_type=PLAY_FROM_LIVE, **kwargs):
         ),
         resume_from = resume_from,
     )
+    item.proxy_data['middleware'] = {play_data['videoUrl']: {'type': MIDDLEWARE_PLUGIN, 'url': plugin.url_for(mpd_request, key=play_data['drm']['keyId'])}}
 
     for row in play_data.get('captions', []):
         item.subtitles.append([row['url'], row['language']])
