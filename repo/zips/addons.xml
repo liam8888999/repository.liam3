@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.23.5">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.23.6">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -12,7 +12,7 @@
     <description lang="en">Easily merge multiple IPTV playlists &amp; EPGs from remote, local or supported add-on sources.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
-    <language/>
+    <language></language>
     <website></website>
     <news>Fix setup for Kodi 20. Thanks @1deep for the idea!</news>
     <assets>
@@ -188,7 +188,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.5">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.6">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -448,7 +448,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.3.9.1">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.0">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -471,7 +471,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.59.3">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.59.7">
   <requires>
     <import addon="slyguy.dependencies"/>
   </requires>
