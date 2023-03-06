@@ -367,6 +367,18 @@ class Item(object):
             else:
                 li.setProperty('inputstream', self.inputstream.addon_id)
 
+            # li.setProperty('inputstream', 'inputstream.ffmpegdirect')
+            # li.setProperty('mimetype', 'application/x-mpegURL')
+            # li.setProperty('inputstream.ffmpegdirect.is_realtime_stream', 'true')
+            # li.setProperty('inputstream.ffmpegdirect.manifest_type', 'hls')
+            # li.setProperty('inputstream.ffmpegdirect.stream_mode', 'timeshift')
+            # li.setProperty('inputstream.ffmpegdirect.open_mode', 'curl')
+
+            self.inputstream.set_setting('HDCPOVERRIDE', 'true')
+
+            if self.inputstream.server_certificate and not self.inputstream.flags:
+                self.inputstream.flags = 'persistent_storage'
+
             li.setProperty('{}.manifest_type'.format(self.inputstream.addon_id), self.inputstream.manifest_type)
 
             if self.inputstream.license_type:
