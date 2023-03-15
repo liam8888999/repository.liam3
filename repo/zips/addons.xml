@@ -124,7 +124,7 @@ Subscription required.</description>
     </extension>
 </addon>
 
-<addon id="skin.liam2" version="2.0.24" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="2.0.25" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
     <import addon="service.libraryupdater" version="1.0"/>
@@ -133,7 +133,6 @@ Subscription required.</description>
 		<import addon="script.embuary.helper" version="1.4.5"/>
 		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
 		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
-    <import addon="plugin.video.foxtel.go" version="0.9.4"/>
     <import addon="plugin.video.optus.sport" version="0.7.2"/>
     <import addon="plugin.video.stan.au" version="0.3.6"/>
     <import addon="script.module.slyguy" version="0.52.6"/>
