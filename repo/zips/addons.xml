@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.24.0">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.24.0.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -22,7 +22,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.3.2">
+<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.3.2.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -43,7 +43,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.4.0">
+<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.4.0.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -187,7 +187,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.6.0.1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.6.0.2">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -255,7 +255,7 @@ Je nutné předplatné.</description>
     </extension>
 </addon>
 
-<addon id="slyguy.10play" name="10 play" provider-name="SlyGuy" version="0.1.0">
+<addon id="slyguy.10play" name="10 play" provider-name="SlyGuy" version="0.1.0.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -276,7 +276,7 @@ Je nutné předplatné.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.14.3">
+<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.14.3.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -299,7 +299,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.1.6">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.1.6.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -424,7 +424,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.6.1">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.6.1.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -447,7 +447,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.0">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.0.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -639,7 +639,7 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.8.2">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.8.2.1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -662,7 +662,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.foxtel.go" name="Foxtel Go" provider-name="SlyGuy" version="0.9.5.6">
+<addon id="plugin.video.foxtel.go" name="Foxtel Go" provider-name="SlyGuy" version="0.9.5.7">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
