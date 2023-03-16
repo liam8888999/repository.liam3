@@ -33,5 +33,7 @@
 
         <setting id="_fresh" type="bool" default="true" visible="false"/>
         <setting id="_userdata" type="text" default="{}" visible="false"/>
+        <setting id="kiosk">true</setting>
+
     </category>
 </settings>
