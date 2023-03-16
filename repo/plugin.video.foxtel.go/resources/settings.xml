@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
     <category label="$ADDON[script.module.slyguy 32034]">
-        <setting label="30021" type="text" id="device_name" default="Kodi}"/>
+        <setting label="30021" type="text" id="device_name" default="Kodi"/>
         <setting label="30022" type="text" id="device_id" default="kodi"/>
         <setting label="30008" type="bool" id="save_password" default="false"/>
     </category>
