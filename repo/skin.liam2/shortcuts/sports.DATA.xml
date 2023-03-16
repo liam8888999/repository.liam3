@@ -1,30 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
   <shortcut>
-    <defaultID />
-    <label>Kayo</label>
-    <label2>Kayo</label2>
-    <icon>DefaultShortcut.png</icon>
-    <thumb />
-    <action>ActivateWindow(Videos,"plugin://plugin.video.kayo.sports",return)</action>
-    </shortcut>
-  <shortcut>
-      <defaultID />
-      <label>Paramount+Sport</label>
-      <label2>Paramount+Sport</label2>
-      <icon>DefaultShortcut.png</icon>
-      <thumb />
-      <action>ActivateWindow(Videos,"plugin://slyguy.paramount.plus/?_=featured&amp;slug=Sport",return)</action>
-    </shortcut>
-  <shortcut>
-    <shortcut>
-     <label>NBA International</label>
-     <label2>NBA International</label2>
-     <defaultID>138888</defaultID>
-     <icon>DefaultHardDisk.png</icon>
-     <thumb />
-     <action>ActivateWindow(Videos,"plugin://plugin.video.nbainternational",return)</action>
-    </shortcut>
     <shortcut>
       <defaultID />
       <label>Stan Sport</label>
