@@ -470,9 +470,9 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.63.3.1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.63.5">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.12"/>
+    <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
   <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.python.pluginsource" library="default.py" />
