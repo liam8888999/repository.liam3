@@ -470,7 +470,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.63.6">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.63.7">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
@@ -483,7 +483,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add Ignore Display Resolution logic and setting</news>
+    <news></news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -662,7 +662,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.foxtel.go" name="Foxtel Go" provider-name="SlyGuy" version="0.9.8">
+<addon id="plugin.video.foxtel.go" name="Foxtel Go" provider-name="SlyGuy" version="0.9.9">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
