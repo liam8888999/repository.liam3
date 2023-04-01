@@ -424,7 +424,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.6.3">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.6.3.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
