@@ -232,7 +232,7 @@
 
 			<!-- Time Label -->
 			<control type="group" id="1">
-				<left>800</left>
+				<left>750</left>
 				<top>485</top>
 				<include>OSDAnimation</include>
 				<visible>[String.IsEmpty(Window(VideoOSD).Property(ShowPlot)) | String.IsEmpty(VideoPlayer.Plot)] + !VideoPlayer.Content(LiveTV)</visible>
@@ -558,7 +558,7 @@
 
 				<control type="label" id="1">
 					<description>Title label</description>
-					<left>90</left>
+					<left>75</left>
 					<top>10</top>
 					<height>30</height>
 					<width>1000</width>
@@ -588,7 +588,7 @@
 	<left>40</left>
 				<control type="label" id="1">
 					<description>Title label</description>
-					<left>90</left>
+					<left>75</left>
 					<top>10</top>
 					<height>30</height>
 					<width>1000</width>
@@ -615,7 +615,7 @@
 				</control>
 				<control type="label" id="1">
 					<description>Title label</description>
-					<left>90</left>
+					<left>75</left>
 					<top>10</top>
 					<height>30</height>
 					<width>1000</width>
@@ -642,7 +642,7 @@
 				</control>
 				<control type="label" id="1">
 					<description>Title label</description>
-					<left>90</left>
+					<left>75</left>
 					<top>10</top>
 					<height>30</height>
 					<width>1000</width>
@@ -674,7 +674,7 @@
 	<left>190</left>
 	<control type="label" id="1">
 		<description>Title label</description>
-		<left>100</left>
+		<left>75</left>
 		<top>10</top>
 		<height>30</height>
 		<width>1000</width>
