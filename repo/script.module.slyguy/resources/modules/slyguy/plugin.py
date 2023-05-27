@@ -775,21 +775,20 @@ class Folder(object):
         else:
             raise Exception('add_items only accepts an Item or list of Items')
 
-# Update Required Message
-#def require_update():
-#    updates = settings.common_settings.getDict('_updates')
-#    if not updates:
-#        return
+def require_update():
+    updates = settings.common_settings.getDict('_updates')
+    if not updates:
+        return
 
-#    need_updated = []
-#    for addon_id in REQUIRED_UPDATE:
-#        if addon_id in updates:
-#            try: addon = xbmcaddon.Addon(addon_id)
-#            except: continue
-#
-#            cur_version = addon.getAddonInfo('version')
-#            if updates[addon_id][0] == cur_version and time.time() > updates[addon_id][1] + UPDATE_TIME_LIMIT:
-#                need_updated.append([addon_id, addon.getAddonInfo('name'), cur_version])
+    need_updated = []
+    for addon_id in REQUIRED_UPDATE:
+        if addon_id in updates:
+            try: addon = xbmcaddon.Addon(addon_id)
+            except: continue
+
+            cur_version = addon.getAddonInfo('version')
+            if updates[addon_id][0] == cur_version and time.time() > updates[addon_id][1] + UPDATE_TIME_LIMIT:
+                need_updated.append([addon_id, addon.getAddonInfo('name'), cur_version])
 
 #    if need_updated:
 #        raise PluginError(_(_.UPDATES_REQUIRED, updates_required='\n'.join(['[B]{} ({})[/B]'.format(entry[1], entry[2]) for entry in need_updated])))
