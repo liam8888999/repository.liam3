@@ -79,7 +79,7 @@
 
 
 						<control type="progress">
-							<description>watch progress bar</description>
+							<description>watch progress bar.</description>
 							<top>0</top>
 							<left>74</left>
 							<width>780</width>
