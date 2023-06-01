@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.liam2" version="2.0.27" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="2.0.28" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
     <import addon="service.libraryupdater" version="1.0"/>
@@ -43,7 +43,7 @@
     <disclaimer lang="en_NZ">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
     <disclaimer lang="en_US">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
     <platform>all</platform>
-    <news>-Fix widgets
+    <news>-add recording size
   </news>
 		<assets>
 			<icon>resources/icon.png</icon>
