@@ -124,7 +124,7 @@ Subscription required.</description>
     </extension>
 </addon>
 
-<addon id="skin.liam2" version="2.0.29" name="Liam 2" provider-name="Liam">
+<addon id="skin.liam2" version="2.0.30" name="Liam 2" provider-name="Liam">
   <requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
     <import addon="service.libraryupdater" version="1.0"/>

@@ -441,6 +441,16 @@
 				<shadowcolor>99000000</shadowcolor>
 				<label>$INFO[ListItem.Date]$INFO[ListItem.EndTime(hh:mm), - ]$VAR[ListItemDuration,  |  ]</label>
 			</control>
+			<control type="label">
+				<top>-80</top>
+				<left>900</left>
+				<width>940</width>
+				<font>FontSize_20</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<label>Recording Size: $INFO[ListItem.Size]</label>
+				<visible>!ListItem.IsRecording</visible>
+			</control>
 			<control type="textbox">
 				<top>-50</top>
 				<width>800</width>
