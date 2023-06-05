@@ -43,7 +43,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.4.2">
+<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.4.3">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -424,28 +424,6 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.audio.spotify" version="1.1.59" name="Spotify" provider-name="marcelveldt">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="xbmc.addon" version="12.0.0"/>
-        <import addon="script.module.requests" version="2.3.0"/>
-        <import addon="script.module.simplejson" version="3.3.0"/>
-        <import addon="script.module.simplecache" version="1.0.0"/>
-        <import addon="script.module.cherrypy" version="11.0.0"/>
-        <import addon="script.module.metadatautils" version="1.0.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="plugin.py">
-        <provides>audio</provides>
-    </extension>
-	<extension library="service.py" point="xbmc.service" start="login" />
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Unofficial Spotify music plugin for Kodi</summary>
-        <description>Requires a Spotify premium account.</description>
-        <disclaimer>This product uses SPOTIFY(R) CORE but is not endorsed, certified or otherwise approved in any way by Spotify. Spotify is the registered trade mark of the Spotify Group.</disclaimer>
-    </extension>
-</addon>
-
 <addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.6.3.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
@@ -469,7 +447,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.1">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.2">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -484,7 +462,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>fix kodi 18 decoding issue in live sports</news>
+    <news>Add pagination</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -492,44 +470,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.audio.iheart"
-       name="iHeartRadio"
-       version="2.0.2"
-       provider-name="divingmule">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.module.requests" version="2.22.0+matrix.1"/>
-    <import addon="script.common.plugin.cache" version="2.6.1.1"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_US">Live radio over the internet</summary>
-    <description lang="en_US">
-    Listen to more than 1,500 live radio stations from coast-to-coast including pop, country, urban, rock, talk, and college.[CR]
-    Browse radio stations by music genre and location.[CR]
-    Read more: http://news.iheart.com/about/
-    </description>
-    <platform>all</platform>
-    <language>en_US</language>
-    <license>GPL-2.0-or-later</license>
-    <source>https://github.com/divingmule/plugin.audio.iheart</source>
-    <forum>http://forum.xbmc.org/showthread.php?tid=170721</forum>
-    <website>http://iheart.com</website>
-    <news>v2.0.2 (01/30/2022)
-	  [fix] Bug in search function
-	  v2.0.1 (03/19/2021)
-      [new] Adds support for Canada, Australia, Mexico, New Zealand and podcasts world wide.
-    </news>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.65.4.1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.65.8">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
