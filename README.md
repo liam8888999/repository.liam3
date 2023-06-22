@@ -2,7 +2,7 @@ Github url for Kodi is https://liam8888999.github.io/repository.liam3/
 
 
 
-
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E4MI8T5)
 
 
 
