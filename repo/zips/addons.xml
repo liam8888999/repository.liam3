@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.24.5">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.24.6">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -43,7 +43,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.4.7">
+<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.4.8">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -58,7 +58,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add skip credits. Add play next episode</news>
+    <news>Add support for basic package</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -315,7 +315,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.1.7">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.1.8">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -486,7 +486,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.68.2">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.68.4">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
