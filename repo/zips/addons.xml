@@ -200,7 +200,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.9">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.14.0">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -235,7 +235,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.12">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.13">
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Dependencies required by all Slyguy add-ons</description>
@@ -243,7 +243,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add dnspython 1.16.0</news>
+    <news>Add googletrans 4.0.0-rc1</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -486,7 +486,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.68.4">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.69.0">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
@@ -702,7 +702,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.foxtel.go" name="Foxtel Go" provider-name="SlyGuy" version="0.10.2">
+<addon id="plugin.video.foxtel.go" name="Foxtel Go" provider-name="SlyGuy" version="0.10.2.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
