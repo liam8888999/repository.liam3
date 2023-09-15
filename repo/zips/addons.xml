@@ -440,7 +440,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.7.1.1">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.7.2">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -486,7 +486,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.71.1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.71.6">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
