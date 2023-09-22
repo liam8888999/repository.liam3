@@ -43,7 +43,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.4.8">
+<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.5.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -292,7 +292,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.14.4">
+<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.14.8">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -463,7 +463,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.2">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.4">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -486,7 +486,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.71.6">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.71.9">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
