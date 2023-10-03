@@ -43,9 +43,9 @@
   </extension>
 </addon>
 
-<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.5.4">
+<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.5.5">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.streamotion"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -106,6 +106,25 @@ Subscription required.</description>
     <news></news>
     <assets>
       <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.streamotion" name="SlyGuy Streamotion Common" provider-name="SlyGuy" version="0.0.1">
+  <requires>
+    <import addon="script.module.slyguy" version="0.63.1"/>
+  </requires>
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Common code required by Slyguy Streamotion add-ons</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news></news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>
@@ -292,9 +311,9 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.15.2">
+<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.15.3">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.streamotion"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -486,7 +505,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.73.7">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.74.0">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
@@ -702,7 +721,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.foxtel.go" name="Foxtel Go" provider-name="SlyGuy" version="0.10.7">
+<addon id="plugin.video.foxtel.go" name="Foxtel Go" provider-name="SlyGuy" version="0.10.8">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
