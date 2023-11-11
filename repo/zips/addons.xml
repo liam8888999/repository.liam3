@@ -97,22 +97,6 @@ Subscription required.</description>
     </extension>
 </addon>
 
-<addon id="script.module.inputstreamhelper" name="InputStream Helper (Slyguy Wrapper)" version="99.0.6" provider-name="SlyGuy">
-  <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
-  </requires>
-  <extension point="xbmc.service" library="service.py" />
-  <extension point="xbmc.python.module" library="resources/modules" />
-  <extension point="xbmc.addon.metadata">
-    <description lang="en">Replaces Inputstream Helper with Slyguy DRM Helper</description>
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <news></news>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="script.module.streamotion" name="SlyGuy Streamotion Common" provider-name="SlyGuy" version="0.0.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
@@ -508,7 +492,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.74.2">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.74.8">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
