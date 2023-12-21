@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.24.7">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.25.0">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -224,7 +224,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.14.6.1.1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.15.6">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -251,7 +251,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Updated pl translation. Thanks @norbiros</news>
+    <news>Fix watchlist</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -510,13 +510,14 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.74.9">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.76.2">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
+  <extension point="xbmc.python.script" library="script.py">
     <provides>executable</provides>
   </extension>
+  <extension point="xbmc.python.pluginsource" library="default.py" />
   <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
@@ -705,7 +706,7 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.8.5.1.1">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.8.6">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
