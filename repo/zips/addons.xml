@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.25.0">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.25.3">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -14,7 +14,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Added http method for pvr simple 21.7.0 and up</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -224,7 +224,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.15.6">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.15.7.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -251,7 +251,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix watchlist</news>
+    <news>Update French translation. Thanks @ludovik35</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -464,7 +464,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.7.4">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.7.6.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -479,7 +479,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix playback</news>
+    <news>Add French translation. Thanks @ludovik35</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -487,7 +487,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.5.1">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.5.2">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -510,7 +510,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.76.2">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.76.7">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.8"/>
   </requires>
@@ -706,7 +706,7 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.8.6">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.8.6.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
