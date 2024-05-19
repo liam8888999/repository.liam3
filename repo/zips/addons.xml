@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.25.5">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.25.9">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.slyguy" version="0.78.7"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
@@ -224,7 +224,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.16.2">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.16.5">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -251,7 +251,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Update French translation. Thanks @ludovik35</news>
+    <news>Hide DTS-X setting as will not work until Kodi 22</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -259,7 +259,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.17">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.18">
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Dependencies required by all Slyguy add-ons</description>
@@ -267,7 +267,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Update six. Add looseversion</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -339,7 +339,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.1.8">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.2.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -352,7 +352,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>1080 live</news>
+    <news>Add Goald Coast, Norther Rivers, Newcastle regions. Thanks @CrazyErrorGamer</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -464,7 +464,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.7.9">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.8.1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -510,9 +510,9 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.78.1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.80.1">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.8"/>
+    <import addon="slyguy.dependencies" version="0.0.18"/>
   </requires>
   <extension point="xbmc.python.script" library="script.py">
     <provides>executable</provides>
@@ -526,7 +526,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Update PL language. Thanks @hevet</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
