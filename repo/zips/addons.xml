@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.25.9">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.26.0">
   <requires>
     <import addon="script.module.slyguy" version="0.78.7"/>
   </requires>
@@ -14,7 +14,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>Added http method for pvr simple 21.7.0 and up</news>
+    <news>Add back Restart PVR setting</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -339,7 +339,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.2.1">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.2.4">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -510,7 +510,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.80.1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.80.8">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.18"/>
   </requires>
@@ -526,7 +526,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Update PL language. Thanks @hevet</news>
+    <news>Add Play next and Queue item context menu items</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
