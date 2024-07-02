@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.26.0">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.26.4">
   <requires>
     <import addon="script.module.slyguy" version="0.78.7"/>
   </requires>
@@ -224,7 +224,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.16.5">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.16.12">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -295,7 +295,7 @@ Wymagana subskrypcja.</description>
     </extension>
 </addon>
 
-<addon id="slyguy.10play" name="10 play" provider-name="SlyGuy" version="0.1.2">
+<addon id="slyguy.10play" name="10 play" provider-name="SlyGuy" version="0.1.3">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -339,7 +339,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.2.4">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.2.5">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -352,7 +352,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add Goald Coast, Norther Rivers, Newcastle regions. Thanks @CrazyErrorGamer</news>
+    <news>Add setting to use legacy live streams</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -487,7 +487,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.6">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.7">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -502,7 +502,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add pagination</news>
+    <news>Improve Sport</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -510,10 +510,18 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.80.8">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.82.8">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.18"/>
   </requires>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="default.py">
+        <label>$LOCALIZE[20410]</label>
+        <visible>!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)] + Integer.IsEqual(Window(10000).Property(_slyguy_donor),1)</visible>
+      </item>
+    </menu>
+  </extension>
   <extension point="xbmc.python.script" library="script.py">
     <provides>executable</provides>
   </extension>
