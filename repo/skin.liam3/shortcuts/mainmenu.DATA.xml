@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+
+  <!-- Live TV -->
+  <shortcut>
+   <label>Live TV</label>
+   <label2>HI</label2>
+   <defaultID>livetv</defaultID>
+   <icon>DefaultLiveTV.png</icon>
+   <action>ActivateWindow(TVGuide)</action>
+  </shortcut>
+
+ <!-- Movies -->
+ <shortcut>
+  <label>$LOCALIZE[342]</label>
+  <label2>32034</label2>
+  <defaultID>movies</defaultID>
+  <icon>DefaultMovies.png</icon>
+  <action>noop</action>
+ </shortcut>
+
+ <!-- TVShows -->
+ <shortcut>
+  <label>$LOCALIZE[31002]</label>
+  <label2>32034</label2>
+  <defaultID>tvshows</defaultID>
+  <icon>DefaultTVShows.png</icon>
+  <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+ </shortcut>
+
+ <!-- Sports -->
+ <shortcut>
+  <label>Sports</label>
+  <label2>Sports</label2>
+  <defaultID>sports</defaultID>
+  <icon>DefaultPicture.png</icon>
+  <action>ActivateWindow(Pictures)</action>
+ </shortcut>
+
+ <!-- Catchup -->
+ <shortcut>
+  <label>Catchup</label>
+  <label2>Catchup</label2>
+  <defaultID>catchup</defaultID>
+  <icon>DefaultAddon.png</icon>
+  <action>noop</action>
+ </shortcut>
+
+ <!-- Streaming -->
+ <shortcut>
+  <label>Streaming</label>
+  <label2>Streaming</label2>
+  <defaultID>streaming</defaultID>
+  <icon>icons/big/Trailers.png</icon>
+  <action>noop</action>
+ </shortcut>
+
+ <!-- Videos -->
+ <shortcut>
+  <label>$LOCALIZE[3]</label>
+  <label2>32034</label2>
+  <defaultID>videos</defaultID>
+  <icon>DefaultVideo.png</icon>
+  <action>ActivateWindow(videos,sources://video/,return)</action>
+ </shortcut>
+
+ <!-- Music -->
+ <shortcut>
+  <label>$LOCALIZE[2]</label>
+  <label2>32034</label2>
+  <defaultID>music</defaultID>
+  <icon>DefaultAudio.png</icon>
+  <action>ActivateWindow(Music,root,return)</action>
+ </shortcut>
+
+ <!-- Utilities -->
+ <shortcut>
+  <label>Utilities</label>
+  <label2>Utilities</label2>
+  <defaultID>utilities</defaultID>
+  <icon>icons/big/Settings.png</icon>
+  <action>noop</action>
+ </shortcut>
+
+</shortcuts>

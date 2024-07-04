@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+  <shortcut>
+   <label>All Movies</label>
+   <label2>All Movies</label2>
+   <defaultID>24011</defaultID>
+   <icon>DefaultAddon.png</icon>
+   <thumb />
+   <action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+  </shortcut>
+ <shortcut>
+  <label>Recently Added</label>
+  <label2>Recently Added</label2>
+  <defaultID>31210</defaultID>
+  <icon>DefaultAddon.png</icon>
+  <thumb />
+  <action>ActivateWindow(Videos,RecentlyAddedMovies,return)</action>
+ </shortcut>
+</shortcuts>

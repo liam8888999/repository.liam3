@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+ <shortcut>
+  <label>19069</label>
+  <label2 />
+  <defaultID>19069</defaultID>
+  <icon>icons/big/EPG.png</icon>
+  <thumb />
+  <action>ActivateWindow(TVGuide)</action>
+ </shortcut>
+ <shortcut>
+  <label>19163</label>
+  <label2 />
+  <defaultID>19163</defaultID>
+  <icon>icons/big/Recordings.png</icon>
+  <thumb />
+  <action>ActivateWindow(TVRecordings)</action>
+ </shortcut>
+ <shortcut>
+  <label>Scheduled</label>
+  <label2>Scheduled Record</label2>
+  <defaultID>19040</defaultID>
+  <icon>icons/big/Timers.png</icon>
+  <thumb />
+  <action>ActivateWindow(TVTimers)</action>
+ </shortcut>
+ <shortcut>
+  <label>Series Record</label>
+  <label2>Series Record</label2>
+  <defaultID>190455</defaultID>
+  <icon>icons/big/Timers.png</icon>
+  <thumb />
+  <action>ActivateWindow(TVTimerRules)</action>
+ </shortcut>
+ <shortcut>
+  <label>137</label>
+  <label2 />
+  <defaultID>137</defaultID>
+  <icon>DefaultAddonsSearch.png</icon>
+  <thumb />
+  <action>ActivateWindow(TVSearch)</action>
+ </shortcut>
+</shortcuts>
