@@ -287,9 +287,9 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.16.12">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.17.0">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -314,7 +314,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Hide DTS-X setting as will not work until Kodi 22</news>
+    <news>Use new settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -322,7 +322,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.18">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.19">
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Dependencies required by all Slyguy add-ons</description>
@@ -330,7 +330,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Update six. Add looseversion</news>
+    <news>Add filelock</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -402,9 +402,9 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.2.5">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.0">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -415,7 +415,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add setting to use legacy live streams</news>
+    <news>Add login. Migrate to new settings</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -573,10 +573,14 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.82.8">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.21">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.18"/>
+    <import addon="slyguy.dependencies" version="0.0.19"/>
   </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="kodi.context.item">
     <menu id="kodi.core.main">
       <item library="default.py">
@@ -585,11 +589,6 @@ Subscription required.</description>
       </item>
     </menu>
   </extension>
-  <extension point="xbmc.python.script" library="script.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.python.pluginsource" library="default.py" />
-  <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Common code, proxy and settings required by all Slyguy add-ons</description>
@@ -597,7 +596,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add Play next and Queue item context menu items</news>
+    <news>Brand new settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
