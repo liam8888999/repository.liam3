@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.26.4">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.26.5">
   <requires>
-    <import addon="script.module.slyguy" version="0.78.7"/>
+    <import addon="script.module.slyguy" version="0.84.28"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
@@ -22,9 +22,9 @@
   </extension>
 </addon>
 
-<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.3.7">
+<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.4.1">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -35,7 +35,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix content navigation</news>
+    <news>New settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -358,9 +358,9 @@ Wymagana subskrypcja.</description>
     </extension>
 </addon>
 
-<addon id="slyguy.10play" name="10 play" provider-name="SlyGuy" version="0.1.3">
+<addon id="slyguy.10play" name="10 play" provider-name="SlyGuy" version="0.2.0">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -371,7 +371,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add playback settings for audio/subs</news>
+    <news>Migrate to new settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -402,7 +402,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.0">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.5">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -527,9 +527,9 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.8.1">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.9.1">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.slyguy" version="0.84.39"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -542,7 +542,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add French translation. Thanks @ludovik35</news>
+    <news>New settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -550,9 +550,9 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.4.7">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.5.1">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -565,7 +565,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Improve Sport</news>
+    <news>New settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -573,7 +573,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.21">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.45">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.19"/>
   </requires>
@@ -585,7 +585,7 @@ Subscription required.</description>
     <menu id="kodi.core.main">
       <item library="default.py">
         <label>$LOCALIZE[20410]</label>
-        <visible>!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)] + Integer.IsEqual(Window(10000).Property(_slyguy_donor),1)</visible>
+        <visible>!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)] + Integer.IsEqual(Window(10000).Property(_slyguy_trailer_context_menu),1)</visible>
       </item>
     </menu>
   </extension>
@@ -776,9 +776,9 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.8.9">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.9.0">
   <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -791,7 +791,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Support news articles</news>
+    <news>New Settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>

@@ -6,27 +6,31 @@ import xbmcgui
 import xbmcplugin
 
 import arrow
-from slyguy import plugin, gui, userdata, signals, inputstream, settings
+from slyguy import plugin, gui, userdata, signals, inputstream
 from slyguy.monitor import monitor
 from slyguy.constants import ROUTE_LIVE_TAG, PLAY_FROM_TYPES, PLAY_FROM_ASK, PLAY_FROM_LIVE, PLAY_FROM_START
 
 from .api import API
 from .language import _
 from .constants import *
+from .settings import settings
+
 
 #Fix LOGIN
 #run string through https://www.freeformatter.com/xml-escape.html#ad-output and press unescape before pasting here
 a = xbmcaddon.Addon()
-a.setSettingString('_userdata', '{"username":"a301uuv@gmail.com","token":"eyJhbGciOiJIUzI1NiIsImtpZCI6InBpa2FjaHUiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3MjAzMjc4MzQsImp0aSI6ImZmNTIwODhlYjVkNTRiNTg4YmE2YmZmYWRjOWFlNDRmIiwiaWF0IjoxNzA5OTU5ODM0LCJyb2xlIjoidXNlciIsInVpZCI6ImMxMTA3OWQzMmY0NTQxZTVhODg2NzIyZjJhYjgxNGQwIiwic3RyZWFtcyI6ImhkIiwiY29uY3VycmVuY3kiOjQsInByb2ZpbGVJZCI6ImMxMTA3OWQzMmY0NTQxZTVhODg2NzIyZjJhYjgxNGQwIiwicHJvZmlsZU5hbWUiOiJCaWxsIiwiYXBwIjoiU3Rhbi1BbmRyb2lkVFYiLCJ2ZXIiOiI0LjkuMSIsImZlYXQiOjE2MTE0MzM3OTJ9.NR4PeDhE46821d5zCnvB03c3ZoAlwDyY-csXISh8MEs","expires":1709974200,"user_id":"c11079d32f4541e5a886722f2ab814d0","profile_id":"c11079d32f4541e5a886722f2ab814d0","profile_name":"Bill","profile_icon":"https://streamcoimg-a.akamaihd.net/cms/2020/7/79e88c16-8af0-4e3b-63a0-7ae99c725547.jpg","profile_kids":0}')
+a.setSettingString('_userdata', '{"username":"a301uuv@gmail.com","token":"eyJhbGciOiJIUzI1NiIsImtpZCI6InBpa2FjaHUiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3MzIwNzI2OTcsImp0aSI6Ijc1ZjRmNmY3NDdlZTRhMGU5NzIzN2FkODY3OTVkYjg4IiwiaWF0IjoxNzIxNzA0Njk3LCJyb2xlIjoidXNlciIsInVpZCI6ImMxMTA3OWQzMmY0NTQxZTVhODg2NzIyZjJhYjgxNGQwIiwic3RyZWFtcyI6ImhkIiwiY29uY3VycmVuY3kiOjQsInByb2ZpbGVJZCI6ImMxMTA3OWQzMmY0NTQxZTVhODg2NzIyZjJhYjgxNGQwIiwicHJvZmlsZU5hbWUiOiJCaWxsIiwiYXBwIjoiU3Rhbi1BbmRyb2lkVFYiLCJ2ZXIiOiI0LjMyLjEiLCJmZWF0IjoxNjc4NTQyNjU2fQ.IzCHApvlKx6EgoHC7UeNr65-mrJXith2CUjftQf6Mls","expires":1721719067,"user_id":"c11079d32f4541e5a886722f2ab814d0","profile_id":"c11079d32f4541e5a886722f2ab814d0","profile_name":"Bill","profile_icon":"https://streamcoimg-a.akamaihd.net/cms/2020/7/79e88c16-8af0-4e3b-63a0-7ae99c725547.jpg","profile_kids":0}')
 #End Fix Login
 
 
 api = API()
 
+
 @signals.on(signals.BEFORE_DISPATCH)
 def before_dispatch():
     api.new_session()
     plugin.logged_in = api.logged_in
+
 
 @plugin.route('')
 def index(**kwargs):
@@ -35,15 +39,10 @@ def index(**kwargs):
     if not api.logged_in:
         folder.add_item(label=_(_.LOGIN, _bold=True), path=plugin.url_for(login), bookmark=False)
     else:
-        if not userdata.get('profile_kids', False):
-            folder.add_item(label=_(_.FEATURED, _bold=True), path=plugin.url_for(featured, key='sitemap', title=_.FEATURED))
-            folder.add_item(label=_(_.TV, _bold=True), path=plugin.url_for(nav, key='tv', title=_.TV))
-            folder.add_item(label=_(_.MOVIES, _bold=True), path=plugin.url_for(nav, key='movies', title=_.MOVIES))
-
-            if not settings.getBool('hide_sport', False):
-                folder.add_item(label=_(_.SPORT, _bold=True), path=plugin.url_for(nav, key='sport', title=_.SPORT))
-
-        folder.add_item(label=_(_.KIDS, _bold=True), path=plugin.url_for(nav, key='kids', title=_.KIDS))
+        folder.add_item(label=_(_.FEATURED, _bold=True), path=plugin.url_for(featured, key='sitemap', title=_.FEATURED))
+        get_nav(folder)
+        folder.add_item(label=_(_.MY_LIST, _bold=True), path=plugin.url_for(my_list))
+        folder.add_item(label=_(_.CONTINUE_WATCHING, _bold=True), path=plugin.url_for(continue_watching))
         folder.add_item(label=_(_.SEARCH, _bold=True), path=plugin.url_for(search))
 
         if settings.getBool('bookmarks', True):
@@ -57,6 +56,22 @@ def index(**kwargs):
     folder.add_item(label=_.SETTINGS, path=plugin.url_for(plugin.ROUTE_SETTINGS), _kiosk=False, bookmark=False)
 
     return folder
+
+
+def get_nav(folder):
+    skip = ['mylist', 'history', 'index']
+    data = api.page('index')
+    for row in data['mainNav']:
+        if 'path' not in row['cta']:
+            continue
+        key = row['cta']['path'].lstrip('/')
+        if key in skip:
+            continue
+        folder.add_item(
+            label = _(row['title'], _bold=True),
+            path=plugin.url_for(nav, key=key, title=row['title']),
+        )
+
 
 @plugin.route()
 def login(**kwargs):
