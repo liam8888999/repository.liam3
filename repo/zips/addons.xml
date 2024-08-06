@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.26.5">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.27.1">
   <requires>
-    <import addon="script.module.slyguy" version="0.84.28"/>
+    <import addon="script.module.slyguy" version="0.84.57"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
@@ -14,7 +14,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>Add back Restart PVR setting</news>
+    <news>New Settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -22,7 +22,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.4.1">
+<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.4.2">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -358,7 +358,7 @@ Wymagana subskrypcja.</description>
     </extension>
 </addon>
 
-<addon id="slyguy.10play" name="10 play" provider-name="SlyGuy" version="0.2.0">
+<addon id="slyguy.10play" name="10 play" provider-name="SlyGuy" version="0.2.1">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -402,7 +402,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.5">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.7">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -573,7 +573,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.45">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.57">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.19"/>
   </requires>
