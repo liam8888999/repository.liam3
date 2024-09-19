@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.27.1">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.27.2">
   <requires>
     <import addon="script.module.slyguy" version="0.84.57"/>
   </requires>
@@ -22,7 +22,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.4.2">
+<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.4.3">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -43,7 +43,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.binge" name="Binge" provider-name="SlyGuy" version="0.5.5">
+<addon id="slyguy.binge" name="Binge (DEPRECATED)" provider-name="SlyGuy" version="0.5.6">
   <requires>
     <import addon="script.module.streamotion"/>
   </requires>
@@ -51,14 +51,12 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Binge on the world's best TV Shows and Movies.
-
-Subscription required.</description>
+    <description lang="en">This addon no longer works and has been deprecated. Open a github issue if you would like it to return</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add support for basic package</news>
+    <news>This addon no longer works and has been deprecated. Open a github issue if you would like it to return</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -115,18 +113,18 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.streamotion" name="SlyGuy Streamotion Common" provider-name="SlyGuy" version="0.0.1">
+<addon id="script.module.streamotion" name="SlyGuy Streamotion Common (DEPRECATED)" provider-name="SlyGuy" version="0.0.2">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Common code required by Slyguy Streamotion add-ons</description>
+    <description lang="en">This addon no longer works and has been deprecated. Open a github issue if you would like it to return</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>This addon no longer works and has been deprecated. Open a github issue if you would like it to return</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -287,7 +285,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.17.0.1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.17.3">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -322,7 +320,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.19">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.22">
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Dependencies required by all Slyguy add-ons</description>
@@ -330,7 +328,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add filelock</news>
+    <news>remove pymysql</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -379,7 +377,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.kayo.sports" name="Kayo Sports" provider-name="SlyGuy" version="0.15.3">
+<addon id="plugin.video.kayo.sports" name="Kayo Sports (DEPRECATED)" provider-name="SlyGuy" version="0.15.4">
   <requires>
     <import addon="script.module.streamotion"/>
   </requires>
@@ -387,14 +385,12 @@ Wymagana subskrypcja.</description>
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Watch your favourite sports live &amp; on demand with Kayo Sports.
-
-Subscription required.</description>
+    <description lang="en">This addon no longer works and has been deprecated. Open a github issue if you would like it to return</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>@Mobi0007 is an asshole!</news>
+    <news>This addon no longer works and has been deprecated. Open a github issue if you would like it to return</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -402,7 +398,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.7">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.8">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -527,7 +523,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.9.1">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.9.4">
   <requires>
     <import addon="script.module.slyguy" version="0.84.39"/>
   </requires>
@@ -550,9 +546,9 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.5.1">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.5.2">
   <requires>
-    <import addon="script.module.slyguy" version="0.84.0"/>
+    <import addon="script.module.slyguy" version="0.85.23"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -573,9 +569,9 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.57">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.85.26">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.19"/>
+    <import addon="slyguy.dependencies" version="0.0.20"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
@@ -596,7 +592,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Brand new settings!</news>
+    <news>Move userdata and bookmarks into settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -776,7 +772,7 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.9.0.1">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.9.1">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -799,7 +795,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.foxtel.go" name="Foxtel Go" provider-name="SlyGuy" version="0.10.8">
+<addon id="plugin.video.foxtel.go" name="Foxtel Go (DEPRECATED)" provider-name="SlyGuy" version="0.10.9">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
   </requires>
@@ -807,14 +803,12 @@ Subscription required.</description>
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Foxtel GO anywhere, anytime, any place. Stream Live and On Demand shows from your pack on your favourite devices.
-
-Subscription required.</description>
+    <description lang="en">This addon no longer works and has been deprecated. Open a github issue if you would like it to return</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>@Mobi0007 is an asshole!</news>
+    <news>This addon no longer works and has been deprecated. Open a github issue if you would like it to return</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
