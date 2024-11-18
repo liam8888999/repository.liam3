@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.27.2">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.27.6">
   <requires>
-    <import addon="script.module.slyguy" version="0.84.57"/>
+    <import addon="script.module.slyguy" version="0.85.37"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
@@ -14,7 +14,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>New Settings!</news>
+    <news>Support plugin method returning url/path</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -285,7 +285,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.17.3">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.17.4">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -523,7 +523,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.9.4">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.9.5">
   <requires>
     <import addon="script.module.slyguy" version="0.84.39"/>
   </requires>
@@ -538,7 +538,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>New settings!</news>
+    <news>Fix live NFL</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -546,7 +546,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.5.2">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.5.3">
   <requires>
     <import addon="script.module.slyguy" version="0.85.23"/>
   </requires>
@@ -569,7 +569,7 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.85.26">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.85.41">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.20"/>
   </requires>
