@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.27.6">
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.28.7">
   <requires>
-    <import addon="script.module.slyguy" version="0.85.37"/>
+    <import addon="script.module.slyguy" version="0.85.92"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
@@ -14,7 +14,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>Support plugin method returning url/path</news>
+    <news>More robust IPTV Manager support</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -22,9 +22,9 @@
   </extension>
 </addon>
 
-<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.4.3">
+<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.5.0">
   <requires>
-    <import addon="script.module.slyguy" version="0.84.0"/>
+    <import addon="script.module.slyguy" version="0.86.5"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -35,28 +35,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>New settings!</news>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="slyguy.binge" name="Binge (DEPRECATED)" provider-name="SlyGuy" version="0.5.6">
-  <requires>
-    <import addon="script.module.streamotion"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <description lang="en">This addon no longer works and has been deprecated. Open a github issue if you would like it to return</description>
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <license></license>
-    <language></language>
-    <website></website>
-    <news>This addon no longer works and has been deprecated. Open a github issue if you would like it to return</news>
+    <news>Login now required - its free to register on 7plus.com.au</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -109,25 +88,6 @@
     <news></news>
     <assets>
       <icon>icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="script.module.streamotion" name="SlyGuy Streamotion Common (DEPRECATED)" provider-name="SlyGuy" version="0.0.2">
-  <requires>
-    <import addon="script.module.slyguy" version="0.63.1"/>
-  </requires>
-  <extension point="xbmc.python.module" library="resources/modules" />
-  <extension point="xbmc.addon.metadata">
-    <description lang="en">This addon no longer works and has been deprecated. Open a github issue if you would like it to return</description>
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <license></license>
-    <language></language>
-    <website></website>
-    <news>This addon no longer works and has been deprecated. Open a github issue if you would like it to return</news>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>
@@ -285,9 +245,9 @@
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.17.4">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.20.22">
   <requires>
-    <import addon="script.module.slyguy" version="0.84.0"/>
+    <import addon="script.module.slyguy" version="0.85.87"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -312,7 +272,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Use new settings!</news>
+    <news>Fix login</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -320,7 +280,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.22">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.29">
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Dependencies required by all Slyguy add-ons</description>
@@ -328,7 +288,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>remove pymysql</news>
+    <news>remove python qrcode</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -377,28 +337,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.kayo.sports" name="Kayo Sports (DEPRECATED)" provider-name="SlyGuy" version="0.15.4">
-  <requires>
-    <import addon="script.module.streamotion"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <description lang="en">This addon no longer works and has been deprecated. Open a github issue if you would like it to return</description>
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <license></license>
-    <language></language>
-    <website></website>
-    <news>This addon no longer works and has been deprecated. Open a github issue if you would like it to return</news>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.8">
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.9">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -411,7 +350,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add login. Migrate to new settings</news>
+    <news>Better error when refresh token fails</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -523,9 +462,9 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.9.5">
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.9.13">
   <requires>
-    <import addon="script.module.slyguy" version="0.84.39"/>
+    <import addon="script.module.slyguy" version="0.85.92"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -538,7 +477,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix live NFL</news>
+    <news>Fix some movie art work. Thanks @tchebb</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -546,9 +485,9 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.5.3">
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.5.5">
   <requires>
-    <import addon="script.module.slyguy" version="0.85.23"/>
+    <import addon="script.module.slyguy" version="0.85.92"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -561,7 +500,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>New settings!</news>
+    <news>Fix live!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -569,22 +508,14 @@ Subscription required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.85.41">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.86.20">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.20"/>
+    <import addon="slyguy.dependencies" version="0.0.28"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
   </extension>
   <extension point="xbmc.service" library="service.py" start="login" />
-  <extension point="kodi.context.item">
-    <menu id="kodi.core.main">
-      <item library="default.py">
-        <label>$LOCALIZE[20410]</label>
-        <visible>!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)] + Integer.IsEqual(Window(10000).Property(_slyguy_trailer_context_menu),1)</visible>
-      </item>
-    </menu>
-  </extension>
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Common code, proxy and settings required by all Slyguy add-ons</description>
@@ -592,7 +523,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Move userdata and bookmarks into settings!</news>
+    <news>Add Remove Framerate Hints video setting</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -772,7 +703,7 @@ Subscription required.</description>
 	</extension>
 </addon>
 
-<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.9.1">
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.9.2">
   <requires>
     <import addon="script.module.slyguy" version="0.84.0"/>
   </requires>
@@ -787,7 +718,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>New Settings!</news>
+    <news>Fix 1080p</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
