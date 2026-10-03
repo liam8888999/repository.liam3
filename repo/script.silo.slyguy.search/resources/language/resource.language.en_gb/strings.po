@@ -1,3 +1,0 @@
-msgctxt "#30000"
-msgid "Search Streaming Services"
-msgstr "Search Streaming Services"
