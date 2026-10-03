@@ -43,7 +43,7 @@
   </extension>
 </addon>
 
-<addon id="script.silo.slyguy.search" name="Silo &amp; SlyGuy Search" version="0.2.4" provider-name="Liam Robson">
+<addon id="script.silo.slyguy.search" name="Silo &amp; SlyGuy Search" version="0.2.6" provider-name="Liam Robson">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
