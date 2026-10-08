@@ -2,8 +2,13 @@
 """Small Kodi JSON-RPC helpers used by the search bridge."""
 
 import json
+import time
 
 import xbmc
+
+SLYGUY_ADDON_CACHE_TTL_SECONDS = 300.0
+_SLYGUY_ADDON_CACHE = None
+_SLYGUY_ADDON_CACHE_AT = 0.0
 
 
 def call(method, params=None):
@@ -23,6 +28,16 @@ def call(method, params=None):
 
 
 def get_installed_slyguy_video_addons():
+    global _SLYGUY_ADDON_CACHE
+    global _SLYGUY_ADDON_CACHE_AT
+
+    now = time.monotonic()
+    if (
+        _SLYGUY_ADDON_CACHE is not None
+        and now - _SLYGUY_ADDON_CACHE_AT < SLYGUY_ADDON_CACHE_TTL_SECONDS
+    ):
+        return list(_SLYGUY_ADDON_CACHE)
+
     result = call("Addons.GetAddons", {
         "type": "xbmc.python.pluginsource",
         "content": "video",
@@ -51,12 +66,16 @@ def get_installed_slyguy_video_addons():
 
         addons.append(addon)
 
-    return sorted(
+    addons = sorted(
         addons,
         key=lambda item: str(
             item.get("name") or item.get("addonid") or ""
         ).lower(),
     )
+
+    _SLYGUY_ADDON_CACHE = addons
+    _SLYGUY_ADDON_CACHE_AT = now
+    return list(addons)
 
 
 def get_plugin_directory(url):
