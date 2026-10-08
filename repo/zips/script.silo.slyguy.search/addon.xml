@@ -1,5 +1,49 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.silo.slyguy.search" name="Silo &amp; SlyGuy Search" version="0.3.1" provider-name="Liam Robson">
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.28.7">
+  <requires>
+    <import addon="script.module.slyguy" version="0.85.92"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Easily merge multiple IPTV playlists &amp; EPGs from remote, local or supported add-on sources.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>More robust IPTV Manager support</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="slyguy.7plus" name="7plus" provider-name="SlyGuy" version="0.5.0">
+  <requires>
+    <import addon="script.module.slyguy" version="0.86.5"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite shows for free as seen on Channel 7, 7mate, 7TWO and 7flix and explore our collection of 7plus exclusives</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Login now required - its free to register on 7plus.com.au</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.silo.slyguy.search" name="Silo &amp; SlyGuy Search" version="0.3.3" provider-name="Liam Robson">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -24,3 +68,706 @@
     <license>GNU General Public License v3.0</license>
   </extension>
 </addon>
+
+<addon id="repository.Rockcrusher" name="[COLOR red]Rocks Repository[/COLOR]" version="2.8" provider-name="Rock">
+	<extension point="xbmc.addon.repository" name="[COLOR red]Rocks Repository[/COLOR]">
+	<dir minversion="18.0" maxversion="18.9.0">
+        <info compressed="false">https://Rockodi.com/Kodi-18/addons.xml</info>
+        <checksum>https://Rockodi.com/Kodi-18/addons.xml.md5</checksum>
+        <datadir zip="true">https://Rockodi.com/Kodi-18/</datadir>
+    </dir>
+    <dir minversion="18.9.0">
+        <info compressed="false">https://Rockodi.com/Kodi-19/addons.xml</info>
+        <checksum>https://Rockodi.com/Kodi-19/addons.xml.md5</checksum>
+        <datadir zip="true">https://Rockodi.com/Kodi-19/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Rocks Addons</summary>
+            <description>Rocks Repository</description>
+            <disclaimer lang="en">Author does not host or distribute any of the content displayed by this addon. Author does not have any affiliation with the content provider.
+            </disclaimer>
+            <platform>all</platform>
+            <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.module.inputstreamhelper" name="InputStream Helper (Slyguy Wrapper)" provider-name="SlyGuy" version="99.0.12">
+	<requires>
+		<import addon="repository.slyguy.inputstreamhelper"/>
+	</requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Replaces Inputstream Helper with Slyguy DRM Helper</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <news></news>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="skin.liam3" version="2.0.31" name="Liam 3" provider-name="Liam">
+  <requires>
+		<import addon="xbmc.gui" version="5.17.0"/>
+    <import addon="service.libraryupdater" version="1.0"/>
+		<import addon="script.skinshortcuts" version="1.0.17"/>
+		<import addon="plugin.video.themoviedb.helper" version="2.0.18"/>
+		<import addon="script.embuary.helper" version="1.4.5"/>
+		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
+		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
+    <import addon="plugin.video.optus.sport" version="0.7.2"/>
+    <import addon="plugin.video.stan.au" version="0.3.6"/>
+    <import addon="script.module.slyguy" version="0.52.6"/>
+    <import addon="script.advancedsettings" version="1.1"/>
+    <import addon="slyguy.7plus" version="0.3.1"/>
+    <import addon="slyguy.9now" version="0.1.3"/>
+    <import addon="slyguy.10play" version="0.0.9"/>
+    <import addon="slyguy.dependencies" version="0.0.5"/>
+    <import addon="slyguy.disney.plus" version="0.11.8"/>
+    <import addon="slyguy.paramount.plus" version="0.4.9"/>
+    <import addon="pvr.hts" version="19.0.6"/>
+    <import addon="pvr.iptvsimple" version="19.1.0"/>
+    <import addon="script.keymap" version="1.1.4"/>
+    <import addon="script.trakt" version="3.5.0"/>
+    <import addon="script.xbmc.unpausejumpback" version="3.0.3"/>
+    <import addon="plugin.program.iptv.merge" version="0.22.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+  <extension point="xbmc.addon.metadata">
+  <summary lang="en">A GUI for Kodi Media Center</summary>
+    <summary lang="en_AU">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_NZ">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_US">A GUI for Kodi Media Center</summary>
+  <description lang="en">This is the 2nd generation of Liam skin for Kodi. Liam 3 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_AU">This is the 2nd generation of Liam skin for Kodi. Liam 3 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_NZ">This is the 2nd generation of Liam skin for Kodi. Liam 3 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_US">This is the 2nd generation of Liam skin for Kodi. Liam 3 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+  <disclaimer lang="en">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_AU">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_NZ">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_US">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <platform>all</platform>
+    <news>-add recording size
+  </news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+			<screenshot>resources/screenshot-10.jpg</screenshot>
+		</assets>
+  </extension>
+</addon>
+
+<addon id="script.advancedsettings"
+       name="Advanced Settings"
+       version="1.3"
+       provider-name="Liam Robson">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <news>Fixed bugs</news>
+        <platform>all</platform>
+        <summary lang="en_GB">Unlock Kodi advanced settings</summary>
+        <description lang="en_GB">This plugin allows you to unlock and edit the hidden advanced system settings of Kodi. Please note that Kodi restart is required so that the advanced settings become in effect.</description>
+        <disclaimer lang="en_GB">This plugin was created just fo fun and has no relation to official Kodi software. PLease use at your own risk. Author bears no liability for any changes made by this plugin in your system.</disclaimer>
+            <platform>all</platform>
+        <language>en</language>
+        <license>GPL-3.0-or-later</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/screenshot-01.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="skin.liam2" version="2.0.30" name="Liam 2" provider-name="Liam">
+  <requires>
+		<import addon="xbmc.gui" version="5.15.0"/>
+    <import addon="service.libraryupdater" version="1.0"/>
+		<import addon="script.skinshortcuts" version="1.0.17"/>
+		<import addon="plugin.video.themoviedb.helper" version="2.0.18"/>
+		<import addon="script.embuary.helper" version="1.4.5"/>
+		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
+		<import addon="resource.images.weathericons.outline" version="0.0.6"/>
+    <import addon="plugin.video.optus.sport" version="0.7.2"/>
+    <import addon="plugin.video.stan.au" version="0.3.6"/>
+    <import addon="script.module.slyguy" version="0.52.6"/>
+    <import addon="script.advancedsettings" version="1.1"/>
+    <import addon="slyguy.7plus" version="0.3.1"/>
+    <import addon="plugin.video.foxtel.go" version="0.9.5"/>
+    <import addon="slyguy.9now" version="0.1.3"/>
+    <import addon="slyguy.10play" version="0.0.9"/>
+    <import addon="slyguy.dependencies" version="0.0.5"/>
+    <import addon="slyguy.disney.plus" version="0.11.8"/>
+    <import addon="slyguy.paramount.plus" version="0.4.9"/>
+    <import addon="pvr.hts" version="19.0.6"/>
+    <import addon="pvr.iptvsimple" version="19.1.0"/>
+    <import addon="script.keymap" version="1.1.4"/>
+    <import addon="script.trakt" version="3.5.0"/>
+    <import addon="script.xbmc.unpausejumpback" version="3.0.3"/>
+    <import addon="plugin.program.iptv.merge" version="0.22.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+  <extension point="xbmc.addon.metadata">
+  <summary lang="en">A GUI for Kodi Media Center</summary>
+    <summary lang="en_AU">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_NZ">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_US">A GUI for Kodi Media Center</summary>
+  <description lang="en">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_AU">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_NZ">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en_US">This is the 2nd generation of Liam skin for Kodi. Liam2 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+  <disclaimer lang="en">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_AU">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_NZ">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <disclaimer lang="en_US">Mouse, Games and touchscreen use are not supported. With the installation of this skin you agree that you don't use it in any way for comercial purposes without my prior consentse. I'm not associated with any available Kodi build and i won't give any support to blacklisted, banned or illegal third party addons.</disclaimer>
+    <platform>all</platform>
+    <news>-add recording size
+  </news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+			<screenshot>resources/screenshot-10.jpg</screenshot>
+		</assets>
+  </extension>
+</addon>
+
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.20.22">
+  <requires>
+    <import addon="script.module.slyguy" version="0.85.87"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Disney+ is the exclusive home for your favorite movies and TV shows from Disney, Pixar, Marvel, Star Wars, and National Geographic.
+
+Subscription required.</description>
+    <description lang="it">Disney+ è la casa esclusiva per i tuoi film e programmi TV preferiti di Disney, Pixar, Marvel, Star Wars e National Geographic.
+
+Abbonamento richiesto.</description>
+    <description lang="fr">Disney+ est la destination exclusive de vos films et séries TV préférés des univers Disney, Pixar, Marvel, Star Wars et National Geographic.
+
+Abonnement requis.</description>
+    <description lang="cs">Disney+ je exkluzivní místo pro vaše oblíbené filmy a televizní pořady ze světa Disney, Pixar, Marvel, Star Wars a National Geographic.
+
+Je nutné předplatné.</description>
+      <description lang="pl">Disney+ to wyłączne miejsce dla twoich ulubionych filmów i programów telewizyjnych od Disneya, Pixara, Marvela, Gwiezdnych wojen i National Geographic.
+
+Wymagana subskrypcja.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Fix login</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.29">
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Dependencies required by all Slyguy add-ons</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>remove python qrcode</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="repository.liam3" name="Liam Repo" version="1.2.8" provider-name="Liam">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+      <dir>
+          <info compressed="false">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml</info>
+          <checksum>https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/addons.xml.md5</checksum>
+          <datadir zip="true">https://raw.githubusercontent.com/liam8888999/repository.liam3/master/repo/zips/</datadir>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Liams Repo</summary>
+        <description>Mine</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="slyguy.10play" name="10" provider-name="SlyGuy" version="0.2.8">
+  <requires>
+    <import addon="script.module.slyguy" version="0.84.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite TV shows from Channel 10, 10 Comedy and 10 Drama on demand, plus much more on 10!</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>temp playback workaround</news>
+    <assets>
+      <icon>icon2.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="slyguy.9now" name="9Now" provider-name="SlyGuy" version="0.3.9">
+  <requires>
+    <import addon="script.module.slyguy" version="0.84.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite shows from 9Now</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Better error when refresh token fails</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.libraryupdater"
+    name="Library Updater" version="1.1.1" provider-name="liam">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.dateutil" version="2.7.3" />
+    <import addon="script.module.kodi-six" version="0.1.0"/>
+    <import addon="script.module.future" version="0.16.0.4"/>
+  </requires>
+  <extension point="xbmc.python.script" library="manual.py" />
+  <extension point="xbmc.service" library="default.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="be_BY">Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update.</summary>
+    <summary lang="bg_BG">Обновява библиотеките в Kodi (за видео и музика) чрез брояч. Той се стартира като Kodi услуга, затова никога няма да изпуснете нито едно обновяване.</summary>
+    <summary lang="ca_ES">Actualitza les llibreries de vídeo i música de l'Kodi amb un temporitzador. El temporitzador arranca com un servei de l'Kodi, per tant mai es perdrà una actualització.</summary>
+    <summary lang="da_DK">Opdater dine Kodi video- og musikbiblioteker ved hjælp af en timer. Timeren kører som en Kodi service, så du aldrig glipper en opdatering</summary>
+    <summary lang="de_DE">Update deine Kodi Video- und Musiklibrariers mit einem Timer. Der Timer läuft als ein Kodi service, sodass Du niemals ein Update verpasst.</summary>
+    <summary lang="el_GR">Ενημερώστε τις συλλογές ταινιών και μουσικής σας με χρονοδιακόπτη. Ο χρονοδιακόπτης εκτελείται σαν υπηρεσία του Kodi ούτως ώστε να μη χάνετε ποτέ καμία ενημέρωση.</summary>
+    <summary lang="en_GB">Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update.</summary>
+    <summary lang="en_NZ">Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update.</summary>
+    <summary lang="en_US">Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update.</summary>
+    <summary lang="es_ES">Actualice sus librerías de Video y Musica de Kodi con un temporizador. El temporizador se ejecuta como un servicio para que nunca se pierda una actualización.</summary>
+    <summary lang="es_MX">Actualiza tus bibliotecas de video y música de Kodi en base a un temporizador. El temporizador se ejecuta como un servicio de Kodi para que nunca te pierdas una actualización</summary>
+    <summary lang="fr_FR">Mettez à jour votre vidéo médiathèques Kodi et votre bibliothèques musicales avec une minuterie. La minuterie fonctionne comme un service Kodi afin que vous ne manquez jamais une mise à jour.</summary>
+    <summary lang="fr_CA">Mettre à jour les bibliothèques de vidéos et de musique sur une minuterie. La minuterie fonctionne comme un service de Kodi afin que vous ne manquez jamais une mise à jour.</summary>
+    <summary lang="gl_ES">Actualizar as súas Bibliotecas de Vídeo e Música mediante un temporizador. Un temporizador execútase no Kodi como un servizo de maneira que nunca esquecerá unha actualización.</summary>
+    <summary lang="he_IL">עדכן את ספריות הוידאו והמוזיקה של Kodi בעזרת טיימר. הטיימר ירוץ כשירות Kodi כך שלא תפספס עדכון.</summary>
+    <summary lang="hr_HR">Ažurirajte svoju ​​Kodi Videoteku i Fonoteku u zakazano vrijeme. Zakazano vrijeme radi kao Kodi usluga, tako da nikada nećete propustiti ažuriranje.</summary>
+    <summary lang="hu_HU">Az Kodi videó és zene könyvtárak időzített frissítése. Az időzítő az Kodi szolgáltatásaként fut, így nem marad le egyetlen frissítésről sem.</summary>
+    <summary lang="id_ID">Perbarui Pustaka Video dan Musik Kodi Anda dalam interval waktu. Timer dijalankan sebagai layanan Kodi sehingga Anda tak akan kelewatan hal baru.</summary>
+    <summary lang="is_IS">Uppfæra Kvikmynda og Tónlistarsöfnin þín á Kodi á ákveðnum tímum. Tímasetningin keyrir sem þjónusta á Kodi svo þú missir aldrei af uppfærslu.</summary>
+    <summary lang="it_IT">Aggiorna le tue librerie Video e Musicali in un momento definito. Il timer sarà eseguito come servizio di Kodi così non perderai nessun aggiornamento.</summary>
+    <summary lang="ko_KR">Kodi 비디오, 음악 라이브러리를 타이머로 자동 업데이트 하세요. 타이머는 Kodi 서비스로 실행되므로 업데이트를 잊어버리는 일은 없습니다.</summary>
+    <summary lang="lt_LT">Atnaujinkite savo Kodi vaizdo ir muzikos biblioteką nustatytu laiku. Laikmatis veikia kaip Kodi paslauga, todėl jūs niekada nepraleisite atnaujinimo.</summary>
+    <summary lang="nl_NL">Werk je Kodi video en muziek bibliotheken periodiek bij. De timer werkt als een Kodi service zodat je geen enkele update mist.</summary>
+    <summary lang="nb_NO">Oppdater dine Kodi Video og Musikk bibliotek basert på en timer. Timern kjører som en Kodi tjeneste slik at du aldri mister en oppdatering.</summary>
+    <summary lang="pl_PL">Automatycznie aktualizuj swoją bibliotekę filmów i albumów muzycznych. Usługa jest częścią Kodi, więc nigdy nie przegapisz niezbędnych aktualizacji.</summary>
+    <summary lang="pt_PT">Actualize as suas bibliotecas de vídeo e música do Kodi com um temporizador. Ele actua como um serviço do Kodi para que nunca perca uma actualização.</summary>
+    <summary lang="pt_BR">Atualize sua coleção de vídeos e músicas no Kodi com agendamentos. Agendamentos rodam como serviço no Kodi, para que você nunca mais se esqueça de atualizar.</summary>
+    <summary lang="ru_RU">Обновляет вашу медиатеку по таймеру. Таймер работает как сервис Kodi, поэтому вы никогда не забудете об обновлении.</summary>
+    <summary lang="sk_SK">Aktualizujte Vašu Kodi Video a Hudobnú knižnicu podľa časovača. Časovač beží ako Kodi služba, takže nikdy nezmeškáte aktualizáciu.</summary>
+    <summary lang="sv_SE">Uppdatera ditt Kodi video och musikbibliotek schemalagt. Schemaläggaren körs som en Kodi-service så du aldrig missar en uppdatering.</summary>
+    <summary lang="zh_CN">定时更新你的Kodi视频和音乐资料库。定时器以Kodi服务的方式运行以保证不会错过更新。</summary>
+    <description lang="be_BY">This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported.</description>
+    <description lang="bg_BG">Услугата ще обновява видео и музикалната библиотека в Kodi през определен интервал от време. Можете да променяте интервала за сканиране (на източниците на видео, аудио или и за двата вида информация). Можете да зададете брояч в стил Cron (за запознатите с Linux), който Ви осигурява по-голям контрол. Ако се случи, че гледате/слушате файл от библиотека за която се е задействал брояч сканирането ще се отложи до момента в който не приключите активността. Също така се поддържа и обновяване на определени папки и почистване на библиотеките.</description>
+    <description lang="ca_ES">Aquest és un servei de Kodi que actualitza les teves biblioteques de vídeo i música amb un temporitzador. Podeu seleccionar un interval diferent per analitzar les bases de dades multimèdia (àudio, vídeo, ambdós) o pot establir un temporitzador d'estil cron per a un major control. Si està reproduint a l'arxiu d'àudio o de vídeo quan s'inicia el temporitzador es pot ometre el procés d'actualització de la biblioteca fins que acabi per tant de tindre una experiència multimèdia ininterrompuda. Ara es compatible amb l'actualització d'un camí de vídeo específic, i la neteja de les biblioteques de música i vídeo.</description>
+    <description lang="da_DK">Dette er en Kodi service, der opdaterer dine musik- og videobiblioteker ved hjælp af en timer. Du kan vælge forskellige intervaller for skanningen af din mediedatabase (lyd, video, begge) eller du kan vælge en cron-baseret timer for øget kontrol. Hvis du afspiller en lyd- eller videofil, når timeren begynder, kan den springe over opdatering af biblioteket indtil emnet er færdigafspillet, så din medieoplevelse ikke afbrydes. Opdatering af specifikke videostier og oprydning i musik/videobibliotekerne er nu understøttet.</description>
+    <description lang="de_DE">Dies ist ein Kodi Service, der deine Musik und Video Bibliothek in bestimmten Abständen automatisch aktualisiert. Du kannst verschiedene Intervalle für das Scannen deiner Mediendatenbanken (Audio, Video oder beides) verwenden oder einen eigenen Cron Ausdruck für noch mehr Kontrolle benutzen. Wenn du gerade Musik oder ein Video abspielst kannst du den Timer des automatischen Updates überspringen, so dass dein Film Erlebnis nicht unterbrochen wird. Die Aktualisierung von konkreten Pfaden und Aufräumen der Musik/Video Bibliotheken wird nun unterstützt</description>
+    <description lang="el_GR">Αυτή είναι μία Υπηρεσία του Kodi που ενημερώνει τις συλλογές ταινιών και μουσικής σας με χρονοδιακόπτη. Μπορείτε να επιλέξετε διαφορετικό χρονικό διάστημα για σάρωση των πολυμέσων σας (Μουσική, Βίντεο, Και Τα Δυο) ή μπορείτε να ορίσετε ένα χρονοδιακόπτη τύπου cron για καλύτερο έλεγχο. Αν αναπαράγεται μία ταινία ή ένα τραγούδι όταν αρχίσει ο χρονοδιακόπτης μπορεί να αναβληθεί η διαδικασία της ενημέρωσης της συλλογής μέχρις ότου τελειώσει, προκειμένου να μην επηρεαστεί η αναπαραγωγή. Πλέον υποστηρίζεται η ενημέρωση συγκεκριμένης Διαδρομής Βίντεο, καθώς και Εκκαθάριση των συλλογών Ταινιών/Μουσικής.</description>
+    <description lang="en_GB">This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported.</description>
+    <description lang="en_NZ">This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported.</description>
+    <description lang="en_US">This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported.</description>
+    <description lang="es_ES">Este es un servicio de Kodi que actualizara sus librerías de música y video con un temporizador. Puede elegir intervalos diferentes para escanear sus bases de datos (video, música, ambas) o puede elegir un temporizador del estilo "cron" para un mayor control. Si esta reproduciendo audio o video cuando el temporizador se ejecuta, omitirá la actualización hasta que acabe la reproducción, para que no interrumpa su experiencia multimedia. Actualizar una ruta especifica y limpiar las bases de datos de música y video esta ahora soportado.</description>
+    <description lang="es_MX">Esto es un servicio de Kodi que actualiza tus bibliotecas de música y video en base a un temporizador. Puedes seleccionar diferentes intervalos para escanear tus bases de datos de medios (Audio, Video, Ambas) o puedes configurar un temporizador de estilo Cron para un mayor control. Si estas reproduciendo audio o video cuando el temporizador empieza, puede saltarse la actualización de bibliotecas hasta que esta termine, evitando de esta manera una interrupción en la reproducción de medios. Actualizar una ruta específica de video y limpiar bibliotecas de Música/Video se encuentra ahora soportado</description>
+    <description lang="fr_FR">Il s'agit d'un service de Kodi qui mettra à jour vos bibliothèques musicale et vidéo sur une minuterie. Vous pouvez sélectionner plusieurs intervalles pour scanner vos bases de données multimédia (Audio,Vidéo,Les deux) ou vous pouvez régler une minuterie pour un meilleur contrôle. Si vous jouez un fichier audio ou vidéo lorsque la minuterie démarre, le processus de mise à jour bibliothèque peut être ignoré jusqu'à ce que la lecture soit terminée afin que votre expérience multimédia ne soit pas interrompue. Mise à jour d’un chemin vidéo spécifique, et nettoyage des bibliothèques de musique/vidéo est maintenant supporté.</description>
+    <description lang="fr_CA">Ceci est un service Kodi qui mettra à jour automatiquement votre audiothèque et votre vidéothèque d'après une minuterie. Vous pouvez sélectionner un intervalle différent  pour balayer votre base de données multimédias (audio, vidéo, les deux) ou vous pouvez créer une minuterie de style cron pour un plus grand contrôle. Si vous lisez un fichier audio ou vidéo lorsque le minuteur commence, le service peut ignorer le processus de balayage de vos médiathèques jusqu'à ce que vous ayez terminé afin de ne pas interrompre votre écoute. Mettre à jour un chemin vidéo spécifique et nettoyer votre audiothèque et votre vidéothèque est maintenant pris en charge.</description>
+    <description lang="gl_ES">É un servizo de Kodi que actualizará as súas bibliotecas de vídeo e música mediante un temporizador. Pode seleccionar un intervalo diferente para escanear a súa base de datos (Son,Vídeo, Ambos) ou pode estabelecer un temporizador ao estilo de cron para un maior control. O temporizador pode omitir a actualización da biblioteca mentres está a reproducir unha canción ou vídeo até que remate. Agora soporta a actualización dun camiño de vídeo especifico e a limpeza das bibliotecas de Música/Video.</description>
+    <description lang="he_IL">זהו שירות Kodi היעדכן את ספריות הוידאו ומוזיקה שלך לפי טיימר. ביכולתך לבחור תדירות שונה לסריקת מסדי הנתונים (אודיו, וידאו, שניהם) או להגדיר טיימר דמוי Cron לשליטה טובה יותר. כאשר מנוגן קובץ אודיו או וידאו הטיימר מסוגל לדלג על תהליך העדכון עד לאחר תום הניגון כך שחווית המדיה שלך לא תיפגם. נוספה תמיכה לעדכון נתיב וידאו ספציפי וניקוי ספריות המוזיקה/וידאו.</description>
+    <description lang="hr_HR">Ovo je Kodi usluga koja će ažurirati vašu Fonoteku i Videoteku u zakazano vrijeme. Možete odabrati neko drugo razdoblje pretraživanja vaše medijske baze podataka (glazba, video, obadvoje) ili možete postaviti cron-stil zakazano vrijeme za veću kontrolu. Ako se reproducira glazba ili video datoteka kada se zakazano vrijeme pokrene, ažuriranje ne započinje dok reprodukcija ne završi zato da se reprodukcija medija ne prekida. Ažuriranje određene Video putanje, i čišćenje Fonoteke i Videoteke sada je podržano.</description>
+    <description lang="hu_HU">Ez egy automatikus Kodi szolgáltatás, amely időzítetten frissíti a zenei és videó adatbázisokat. A különböző adatbázisokhoz eltérő időzítés választható vagy a teljesebb irányítás érdekében cron stílusú időzítés is használható. Amennyiben éppen lejátszik valamit, a frissítés elhalasztódik a lejátszás utánra, hogy ne zavarja a lejátszást. Már támogatott az egyedi videó frissítés és a zene/videó adatbázis tisztítás is.</description>
+    <description lang="id_ID">Ini adalah Layanan Kodi yang akan memperbarui pustaka musik dan video Anda dalam interval waktu. Anda dapat memilih interval yang berbeda untuk memindai basis data media (Audio, Video, Keduanya) atau Anda dapat mengeset timer ala cron untuk kontrol yang lebih luas. Apabila Anda memutar berkas audio atau video saat timer dimulai, ia dapat melewati proses pembaruan pustaka sampai pemutaran selesai sehingga pengalaman media Anda tidak terganggu. Memperbarui Lokasi Video spesifik, serta Membersihkan pustaka Musik/Video kini dapat dilakukan.</description>
+    <description lang="is_IS">Þetta er Kodi þjónusta sem uppfærir tónlistar- og kvikmyndasöfnin þín á ákveðnum tímum. Þú getur valið mismunandi tímabil til að skanna miðlunar gagnasöfn þín. (Tónlist, Kvikmyndir, Bæði) eða þú getur still cron tímasetningu til að hafa frekari stjórnun. Ef þú ert að keyra hljóð eða mynd þegar tíminn kemur þá bíður hann með uppfærslu þangað til að þú ert búinn til að trufla ekki afspilunina. Stuðningur er nú við uppfærslur á tilgreindum slóðum og Tiltekt á tónlistar/myndefnis söfnum.</description>
+    <description lang="it_IT">Questo è un servizio di Kodi che aggiornerà le tue librerie video e musicali a d una scadenza predefinita. Puoi impostare vari intervalli per scansionare i tuoi db (audio, video o entrambi) o puoi impostare un timer per un miglior controllo. Se stai eseguendo file video o audio quando la scansione sarà rimandata fin quando non avrai finito, così che non sarai interrotto. L'aggiornamento un percorso specifico e pulizia dele librerie Video e Musicali sono ora supportati </description>
+    <description lang="ko_KR">음악과 비디오 라이브러리 업데이트를 예약 실행하는 Kodi 서비스입니다. 미디어 데이터베이스(오디오, 비디오, 모두)를 각각 다른 간격으로 업데이트하도록 선택하거나 cron 스타일의 타이머를 설정할 수 있습니다. 타이머가 시작될 때 오디오나 비디오를 재생하고 있다면 재생을 완료할 때까지 라이브러리 업데이트 프로세스를 생략할 수 있습니다. 지정한 비디오 경로 업데이트, 음악/비디오 라이브러리 정리도 지원합니다.</description>
+    <description lang="lt_LT">Tai Kodi paslauga, kuri atnaujins jūsų muzikos ir vaizdo bibliotekas nurodytu laiku. Jūs galite nurodyti skirtingus laiko intervalus medija duomenų bazių skenavimui (garso, vaizdo, abiejų) arba galite nustatyti 'Cron' stiliaus laikmatį geresnei kontrolei. Jei laikmatis suveikia tuo metu, kai atkuriamas garso ar vaizdo failas, bibliotekos atnaujinimo procesas gali būti pristabdytas kol baigsis atkurimas, kad jūsų laikmatis gali praleisti bibliotekos atnaujinimo procesą tam, kad gaėltumėte nepertraukiamai mėgautis medija turiniu. Konkretaus kelio iki vaizdo failų atnaujinimas ir muzikos/vaizdo bibliotekos valymas dabar jau palaikoma.</description>
+    <description lang="nl_NL">Dit is een Kodi service die je muziek en video bibliotheek periodiek bijwerkt. Je kan een interval instellen per media bibliotheek (audio, video of beide) of je kan een timer in cron-stijl instellen voor meer controle. Als je een audio of video file afspeelt wanneer een geplande update start, kan het bijwerken worden uitgesteld tot het bestand is afgespeeld om je media-beleving niet te onderbreken. Een specifieke video locatie bijwerken en de muziek/videobibliotheken opschonen, zijn nu ondersteund. </description>
+    <description lang="nb_NO">Dette er en Kodi tjeneste som vil oppdatere dine video og musikk bibliotek basert på en timer. Du kan velge mellom forskjellige intervall for skanning av media databasene dine (audio, video eller begge) eller du kan sette en cron liknende timer for mer kontroll. Hvis du spiller en audio, eller video, fil når timern starter kan oppdateringen stoppes slik at den ikke forstyrrer seansen din. Oppdatering av spesifikke video mapper og rensking av musikk/video bibliotek støttes.</description>
+    <description lang="pl_PL">Jest to usługa Kodi, która aktualizuje twoją kolekcję muzyki oraz wideo. Pozwala określić odstęp czasu w jakim twoja biblioteka będzie skanowana lub dla lepszej kontroli ustawić formułę cron. Jeżeli odtwarzasz muzykę lub film, to aktualizacja kolekcji rozpocznie się po zakończeniu odtwarzania. Obsługiwana jest aktualizacja podanej ścieżki wideo oraz czyszczenie bibliotek muzyki i wideo.</description>
+    <description lang="pt_PT">Este é um serviço do Kodi que actualizará as suas bibliotecas de música e vídeo por temporizador. Pode seleccionar intervalos de tempo para analisar as suas bases de média (áudio, vídeo, ambas) ou pode definir um temporizador cron para maior controlo. Se estiver a reproduzir um ficheiro áudio ou vídeo quando o temporizador inicia, este pode adiar a actualização da biblioteca até a reprodução estar concluída, para não interromper. Agora pode também actualizar uma localização de vídeo específica e limpar as bibliotecas áudio/vídeo.</description>
+    <description lang="pt_BR">Este é um serviço Kodi que irá atualizar a sua coleção de vídeos e músicas através de agendador de atividade. Você pode selecionar um intervalo diferente para escanear seus bancos de dados de mídia (áudio, vídeo, tanto) ou você pode definir um temporizador estilo cron  para maior controle. Se você estiver reproduzindo um arquivo de áudio ou vídeo quando o cronômetro iniciar, ele pode pular o processo de atualização da biblioteca até que seja concluída, de modo que sua experiência de mídia não é interrompido. Atualizar um caminho de vídeo específico, e de limpeza das bibliotecas de música / vídeo é agora suportado.</description>
+    <description lang="ru_RU">Это сервис, который обновляет вашу медиатеку по таймеру. Вы можете выбрать разные периоды для сканирования  ваших баз (Аудио, Видео, и то и то) или установить таймер по-времени для большего контроля. Если запущено проигрывание аудио или видео файла, когда срабатывает таймер, он может отменить процесс обновления до тех пор, пока Вы не закончите прослушивание или просмотр чего-либо. &#10;Выборочное обновление папок с Видео, очистка медиатеки теперь также поддерживается.</description>
+    <description lang="sk_SK">Toto je Kodi služba, ktorá aktualizuje Vašu Kodi Hudobnú a Video knižnicu podľa časovača. Môžete zvoliť rôzne intervaly aktualizácie databáz (Hudba,Video,oboje) alebo pre väčšiu kontrolu zadáte časovač podobný Cron-u. Pokiaľ práve prehrávate hudobný alebo video súbor počas štartu časovača, môže byť aktualizácia odložená, aby nebol Váš mediálny zážitok narušený. Aktualizácia špecifických ciest a upratovanie Hudobnej/Video databázy je tiež podporované. </description>
+    <description lang="sv_SE">Detta är en Kodi-service som schemalagt kommer att uppdatera ditt musik och videobibliotek. Du kan välja olika intervall att skanna dina mediadatabaser (Musik,Video,Båda) eller så kan du ange ett cron-inspirerad schemaläggare för bättre kontroll. Om du spelare en musik eller videofil när schemaläggaren startar, kan det hoppa över biblioteksuppdateringen till uppspelningen är klar så mediaupplevelsen inte avbryts. Uppdatering av en specifik videosökväg och rensning av musik/videobiblioteken stödjs nu.</description>
+    <description lang="zh_CN">这是一个定时更新你的音乐和视频资料库的Kodi服务程序。你可以设置不同的时间间隔来扫描媒体库（音频、视频或二者），或者设置一个cron类型的定时器来获得更好的控制。如果定时动作开始时你正在播放一个音频或视频文件，它会跳过此次更新直到播放完毕以避免影响你欣赏媒体。现在已支持更新指定的视频路径以及清理音视频资料库。</description>
+    <license>MIT</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=119520</forum>
+    <source>https://github.com/robweber/xbmclibraryautoupdate</source>
+	<assets>
+		<icon>resources/media/icon.png</icon>
+	</assets>
+	<news>Version 1.2.3
+- fix for hourly timer settings not working </news>
+  </extension>
+</addon>
+
+<addon id="repository.googlecode.xbmc-catchuptv-au" name="Aussie Add-ons (formerly XBMC CatchupTV AU)" provider-name="Aussie Add-ons" version="1.6">
+  <extension name="Aussie Add-ons Repository" point="xbmc.addon.repository">
+    <dir minversion="1.0.0" maxversion="18.9.0">
+      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml</info>
+      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/leia/addons.xml.md5</checksum>
+      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/leia/</datadir>
+    </dir>
+    <dir minversion="18.9.701">
+      <info compressed="false">https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml</info>
+      <checksum>https://raw.github.com/xbmc-catchuptv-au/repo/master/matrix/addons.xml.md5</checksum>
+      <datadir zip="true">https://github.com/xbmc-catchuptv-au/repo/raw/master/matrix/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Install Aussie Add-ons (formerly XBMC CatchupTV AU)</summary>
+    <description>Download and install add-ons from the Aussie Add-ons repository. See http://aussieaddons.com for more information.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="slyguy.paramount.plus" name="Paramount+" provider-name="SlyGuy" version="0.9.13">
+  <requires>
+    <import addon="script.module.slyguy" version="0.85.92"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch thousands of episodes of your favorite shows on any device. Paramount+ includes on-demand and live content from CBS, BET, Comedy Central, Nickelodeon, MTV, VH1, Paramount, and more.
+
+Subscription required.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Fix some movie art work. Thanks @tchebb</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.stan.au" name="Stan" provider-name="SlyGuy" version="0.5.5">
+  <requires>
+    <import addon="script.module.slyguy" version="0.85.92"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Stan offers unlimited access to thousands of hours of entertainment, first-run exclusives, award-winning TV shows, blockbuster movies and kids content.
+
+Subscription required.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Fix live!</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.86.20">
+  <requires>
+    <import addon="slyguy.dependencies" version="0.0.28"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Common code, proxy and settings required by all Slyguy add-ons</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Add Remove Framerate Hints video setting</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="repository.pseudotv" name="PseudoTV Repository" version="1.0.1" provider-name="Lunatixz">
+    <extension point="xbmc.addon.repository" name="PseudoTV Repository">
+        <dir>
+          <info compressed="false">https://raw.githubusercontent.com/PseudoTV/PseudoTV_Live/master/addons.xml</info>
+          <checksum>https://raw.githubusercontent.com/PseudoTV/PseudoTV_Live/master/addons.xml.md5</checksum>
+          <datadir zip="true">https://raw.githubusercontent.com/PseudoTV/PseudoTV_Live/master/zips</datadir>
+        </dir>
+        <dir>
+          <info compressed="false">https://raw.githubusercontent.com/PseudoTV/PseudoTV_Resources/master/addons.xml</info>
+          <checksum>https://raw.githubusercontent.com/PseudoTV/PseudoTV_Resources/master/addons.xml.md5</checksum>
+          <datadir zip="true">https://raw.githubusercontent.com/PseudoTV/PseudoTV_Resources/master/zips</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <description lang="en_GB">PseudoTV Live acts similar to normal broadcast or cable TV, complete with pre-defined and user-defined channels. EPG Provided by Kodi.</description>
+        <platform>all</platform>
+        <source>https://github.com/Lunatixz/KODI_Addons/tree/master/repository.pseudotv</source>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="skin.liam.confluence" version="1.0.23" name="Liam - Confluence" provider-name="Liam">
+	<requires>
+		<import addon="xbmc.gui" version="5.15.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<license>GNU General Public License version 2</license>
+		<forum>https://forum.kodi.tv/forumdisplay.php?fid=125</forum>
+		<source>https://github.com/xbmc/skin.confluence</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+		</assets>
+		<news>- Update language files from Transifex.</news>
+		<summary lang="af_ZA">Confluence oortreksel deur Jezz_X.</summary>
+		<summary lang="ar_SA">جلد كونفليونس من صنع Jezz_x. (الجلد المبدأى لبرنامج إكس بى إم سى)</summary>
+		<summary lang="be_BY">Абалонка Confluence ад Jezz_X.</summary>
+		<summary lang="bg_BG">Confluence облик от Jezz_X. (стандартния облик за Kodi)</summary>
+		<summary lang="ca_ES">Aparença Confluence per Jezz_X.</summary>
+		<summary lang="cs_CZ">Vzhled Confluence od Jezz_X.</summary>
+		<summary lang="cy_GB">Croen Confluence gan Jezz_X. (Croen rhagosodedig Kodi)</summary>
+		<summary lang="da_DK">Confluence skin af Jezz_X.</summary>
+		<summary lang="de_DE">Confluence Skin von Jezz_X.</summary>
+		<summary lang="el_GR">Το κέλυφος Confluence από τον Jezz_X (προεπιλεγμένο κέλυφος του Kodi).</summary>
+		<summary lang="en_AU">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="en_GB">Confluence skin by Jezz_X.</summary>
+		<summary lang="en_NZ">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="en_US">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="es_AR">Skin Confluence por Jezz_X.</summary>
+		<summary lang="es_ES">Skin Confluence por Jezz_X.</summary>
+		<summary lang="es_MX">Skin confluende por Jezz_X. (skin por defecto de Kodi)</summary>
+		<summary lang="et_EE">Confluence rüü autor on Jezz_X.</summary>
+		<summary lang="eu_ES">Confluence azala Jezz_X-ek egina.</summary>
+		<summary lang="fa_IR">پوسته Confluence تهیه شده بوسیله Jezz_X.</summary>
+		<summary lang="fi_FI">Confluence-ulkoasu. Tekijä Jezz_X.</summary>
+		<summary lang="fo_FO">Confluence útsjónd av Jezz_X. (Kodi's vanliga útsjónd)</summary>
+		<summary lang="fr_CA">Habillage Confluence par Jezz_X.</summary>
+		<summary lang="fr_FR">Confluence, un habillage par Jezz_X.</summary>
+		<summary lang="gl_ES">Pel Confluence por Jezz_Z. (Pel predefinida do Kodi)</summary>
+		<summary lang="he_IL">המעטפת Confluence של Jezz_X. (ברירת המחדל של Kodi)</summary>
+		<summary lang="hr_HR">Confluence presvlaka autora Jezz_X. (uobičajena Kodi presvlaka)</summary>
+		<summary lang="hu_HU">Confluence felszín. Készítő: Jezz_X (Kodi alapértelmezett felszín)</summary>
+		<summary lang="hy_AM">''Confluence'' - տեսք՝ Jezz_X. կողմից (Kodi - հիմնական տեսք)</summary>
+		<summary lang="id_ID">Skin Confluence oleh Jezz_X. (Skin bawaan Kodi)</summary>
+		<summary lang="is_IS">Confluence eftir Jezz_X. (Sjálfgefið útlit Kodi)</summary>
+		<summary lang="it_IT">Skin Confluence da Jezz_X. (Skin predefinita di Kodi)</summary>
+		<summary lang="ja_JP">Confluenceスキン by Jezz_X.</summary>
+		<summary lang="ko_KR">Jezz_X가 만든 Confluence 스킨.</summary>
+		<summary lang="lt_LT">Confluence teminė išvaizda, kurią sukūrė Jezz_X. (Kodi numatytoji teminė išvaizda)</summary>
+		<summary lang="lv_LV">Confluence apvalks no Jeez_X.</summary>
+		<summary lang="mk_MK">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="ms_MY">Penyatuan, kulit daripada Jezz_X. (Kulit lalai Kodi)</summary>
+		<summary lang="mt_MT">Dehra Confluence magħmula minn Jezz_X. (Id-dehra normali ta' Kodi)</summary>
+		<summary lang="nb_NO">Confluence-drakt av Jezz_X. (Kodis forvalgte drakt)</summary>
+		<summary lang="nl_NL">Confluence skin door Jezz_X. (Kodi's standaard skin)</summary>
+		<summary lang="pl_PL">Skóra Confluence autorstwa Jezz_X.</summary>
+		<summary lang="pt_BR">Skin Confluence por Jezz_X. (Skin padrão do Kodi)</summary>
+		<summary lang="pt_PT">Tema Confluence por Jezz_X (tema padrão do Kodi)</summary>
+		<summary lang="ro_RO">Costumul Confluence de Jezz_X.</summary>
+		<summary lang="ru_RU">Обложка Confluence (стандартная обложка Kodi). Автор: Jezz_X.</summary>
+		<summary lang="sk_SK">Confluence skin od Jezz_X. (predvolený skin Kodi)</summary>
+		<summary lang="sl_SI">Preobleka Confluence avtorja Jezz_X. (Privzeta preobleka za Kodi)</summary>
+		<summary lang="sq_AL">Maska Confluence nga Jazz_X (maska kryesore së Kodi)</summary>
+		<summary lang="sr_RS">Confluence маска аутора Jezz_X.</summary>
+		<summary lang="sr_RS@latin">Confluence maska autora Jezz_X.</summary>
+		<summary lang="sv_SE">Confluence, ett skal av Jezz_X.</summary>
+		<summary lang="szl">Skōra Confluence zrychtowanŏ ôd Jeez_X. (wychodnŏ skōra we Kodi)</summary>
+		<summary lang="tg_TJ">Пӯсти ҳамҷараёнӣ аз ҷониби Jezz_X. (Пӯсти пешфарзи Kodi)</summary>
+		<summary lang="th_TH">ชุดตกแต่ง Confluence โดย Jezz_X (สกินเริ่มต้นของ Kodi)</summary>
+		<summary lang="tr_TR">Jezz_X tarafından geliştirilen Confluence dış görünümü.</summary>
+		<summary lang="uk_UA">Обкладинка Confluence (стандартна обкладинка Kodi). Автор: Jezz_X.</summary>
+		<summary lang="vi_VN">Giao diện Confluence bởi Jezz_X. (Giao diện mặc định của Kodi)</summary>
+		<summary lang="zh_CN">Jezz_X 开发的 Confluence 皮肤。</summary>
+		<summary lang="zh_TW">Jezz_X 製作的佈景主題（Kodi的預設佈景主題）</summary>
+		<description lang="af_ZA">Confluence is 'n kombinasie van konsepte van 'n klomp gewilde oortreksels, en 'n poging om hulle goeie idees te omvat en te integreer in 'n oortreksel wat maklik behoort te wees vir eerste keer Kodi gebruikers om te verstaan en te gebruik.</description>
+		<description lang="ar_SA">كونفليونس هو الجلد المبدأى لبرنامج إكس بى إم سى اﻹصدار 9.11 وما فوق. هو خلط بين اشهر اﻷجلده الاخرى معاً ومحاوله لتبنى ودمج افكارهم للخروج بِنِتَاج يُفترض به ان يكون سهل اﻹستيعاب بمجرد النظر لمستخدمى إكس بى إم سى المبتدئين.</description>
+		<description lang="be_BY">Confluence уяўляе сабой спалучэнне канцэпцый з мноства папулярных абалонак, што намагаецца аб’яднаць усе найлепшыя ідэі ў адну абалонку, якая павінна быць простай і зручнай для карыстальнікаў Kodi.</description>
+		<description lang="bg_BG">Confluence е стандартният облик на Kodi 9.11 и по-новите версии. Представлява смесица от концепциите на много от популярните облици. Целта е да се интегрират тези добри идеи в подходящ и удобен вид за хора, които се сблъскват за първи път с Kodi.</description>
+		<description lang="ca_ES">Confluence és una combinació de conceptes de moltes aparences populars i intenta adoptar i integrar les seves bones idees en una aparença que sigui senzilla d'entendre i utilitzar per als nous usuaris de Kodi.</description>
+		<description lang="cs_CZ">Confluence je kombinací konceptů z mnoha oblíbených vzhledů a pokouší se pojmout a integrovat jejich dobré nápady do vzhledu, který by měl být pro nové uživatele Kodi jednoduchý na pochopení a používání.</description>
+		<description lang="cy_GB">Confluence yw croen rhagosodedig Kodi 9.11 ac uwch. Mae'n gyfuniad o gysyniadau o nifer o grwyn poblogaidd ac mae'n ymdrechu i gyfuno eu syniadau da hwy i groen ddylai fod yn hawdd i ddefnyddiwr cyntaf Kodi ei deall a'i ddefnyddio.</description>
+		<description lang="da_DK">Confluence er en kombination af koncepter fra mange populære skins, og det forsøger at omfavne og integrere de gode ideer i et skin, der er let for førstegangsbrugere af Kodi at forstå og bruge.</description>
+		<description lang="de_DE">Confluence ist eine Kombination von Konzepten aus vielen beliebten Skins und versucht, deren besten Ideen zu vereinen, um den Einstieg für neue Kodi-Nutzer zu erleichtern.</description>
+		<description lang="el_GR">Το Confluence είναι η προεπιλεγμένη αμφίεση για τις εκδόσεις Kodi 14.0 και άνω. Είναι ένας συνδυασμός από πολλές δημοφιλής αμφιέσεις, και επιχειρεί να παρέχει τις καλύτερες ιδέες τους σε μία αμφίεση, το οποίο είναι εύκολο για τους αρχάριους χρήστες του Kodi να κατανοήσουν και να χρησιμοποιήσουν.</description>
+		<description lang="en_AU">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_GB">Confluence is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_NZ">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_US">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="es_AR">Confluence es una combinación de conceptos de muchos skins populares, e intenta abarcar e integrar lo mejor de ellos en un skin que sea sencillo de entender y utilizar para los nuevos usuarios de Kodi.</description>
+		<description lang="es_ES">Confluence es la skin por defecto de Kodi 9.11 y posteriores. Es una combinación de conceptos de muchas skins populares, e intenta abarcar e integrar lo mejor de ellas en una skin que sea sencilla de entender y utilizar para los nuevos usuarios de Kodi.</description>
+		<description lang="es_MX">Confluence es el skin por defecto para Kodi 9.11 en adelante. Es una combinación de conceptos de varias skins populares, e intenta adoptar e integrar sus buenas ideas en un skin que debería ser fá de entender y usar para quienes usen Kodi por primera vez.</description>
+		<description lang="et_EE">Confluence on Kodi vaikerüü alates versioonist 9.11. Confluence on paljude populaarsete rüüde kombinatsioon, üritades omavahel siduda nende parimaid lahendusi, et saavutada esmakasutajale selget ja kergelt kasutatavat tulemust.</description>
+		<description lang="eu_ES">Confluence hainbat azal ospetsutatik hartutako kontzeptuen konbinaketa da. Horietatik ideia onak hartu eta integratzen saiatzen da, Kodi lehen aldiz erabiltzen dutenentzat ulertzeko eta erabiltzeko erraza izango den azal batean.</description>
+		<description lang="fa_IR">Confluence ترکیبی از چند پوسته محبوب دیگر است و تلاش دارد بهترین ایده ها را با هم ترکیب کند، تا شروعی ساده و آسان را برای کاربران جدید Kodi امکان پذیر سازد.</description>
+		<description lang="fi_FI">Confluence on yhdistelmä useiden suosittujen ulkoasujen konsepteista, ja yritys omaksua ja integroida heidän hyvät ideat ulkoasuun, jonka pitäisi olla helppokäyttöinen ja -tajuinen kaikille Kodin käyttäjille.</description>
+		<description lang="fo_FO">Confluence er vanliga útsjóndin, sum er brúkt í Kodi síðan útg. 9.11. Hetta er ein samansjóðan av fleiri hugtøkum. Ætlanin er at útsjóndin skal lætta um móttøku og nýtslu av Kodi fyri nýggjar brúkarar.</description>
+		<description lang="fr_CA">Confluence est une combinaison de concepts provenant de plusieurs habillages populaires. Il tente d’inclure et d’intégrer leurs bonnes idées en un habillage qui devrait être facile à comprendre et à utiliser pour les utilisateurs débutants de Kodi.</description>
+		<description lang="fr_FR">Confluence s'inspire des concepts de nombreux habillages populaires, et constitue une tentative d'inclusion et d'intégration des meilleures idées afin de créer un habillage d'interface qui soit facile à comprendre et à utiliser pour les personnes découvrant Kodi.</description>
+		<description lang="gl_ES">Confluence é a pel predeterminada para Kodi 9.11 e posteriores. É unha combinación de conceptos de algunhas peles populares, e tenta abranguer e integrar as súas mellores ideas nunha pel que sexa fácil de entender e utilizar para as usuarias que utilizan por primeira vez Kodi.</description>
+		<description lang="he_IL">המעטפת Confluence היא מעטפת ברירת המחדל של Kodi. המעטפת הינה תוצר של אימוץ מאפיינים ממעטפות פופולריות רבות תוך רצון לשלב מאפיינים אלה למעטפת פשוטה לשימוש ולהכרה ראשונית ע\\&quot;י משתמשי Kodi חדשים.</description>
+		<description lang="hr_HR">Confluence je uobičajena presvlaka za Kodi 14.0 naviše. To je mješavina koncepta iz mnogih drugih popularnih presvlaka, pokušaj da se objedine njihove dobre osobine u presvlaku i da budu lagane za upotrebu i razumljive novim Kodi korisnicima.</description>
+		<description lang="hu_HU">A Confluence az alapértelmezett felszín a Kodihoz a 9.11-es verziótól kezdődően. Merít sok sok népszerű felszín elképzeléséből, megpróbálva vegyíteni a jó ötleteket úgy, hogy az könnyen kezelhető legyen a Kodival először találkozóknak is.</description>
+		<description lang="id_ID">Confluence merupakan skin bawaan untuk Kodi 9.11 dan selanjutnya. Merupakan kombinasi konsep dari beberapa skin populer, dan berusaha untuk merangkul dan menyatukan ide bagus mereka ke sebuah skin yang mudah dipakai dan dipahami oleh pengguna Kodi pertama kali.</description>
+		<description lang="is_IS">Confluence er sjálfgefið útlit Kodi 14.0 og nýrra. Það er samsetning hugmynda frá mörgum vinsælum útlitum og er tilraun til að fanga og innlima þær góðu hugmyndir í útlit sem sé einfalt fyrir fyrir nýja Kodi notendur að skilja og nota</description>
+		<description lang="it_IT">Confluence è la skin predefinita di Kodi dalla versione 14.0 in poi. È una combinazione di elementi provenienti da altre skin popolari e cerca di integrare e coinvolgere tutte le loro grandi idee in una skin facile da usare e comprendere per l'utente inesperto di Kodi.</description>
+		<description lang="ja_JP">Confluenceは、さまざまな人気のあるスキンのコンセプトを組み合わせ、ユーザが初めて Kodi に触れる際、使い勝手が良いようにアイデアを盛り込み、簡単で分かり易くユーザーが使用できるようにしてあります。</description>
+		<description lang="ko_KR">Confluence 는 Kodi 14.0 이상을 위한 기본 스킨입니다. 많은 인기 스킨의 컨셉과 좋은 아이디어를 모아서 하나의 스킨으로 만들었으며 초보자도 사용하기 쉽습니다.</description>
+		<description lang="lt_LT">Confluence yra numatytoji teminė išvaizda pradedant Kodi 9.11 versija. Tai daugelio populiarių teminų išvaizdų derinys. Bandymas priimti ir integruoti vartotojų idėjas į teminę išvaizdą katra turėtų būti lengvai suprantama pirmą kartą naudojantiems Kodi</description>
+		<description lang="lv_LV">Confluence ir apvienota daudzu populāru apvalku koncepcija un centieni pieņemt un integrēt labākās idejas, lai jaunajiem Kodi ietotājiem to būtu viegli izprast un lietot.</description>
+		<description lang="mk_MK">Confluence е основниот изглед на Kodi 14.0 и нагоре. Тој е комбинација на концепти од повеќе популарни изгледи, и настојува да ги обедини и истакне нивните добри идеи во еден изглед разбирлив за почетници.</description>
+		<description lang="ms_MY">Penyatuan ialah kulit lalai untuk Kodi 9.11 dan ke atas. Ia merupakan gabungan konsep dari pelbagai kulit terkenal, dan berusaha untuk merangkumkan dan menyepadukan idea baik kulit-kulit tersebut menjadi satu kulit yang mudah difahami dan digunakan oleh pengguna baru Kodi .</description>
+		<description lang="mt_MT">Confluence hija d-dehra normali ta' Kodi 14.0 il-fuq. Hija taħlita ta' kunċetti minn ħafna dehriet popolari, u tipporva tgħaqqad u tintegra l-aqwa ideat tagħhom f'dehra li għandha tkun faċli biex jifmuha u jużawha dawk l-utenti li qed jużaw Kodi għall-ewwel darba.</description>
+		<description lang="nb_NO">Confluence er forvalgt drakt for Kodi 9.11 og oppover. Det er en kombinasjon av konseptene fra mange populære drakter, og prøver å omfavne og integrere de gode idéene i en drakt som bør være lett å forstå og benytte seg av for nye Kodi-brukere.</description>
+		<description lang="nl_NL">Confluence is de standaard skin voor Kodi 15.0 en hoger. Het combineert de concepten van andere populaire skins, waarbij het tracht hun goede ideeën te integreren in een skin die gemakkelijk in gebruik is.</description>
+		<description lang="pl_PL">Confluence to połączenie koncepcji wielu popularnych skór oraz próba objęcia i zintegrowania ich dobrych pomysłów ze skórą, która powinna być łatwa do opanowania i używania przez użytkowników Kodi po raz pierwszy.</description>
+		<description lang="pt_BR">Confluence é a skin padrão do Kodi 9.11 e acima. É uma combinação de conceitos das mais populares skins, visando abraçar e integrar as boas ideias em uma skin que seja fácil de entender e usar, destinada aos usuários iniciantes do Kodi.</description>
+		<description lang="pt_PT">O tema Confluence é o tema padrão do Kodi 14.0 e superior. É uma combinação de conceitos a partir de muitos temas populares e tenta integrar as boas ideias dos mesmos, num tema que deverá ser fácil de entender e utilizar pelos novos utilizadores do Kodi.</description>
+		<description lang="ro_RO">Confluence este costumul implicit pentru Kodi 9.11 și versiunile ulterioare. Este o combinație de concepte împrumutate de la mai multe costume populare, care încearcă să îmbrățișeze și să integreze ideile lor bune într-un costum care să fie ușor de înțeles și folosit de către utilizatorii Kodi începători.</description>
+		<description lang="ru_RU">Confluence — это стандартная обложка Kodi, начиная с версии 9.11. Она представляет собой сочетание концепций, взятых из многих популярных обложек, в попытке интегрировать их удачные идеи в обложке, которая была бы простой для использования и понимания новыми пользователями Kodi.</description>
+		<description lang="sk_SK">Confluence je predvolený pre Kodi 9.11 a vyššie. Je kombináciou konceptov z mnoho populárnych skinov a pokusom integrovať ich dobré nápady do skinu, ktorý by bol ľahko zrozumiteľný a použiteľný pre nových používateľov Kodi.</description>
+		<description lang="sl_SI">Confluence je privzeta preobleka za Kodi 14.0 in novejše. Je kombinacija konceptov mnogih priljubljenih preoblek in poskuša zaobjeti in integrirati njihove dobre ideje v preobleko, ki bi bila preprosta za uporabo in razumevanje tudi novim uporabnikom.</description>
+		<description lang="sq_AL">Confluence është maska kryesore për Kodi 9.11 dhe verzionet më të lartë. Është nje kombinim nga shumë maska e popullarizuar dhe përpjeket për të përqafuar dhe integruar idetë më të mira në një maskë që të jetë sa më lehtë në përdorim dhe kuptim për përdoruasit duke e përdorur Kodi për herë të parë.</description>
+		<description lang="sr_RS">Confluence је мешавина концепата из многих других популарних маски, и покушај да се обједине њихове добре идеје у маску која би трeбала да буде лака за разумевање и употребу новим корисницима Kodi-а.</description>
+		<description lang="sr_RS@latin">Confluence je mešavina koncepata iz mnogih drugih popularnih maski, i pokušaja da se objedine njihove dobre ideje u masku koja bi trebala da bude laka za razumevanje i upotrebu novim korisnicima Kodi-a.</description>
+		<description lang="sv_SE">Confluence kombinerar koncept från många populära skal och försöker återanvända och integrera goda idéer för att skapa ett skal som är enkelt att förstå och använda för nya Kodi-användare.</description>
+		<description lang="szl">Confluence to je wychodnŏ skōra dlŏ Kodi 14.0 i nowszych. To je miszōng kōnceptōw ze mocki popularnych skōr i prōbuje te nŏjlepsze wkludzić do skōry, kerŏ winnŏ być prostŏ we użyciu i spokopiyniu dlŏ nowych używŏczōw Kodi.</description>
+		<description lang="tg_TJ">Пӯсти ҳамҷараёнӣ ҳамчун пӯсти пешфарз барои Kodi 9.11 ё версияи навтар истифода мешавад. Ин пӯст аз унсурҳои пӯстҳои машҳури дигар сохта шудааст ва ва ҳамаи фикрҳои беҳтарин дар як пӯст ҷамъ мекунад, то ки корбарони навомад тавонанд Kodi-ро ба осонӣ фаҳманд ва истифода баранд.</description>
+		<description lang="th_TH">Confluenceเป็นสกินเริ่มต้นสำหรับ Kodi 9.11 หรือสูงกว่า มันเป็นส่วนผสมของแนวคิดจากสกินที่ได้รับความนิยมและพยายามที่จะยอมรับและบูรณาการส่วนที่ดีของมันเข้าไปในสกิน ซึ่งน่าจะง่ายสำหรับผู้ใช้ Kodiใหม่ ที่จะเข้าใจและใช้งานได้ดี</description>
+		<description lang="tr_TR">Confluence Kodi 14.0 ve yukarısı için varsayılan dış görünümdür. Birçok popüler dış görünümün kavramlarını bir araya getirip ilk kez Kodi kullananlar için anlaşılması ve kullanımı kolaydır.</description>
+		<description lang="uk_UA">Confluence — це стандартна обкладинка Kodi, починаючи з версії 9.11. Концепції багатьох популярних обкладинок поєднано у спробі використати та інтегрувати їхні вдалі ідеї в обкладинці, що стала б зрозумілою та простою в застосуванні для нових користувачів Kodi.</description>
+		<description lang="vi_VN">Confluence là giao diện mặc định cho Kodi 9.11 and các phiên bản trở về trước. Đây là sự kết hợp các khái niệm đến từ các giao diện khác nhau nhằm hướng người dùng đến sự đơn giản và dễ sử dụng.</description>
+		<description lang="zh_CN">Confluence 集合了许多流行皮肤的创意，力求把这些优点融合到一个皮肤中，使得首次使用 Kodi 的用户能更容易上手。</description>
+		<description lang="zh_TW">Confluence 是從 Kodi 9.11 開始預設的佈景主題。它結合了許多受歡迎的佈景主題的概念，且試圖包含並整合它們的優點，使第一次使用 Kodi 的使用者可以簡單地上手。</description>
+	</extension>
+</addon>
+
+<addon id="plugin.video.optus.sport" name="Optus Sport" provider-name="SlyGuy" version="0.9.2">
+  <requires>
+    <import addon="script.module.slyguy" version="0.84.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite sports live &amp; on demand with Optus Sport.
+
+Subscription required.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Fix 1080p</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="repository.silo-kodi" name="Silo-Kodi" version="1.0" provider-name="liam8888999">
+    <extension point="xbmc.addon.repository" name="Silo Kodi">
+      <dir>
+          <info compressed="false">https://raw.githubusercontent.com/liam8888999/silo-kodi/master/repo/zips/addons.xml</info>
+          <checksum>https://raw.githubusercontent.com/liam8888999/silo-kodi/master/repo/zips/addons.xml.md5</checksum>
+          <datadir zip="true">https://raw.githubusercontent.com/liam8888999/silo-kodi/master/repo/zips/</datadir>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Silo addon for kodi</summary>
+        <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+</addons>
