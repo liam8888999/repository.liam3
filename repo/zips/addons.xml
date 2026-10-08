@@ -45,7 +45,8 @@
 
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.silo.slyguy.search" name="Silo &amp; SlyGuy Search" version="0.3.5" provider-name="Liam Robson">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.silo.slyguy.search" name="Silo &amp; SlyGuy Search" version="0.3.6" provider-name="Liam Robson">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -70,6 +71,9 @@
     <license>GNU General Public License v3.0</license>
   </extension>
 </addon>
+
+
+
 
 
 
