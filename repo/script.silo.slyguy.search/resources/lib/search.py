@@ -4,6 +4,9 @@
 import difflib
 import re
 import sys
+import time
+from collections import OrderedDict
+from functools import lru_cache
 from urllib.parse import parse_qsl, urlparse
 
 import xbmc
@@ -13,6 +16,38 @@ import xbmcplugin
 from . import kodi_rpc, silo, slyguy
 
 ADDON_ID = "script.silo.slyguy.search"
+
+SEARCH_CACHE_TTL_SECONDS = 45.0
+SEARCH_CACHE_MAX_ENTRIES = 8
+MAX_DISPLAY_RESULTS = 25
+
+_SEARCH_CACHE = OrderedDict()
+
+
+def _cache_key(query):
+    return " ".join(str(query or "").strip().casefold().split())
+
+
+def _get_cached_results(key):
+    entry = _SEARCH_CACHE.get(key)
+    if entry is None:
+        return None
+
+    cached_at, results = entry
+    if time.monotonic() - cached_at >= SEARCH_CACHE_TTL_SECONDS:
+        _SEARCH_CACHE.pop(key, None)
+        return None
+
+    _SEARCH_CACHE.move_to_end(key)
+    return list(results)
+
+
+def _store_cached_results(key, results):
+    _SEARCH_CACHE[key] = (time.monotonic(), list(results))
+    _SEARCH_CACHE.move_to_end(key)
+
+    while len(_SEARCH_CACHE) > SEARCH_CACHE_MAX_ENTRIES:
+        _SEARCH_CACHE.popitem(last=False)
 
 
 def _handle_from_argv(argv=None):
@@ -116,23 +151,18 @@ def query_from_listitem(list_item):
     return episode_name or ""
 
 
+@lru_cache(maxsize=4096)
 def _match_text(value):
     value = str(value or "").lower().strip()
     value = re.sub(r"[^a-z0-9]+", " ", value)
     return " ".join(value.split())
 
 
-def _match_score(query, item):
-    """Return a relevance score for a provider result.
-
-    Exact title matches rank highest, followed by exact TV-show matches,
-    prefixes, phrase/token containment and finally fuzzy similarity.
-    """
-    q = _match_text(query)
+def _match_score(q, q_tokens, item):
+    """Return a relevance score for a provider result."""
     if not q:
         return 0.0
 
-    q_tokens = set(q.split())
     candidates = (
         ("title", item.get("title"), 1.00),
         ("originaltitle", item.get("originaltitle"), 0.98),
@@ -150,7 +180,6 @@ def _match_score(query, item):
 
         score = 0.0
         if text == q:
-            # A direct title match beats an episode whose show merely matches.
             score = 1000.0
         elif text.startswith(q + " "):
             score = 900.0
@@ -164,15 +193,10 @@ def _match_score(query, item):
             ratio = difflib.SequenceMatcher(None, q, text).ratio()
             score = max(score, ratio * 650.0)
 
-        # Prefer matches in the requested field, but keep the differences
-        # between show/title fields modest so fuzzy title matching still works.
         if field in ("tvshowtitle", "showtitle"):
             score *= 0.96
 
-        # Shorter extras after an otherwise equivalent match are preferable:
-        # "Baby Driver" should beat "Baby Driver: Special Edition".
         score -= max(0, len(text) - len(q)) * 0.25
-
         best = max(best, score * weight)
 
     return best
@@ -194,6 +218,23 @@ def _rank_results(query, results):
 
     # Relevance is primary. Silo wins ties between otherwise equally relevant
     # results, then the original provider order remains stable.
+    ranked.sort(key=lambda row: (-row[0],def _rank_results(query, results):
+    q = _match_text(query)
+    q_tokens = set(q.split()) if q else set()
+
+    ranked = []
+    for index, item in enumerate(results):
+        source = str(item.get("source") or "").strip().lower()
+        source_priority = 0 if source == "silo" else 1
+        ranked.append(
+            (
+                _match_score(q, q_tokens, item),
+                source_priority,
+                index,
+                item,
+            )
+        )
+
     ranked.sort(key=lambda row: (-row[0], row[1], row[2]))
 
     xbmc.log(
@@ -215,6 +256,7 @@ def _rank_results(query, results):
         )
 
     return [item for _, _, _, item in ranked]
+
 
 def _normalise_result(item):
     path = str(item.get("path") or item.get("file") or "").strip()
@@ -284,8 +326,26 @@ def run_search(query):
     query = str(query or "").strip()
     if not query:
         return []
+
+    key = _cache_key(query)
+    cached = _get_cached_results(key)
+    if cached is not None:
+        xbmc.log(
+            "[script.silo.slyguy.search] Search cache hit for %r (%d result(s))"
+            % (query, len(cached)),
+            xbmc.LOGDEBUG,
+        )
+        return cached
+
     combined = _dedupe(silo.search(query) + slyguy.search(query))
-    return _rank_results(query, combined)
+    ranked = _rank_results(query, combined)
+
+    # Rank everything first, then only build Kodi list items for the best
+    # matches. This preserves relevance ordering without making Kodi render
+    # potentially hundreds of provider results.
+    ranked = ranked[:MAX_DISPLAY_RESULTS]
+    _store_cached_results(key, ranked)
+    return list(ranked)
 
 
 def show_results(query, handle=None):
