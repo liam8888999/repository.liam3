@@ -203,22 +203,6 @@ def _match_score(q, q_tokens, item):
 
 
 def _rank_results(query, results):
-    ranked = []
-    for index, item in enumerate(results):
-        source = str(item.get("source") or "").strip().lower()
-        source_priority = 0 if source == "silo" else 1
-        ranked.append(
-            (
-                _match_score(query, item),
-                source_priority,
-                index,
-                item,
-            )
-        )
-
-    # Relevance is primary. Silo wins ties between otherwise equally relevant
-    # results, then the original provider order remains stable.
-    ranked.sort(key=lambda row: (-row[0],def _rank_results(query, results):
     q = _match_text(query)
     q_tokens = set(q.split()) if q else set()
 
@@ -235,6 +219,8 @@ def _rank_results(query, results):
             )
         )
 
+    # Relevance is primary. Silo wins ties between otherwise equally relevant
+    # results, then the original provider order remains stable.
     ranked.sort(key=lambda row: (-row[0], row[1], row[2]))
 
     xbmc.log(
@@ -256,7 +242,6 @@ def _rank_results(query, results):
         )
 
     return [item for _, _, _, item in ranked]
-
 
 def _normalise_result(item):
     path = str(item.get("path") or item.get("file") or "").strip()
