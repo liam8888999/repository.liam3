@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.silo.slyguy.search" name="Silo &amp; SlyGuy Search" version="0.3.3" provider-name="Liam Robson">
+<addon id="script.silo.slyguy.search" name="Silo &amp; SlyGuy Search" version="0.3.4" provider-name="Liam Robson">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
