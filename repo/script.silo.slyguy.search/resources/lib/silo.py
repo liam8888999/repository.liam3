@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Silo search bridge."""
+"""Silo search bridge (provided by the KOLO add-on)."""
 
 from urllib.parse import quote_plus
 
@@ -13,7 +13,7 @@ def search(query):
     if not query:
         return []
 
-    url = "plugin://plugin.video.silo/?action=search&query=%s" % quote_plus(query)
+    url = "plugin://plugin.video.kolo/?action=search&query=%s" % quote_plus(query)
     try:
         files = kodi_rpc.get_plugin_directory(url)
     except Exception as exc:
@@ -54,7 +54,7 @@ def search(query):
             result = dict(item)
             result.update(
                 source="Silo",
-                source_addon_id="plugin.video.silo",
+                source_addon_id="plugin.video.kolo",
                 source_name="Silo",
                 path=path,
             )
