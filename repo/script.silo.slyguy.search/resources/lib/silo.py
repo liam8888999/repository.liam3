@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Silo search bridge."""
+"""KOLO search bridge."""
 
 from urllib.parse import quote_plus
 
@@ -13,11 +13,11 @@ def search(query):
     if not query:
         return []
 
-    url = "plugin://plugin.video.silo/?action=search&query=%s" % quote_plus(query)
+    url = "plugin://plugin.video.kolo/?action=search&query=%s" % quote_plus(query)
     try:
         files = kodi_rpc.get_plugin_directory(url)
     except Exception as exc:
-        xbmc.log("[script.silo.slyguy.search] Silo search failed: %s" % exc, xbmc.LOGWARNING)
+        xbmc.log("[script.silo.slyguy.search] KOLO search failed: %s" % exc, xbmc.LOGWARNING)
         return []
 
     results = []
@@ -53,15 +53,15 @@ def search(query):
         if path and label:
             result = dict(item)
             result.update(
-                source="Silo",
-                source_addon_id="plugin.video.silo",
-                source_name="Silo",
+                source="KOLO",
+                source_addon_id="plugin.video.kolo",
+                source_name="KOLO",
                 path=path,
             )
             results.append(result)
 
     xbmc.log(
-        "[script.silo.slyguy.search] Filtered %d Silo people/episode result(s)"
+        "[script.silo.slyguy.search] Filtered %d KOLO people/episode result(s)"
         % filtered,
         xbmc.LOGINFO,
     )
