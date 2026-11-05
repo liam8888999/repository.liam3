@@ -209,7 +209,7 @@ def _rank_results(query, results):
     ranked = []
     for index, item in enumerate(results):
         source = str(item.get("source") or "").strip().lower()
-        source_priority = 0 if source == "silo" else 1
+        source_priority = 0 if source == "kolo" else 1
         ranked.append(
             (
                 _match_score(q, q_tokens, item),
@@ -219,7 +219,7 @@ def _rank_results(query, results):
             )
         )
 
-    # Relevance is primary. Silo wins ties between otherwise equally relevant
+    # Relevance is primary. KOLO wins ties between otherwise equally relevant
     # results, then the original provider order remains stable.
     ranked.sort(key=lambda row: (-row[0], row[1], row[2]))
 
@@ -254,8 +254,8 @@ def _normalise_result(item):
     display_label = label
     if source == "SlyGuy" and addon_name:
         display_label = "[%s] %s" % (addon_name, label)
-    elif source == "Silo":
-        display_label = "[Silo] %s" % label
+    elif source == "KOLO":
+        display_label = "[KOLO] %s" % label
 
     li = xbmcgui.ListItem(label=display_label)
     for art_key, rpc_key in (("thumb", "thumbnail"), ("fanart", "fanart")):
